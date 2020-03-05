@@ -4,4 +4,4 @@
 
 [博客建造团队](https://www.github.com/dovuque)
 
-[test](https://dovuque.github.io/test.md)
+[test](https://dovuque.github.io/test/index.md)
