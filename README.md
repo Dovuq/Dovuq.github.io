@@ -2,4 +2,4 @@
 
 大佬们，给点建议呗！
 
-[test](https://dovuque.github.io/test)
+[test](https://dovuque.github.io/test/index.html)
