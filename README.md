@@ -2,6 +2,6 @@
 
 大佬们，给点建议呗！
 
-[博客建造团队](https://www.github.com/dovuque)
+[博客建造团队](https://www.github.com/dovuque/)
 
-[test](https://dovuque.github.io/test/index.html)
+[test](https://dovuque.github.io/test/)
