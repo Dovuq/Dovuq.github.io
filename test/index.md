@@ -1,5 +1,3 @@
-<html><title>test</title></html>
-
 # test
 
 [Home](https://dovuque.github.io/)
