@@ -1,13 +1,11 @@
-<html>
-  <head>
-    <title>code</title>
-  </head>
-  <body>
-    <center><h1>code</h1></center><br>
-    <a href="https://dovuque.github.io/">Home</a><br><br>
-    <a href="https://www.luogu.com.cn/problem/U83281"><h2>luogu U83281</h2></a>
-    <pre><code class="language-cpp">
-#include &lt;bits/stdc++.h&gt;
+# code
+
+[Home](https://dovuque.github.io/)
+
+## [luogu U83281](https://www.luogu.com.cn/problem/U83281)
+
+```cpp
+#include <bits/stdc++.h>
 #define _ putchar      
 #define __ int      
 #define ___ main      
@@ -49,6 +47,4 @@ _______ _________ _______ _________ ____ ______ ________ ______ _____ ________ _
 _____ __________ _ ____ _________________ _____ __________ _________________ ___________      
 _______ _________ _______ _________ _______ ________ _______ ________ _______ __________      
 _ ____ _________________ _____ __________ ________________
-    </code></pre>
-  </body>
-</html>
+```
