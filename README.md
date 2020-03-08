@@ -6,7 +6,7 @@
 
 [code](https://dovuque.github.io/code/)
 
-[Different Way to AK luogu P1001](https://dovuque.github.io/akp1001)
+[Different Ways to AK luogu P1001](https://dovuque.github.io/akp1001)
 
 ***
 
@@ -47,9 +47,9 @@
 |Rank|Name|Level|Rate of Adoption|Point|PITY|
 |:--|:--|:--|:--|--:|--:|
 |1|\[Owner\] Dovuq|![](http://latex.codecogs.com/gif.latex?\infty)|03 / 04 = 75.00%|28|8|
-||Average||04 / 05 = 80.00%|24|4|
-|2|Silly Computer|1|01 / 01 = 100.00%|21|1|
-|3|xrdrsp|1|00 / 00 = nan%|20|0|
+||Average||05 / 06 = 83.33%|24|4|
+|2|xrdrsp|1|01 / 01 = 100.00%|22|2|
+|3|Silly Computer|1|01 / 01 = 100.00%|21|1|
 
 # 升级分数：
 
