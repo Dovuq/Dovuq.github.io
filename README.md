@@ -46,8 +46,8 @@
 
 |Rank|Name|Level|Rate of Adoption|Point|PITY|
 |:--|:--|:--|:--|--:|--:|
-|1|\[Owner\] Dovuq|![](http://latex.codecogs.com/gif.latex?\infty)|03 / 03 = 100.00%|27|7|
-||Average||04 / 04 = 100.00%|23|3|
+|1|\[Owner\] Dovuq|![](http://latex.codecogs.com/gif.latex?\infty)|03 / 04 = 75.00%|28|8|
+||Average||04 / 05 = 80.00%|24|4|
 |2|Silly Computer|1|01 / 01 = 100.00%|21|1|
 |3|xrdrsp|1|00 / 00 = nan%|20|0|
 
