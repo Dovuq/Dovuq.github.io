@@ -1,5 +1,3 @@
-# Dovuque.github.io
-
 大佬们，给点建议呗！
 
 [博客建造团队](https://www.github.com/dovuque/)
@@ -7,6 +5,8 @@
 [test](https://dovuque.github.io/test/)
 
 [code](https://dovuque.github.io/code/)
+
+[Different Way to AK luogu P1001](https://dovuque.github.io/akp1001)
 
 ***
 
