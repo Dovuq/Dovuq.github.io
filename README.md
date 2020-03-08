@@ -15,6 +15,7 @@
 ## 定义：
 
 1. Owner: Dovuq
+2. PITY: Points Increased This Year
 
 ## 团队评分规则：
 
@@ -30,7 +31,8 @@
 10. 分数不得转让他人。
 11. 对于分数更改有疑问的，可于 30 天内发送给 Owner。
 12. 对于滥用上述规则者，Owner 有权将他/她/它踢出团队，但此时不适用第 9 条规则。
-13. 其他规则敬请期待。 
+13. 年度 PITY Rank 1 的，可以领取 100DQN 的奖励。
+14. 其他规则敬请期待。 
 
 ## 管理员规则：
 
@@ -44,11 +46,11 @@
 
 ## 分数榜：
 
-|Rank|Name|Level|Rate of Adoption|Point|
-|:--|:--|:--|:--|--:|:--|
-|1|\[Owner\] Dovuq|inf|02/02=100.00%|26|
-|2|Silly Computer|1|01/01=100.00%|21|
-|3|xrdrsp|1|00/00=nan%|20|
+|Rank|Name|Level|Rate of Adoption|Point|PITY|
+|:--|:--|:--|:--|--:|--:|
+|1|\[Owner\] Dovuq|inf|02/02=100.00%|26|6|
+|2|Silly Computer|1|01/01=100.00%|21|1|
+|3|xrdrsp|1|00/00=nan%|20|0|
 
 ## 升级分数：
 
