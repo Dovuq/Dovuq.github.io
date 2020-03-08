@@ -6,7 +6,9 @@ This is a test.
 
 ## Test of LaTeX:
 
-<html><img src="http://latex.codecogs.com/gif.latex?x^3+3px+2q=0\\x_1=\sqrt[3]{-q+\sqrt{q^2+p^3}}+\sqrt[3]{-q-\sqrt{q^2+p^3}}\\x_2=\omega\sqrt[3]{-q+\sqrt{q^2+p^3}}+\omega^2\sqrt[3]{-q-\sqrt{q^2+p^3}}\\x_3=\omega^2\sqrt[3]{-q+\sqrt{q^2+p^3}}+\omega\sqrt[3]{-q-\sqrt{q^2+p^3}}"><br><br>其中<img src="http://latex.codecogs.com/gif.latex?\omega=-\frac12+\frac{\sqrt3}2\text i,\omega^2=-\frac12-\frac{\sqrt3}2\text i,\text i=\sqrt{-1}"></html>
+![](http://latex.codecogs.com/gif.latex?x^3+3px+2q=0\\x_1=\sqrt[3]{-q+\sqrt{q^2+p^3}}+\sqrt[3]{-q-\sqrt{q^2+p^3}}\\x_2=\omega\sqrt[3]{-q+\sqrt{q^2+p^3}}+\omega^2\sqrt[3]{-q-\sqrt{q^2+p^3}}\\x_3=\omega^2\sqrt[3]{-q+\sqrt{q^2+p^3}}+\omega\sqrt[3]{-q-\sqrt{q^2+p^3}})
+
+其中 ![](http://latex.codecogs.com/gif.latex?\omega=-\frac12+\frac{\sqrt3}2\text i,\omega^2=-\frac12-\frac{\sqrt3}2\text i,\text i=\sqrt{-1})
 
 ## Test of markdown:
 
@@ -30,12 +32,9 @@ This is a test.
 * Unordered
 * List
 
-2147483647. An
-2147483648. Ordered
-2147483649. List
-2147483650. Starts
-2147483651. With
-2147483652. 21474843647
+2. An
+2. Ordered
+3. List
 
 > Hello
 >> World!
