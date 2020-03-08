@@ -46,9 +46,9 @@
 
 |Rank|Name|Level|Rate of Adoption|Point|PITY|
 |:--|:--|:--|:--|--:|--:|
-|1|\[Owner\] Dovuq|inf|03/03=100.00%|27|7|
-|2|Silly Computer|1|01/01=100.00%|21|1|
-|3|xrdrsp|1|00/00=nan%|20|0|
+|1|\[Owner\] Dovuq|inf|03 / 03 = 100.00%|27|7|
+|2|Silly Computer|1|01 / 01 = 100.00%|21|1|
+|3|xrdrsp|1|00 / 00 = nan%|20|0|
 
 # 升级分数：
 
