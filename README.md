@@ -48,19 +48,19 @@
 |:--|:--|:--|:--|--:|--:|
 |1|\[Owner\] Dovuq|![](http://latex.codecogs.com/gif.latex?\color{LightGray}\infty)|03 / 03 = 100.00%|27|7|
 ||Average||04 / 04 = 100.00%|23|3|
-|2|Silly Computer|![](http://latex.codecogs.com/gif.latex?\color{red}1)|01 / 01 = 100.00%|21|1|
-|3|xrdrsp|![](http://latex.codecogs.com/gif.latex?\color{red}1)|00 / 00 = nan%|20|0|
+|2|Silly Computer|![](http://latex.codecogs.com/gif.latex?\color{Red}1)|01 / 01 = 100.00%|21|1|
+|3|xrdrsp|![](http://latex.codecogs.com/gif.latex?\color{Red}1)|00 / 00 = nan%|20|0|
 
 # 升级分数：
 
 |Level|Point|
 |:--|:--|
-|![](http://latex.codecogs.com/gif.latex?\color{black}0)|0~19|
-|![](http://latex.codecogs.com/gif.latex?\color{red}1)|20~63|
-|![](http://latex.codecogs.com/gif.latex?\color{orange}2)|64~127|
-|![](http://latex.codecogs.com/gif.latex?\color{yellow}3)|128~255|
-|![](http://latex.codecogs.com/gif.latex?\color{green}4)|256~511|
-|![](http://latex.codecogs.com/gif.latex?\color{blue}5)|512~1023|
-|![](http://latex.codecogs.com/gif.latex?\color{indigo}6)|1024~2047|
-|![](http://latex.codecogs.com/gif.latex?\color{violet}7)|2048~4095|
+|![](http://latex.codecogs.com/gif.latex?\color{Black}0)|0~19|
+|![](http://latex.codecogs.com/gif.latex?\color{Red}1)|20~63|
+|![](http://latex.codecogs.com/gif.latex?\color{Orange}2)|64~127|
+|![](http://latex.codecogs.com/gif.latex?\color{Yellow}3)|128~255|
+|![](http://latex.codecogs.com/gif.latex?\color{Green}4)|256~511|
+|![](http://latex.codecogs.com/gif.latex?\color{Blue}5)|512~1023|
+|![](http://latex.codecogs.com/gif.latex?\color{Indigo}6)|1024~2047|
+|![](http://latex.codecogs.com/gif.latex?\color{Violet}7)|2048~4095|
 |...|...|
