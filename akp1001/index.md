@@ -1,5 +1,7 @@
 # Different Ways to AK [luogu P1001](https://www.luogu.com.cn/problem/p1001)
 
+[Home](https://dovuque.github.io/)
+
 # 1. C
 
 ```c
@@ -47,9 +49,9 @@ print read+read
 
 ```djadja
 program name:=main;
-main uses (1,screen);
+main uses (2,screen,keyboard);
 main begins:
-    boolean function putchar (c:char);
+    boolean function putchar(c:char);
     putchar begins:
         var x,y:integers;
         x:=screen.xnow;
@@ -63,4 +65,49 @@ main begins:
         screen.review();
         return true;
     putchar ends;
+    boolean function print(x:longint);
+    print begins:
+        var ans:boolean;
+        if (x=0) then ans:=putchar('0');
+        if (ans=false) then return false;
+        if (x<0) then it begins:
+            ans:=putchar('-');
+            if (ans=false) then return false;
+            return print(-x);
+        it ends;
+        ans:=putchar(x div 10);
+        if (ans=false) then return false;
+        return putchar(chr(x mod 10+48));
+    print ends;
+    char function getchar();
+    getchar begins:
+        return keyboard.get();
+    getchar ends;
+    longint function read();
+    read begins:
+        var ch:char;
+        var n,flag:longints;
+        ch:=getchar();
+        flag:=1;
+        while (ch<'0' or ch>'9') do it begins:
+            if (ch='-') then
+                flag:=-flag;
+            ch:=getchar();
+        it ends;
+        while (ch>='0' and ch<='9') do it begins:
+            n:=n*10+ord(ch)-48;
+            ch:=getchar();
+        it ends;
+        return n;
+    read ends;
+    nothing function f();
+    f begins:
+        var a,b:longints;
+        a=read();
+        b=read();
+        print(a+b);
+    f ends;
+    program starts with f();
+    program ends with 0;
+main ends.
 ```
