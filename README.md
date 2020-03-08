@@ -44,11 +44,11 @@
 
 分数榜：
 
-|Rank|Name|Level|Rate of Adoption|Point||
+|Rank|Name|Level|Rate of Adoption|Point|
 |:--|:--|:--|:--|--:|:--|
-|1|\[Owner\] Dovuq|inf|01/01=100.00%|25|#########################|
-|2|xrdrsp|1|00/00=nan%|20|####################|
-|2|Silly Computer|1|00/00=nan%|20|####################|
+|1|\[Owner\] Dovuq|inf|01/01=100.00%|25|
+|2|xrdrsp|1|00/00=nan%|20|
+|2|Silly Computer|1|00/00=nan%|20|
 
 升级分数：
 
