@@ -1,7 +1,0 @@
-Receipt
-
-Receipt No.: 00000000
-Note: Silly Computer Added A Test
-Point Change: +0 point
-
-Sign.: <None>
