@@ -1,0 +1,7 @@
+Receipt
+
+Receipt No.: 00000001
+Note: Dovuq Created /Receipt
+Point Change: +5 points
+
+Sign.: ![](https://cdn.luogu.com.cn/upload/image_hosting/zkkmqnih.png)
