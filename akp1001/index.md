@@ -1,4 +1,4 @@
-# Different Ways to AK [luogu P1001](https://www.luogu.com.cn/problem/p1001)
+# Different Ways to AK [luogu P1001](https://www.luogu.com.cn/problem/P1001)
 
 [Home](https://dovuque.github.io/)
 
