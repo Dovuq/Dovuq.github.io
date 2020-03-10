@@ -2,11 +2,9 @@
 
 [博客建造团队](https://www.github.com/dovuque/)
 
-[test](https://dovuque.github.io/test/)
-
-[code](https://dovuque.github.io/code/)
-
-[Different Ways to AK luogu P1001](https://dovuque.github.io/akp1001)
+|文章编号|文章名称|
+|1|[test](https://dovuque.github.io/test/)|
+|2|[Different Ways to AK luogu P1001](https://dovuque.github.io/akp1001)|
 
 ***
 
