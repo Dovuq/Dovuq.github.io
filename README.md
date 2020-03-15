@@ -6,6 +6,7 @@
 |--:|:--|
 |Top 1|[About](https://dovuque.github.io/about)|
 |1|[Different Ways to AK luogu P1001](https://dovuque.github.io/akp1001)|
+|2|[Mathematics Tools](https://dovuque.github.io/mathematics/)|
 
 ***
 
