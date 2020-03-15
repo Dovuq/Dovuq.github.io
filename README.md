@@ -4,8 +4,8 @@
 
 |文章编号|文章名称|
 |--:|:--|
-|1|[test](https://dovuque.github.io/test/)|
-|2|[Different Ways to AK luogu P1001](https://dovuque.github.io/akp1001)|
+|Top 1|[About](https://dovuque.github.io/about)|
+|1|[Different Ways to AK luogu P1001](https://dovuque.github.io/akp1001)|
 
 ***
 
