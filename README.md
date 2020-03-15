@@ -45,11 +45,11 @@
 
 # 分数榜：
 
-|Rank|Name|Level|Rate of Adoption|Point|PITY|
-|:--|:--|:--|:--|--:|--:|
-|1|\[Owner\] Dovuq|![](http://latex.codecogs.com/gif.latex?\infty)|04 / 05 = 80.00%|31|11|
-|2|xrdrsp|1|03 / 03 = 100.00%|29|9|
-|3|Silly Computer|0|01 / 02 = 50.00%|11|-9|
+|Rank|Name|Level|Rate of Adoption|Point|PITY|Note|
+|:--|:--|:--|:--|--:|--:|:--|
+|1|\[Owner\] Dovuq|![](http://latex.codecogs.com/gif.latex?\infty)|04 / 05 = 80.00%|31|11|-|
+|2|xrdrsp|1|03 / 03 = 100.00%|29|9|-|
+|3|Silly Computer|0|01 / 02 = 50.00%|11|-9|-|
 
 # 升级分数：
 
