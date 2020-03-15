@@ -49,7 +49,7 @@
 |Rank|Name|Level|Rate of Adoption|Point|PITY|Note|
 |:--|:--|:--|:--|--:|--:|:--|
 |1|\[Owner\] Dovuq|![](http://latex.codecogs.com/gif.latex?\infty)|04 / 05 = 80.00%|38|18|-|
-|2|xrdrsp|1|03 / 03 = 100.00%|29|9|冒充 Owner|
+|2|xrdrsp|1|03 / 03 = 100.00%|29|9|03-15-2020 04:48 UTC: 冒充 Owner|
 |3|Silly Computer|0|01 / 02 = 50.00%|11|-9|-|
 
 # 升级分数：
