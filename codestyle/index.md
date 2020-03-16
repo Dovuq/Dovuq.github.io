@@ -4,56 +4,123 @@
 
 # c++
 
-## 1. 头文件
-
-建议：
+例子：
 
 ```cpp
 #include <bits/stdc++.h>
-#include <cstdio>
+using namespace std;
+struct bigint
+{
+    int size,num[5005];
+    bigint()
+    {
+        size=0;
+        memset (num,0,sizeof(num));
+    }
+};
+int n;
+bigint ans,a[2025];
+bigint cal (bigint x,bigint y)
+{
+    if (x.size<y.size) swap(x,y);
+    bigint c;
+    c.size=x.size;
+    int d=0;
+    for (int i=0;i<x.size;i++)
+    {
+        c.num[i]+=x.num[i]+y.num[i]+d;
+        d=(c.num[i]<7?0:(c.num[i]<14?1:2));
+        c.num[i]%=10;
+    }
+    if (d) c.num[c.size++]=d;
+    return c;
+}
+istream& operator>> (istream &is,bigint &x)
+{
+    int n,i=0;
+    is>>n;
+    for (;n;i++)
+    {
+        x.num[i]=n%10;
+        n/=10;
+    }
+    x.size=i;
+    return is;
+}
+ostream& operator<< (ostream &os,bigint x)
+{
+    for (int i=x.size-1;i>=0;i--)
+        os<<x.num[i];
+    return os;
+}
+int main ()
+{
+    scanf ("%d",&n);
+    for (int i=0;i<n;i++)
+        cin>>a[i];
+    ans=a[0];
+    for (int i=1;i<n;i++)
+        ans=cal(ans,a[i]);
+    cout<<ans;
+    return 0;
+}
 ```
 
-不建议：
+不建议使用例子：
 
 ```cpp
-#include<bits/stdc++.h>
-# include <cstdio>
-#include <string.h>
-#include "iostream"
-```
-
-## 2. 宏定义
-
-建议：
-
-```cpp
-#define inf 1000000005
-const int inf=1000000005
-#define ll long long
-typedef long long ll
-```
-
-不建议：
-
-```cpp
-# define inf 1000000005
-```
-
-## 3. 变量定义
-
-建议：
-
-```cpp
-int *a;
-int b,c=-1,d=10,arr[10005];
-char mp[105][105];
-```
-
-不建议：
-
-```cpp
-int* a, b ,c = -1 , d=10;
-int arr[10005];
+# include<bits/stdc++.h>
+using namespace std ;
+struct bigint{
+    int size;
+    int num[5005];
+    bigint() { size=0; memset (num,0,sizeof(num)); }
+};
+int n;
+bigint ans , a[2025];
+bigint cal (bigint x , bigint y) {
+    if (x.size < y.size) swap(x,y);
+    bigint c;
+    c.size =x.size;
+    int d=0;
+    for( int i = 0 ; i < x . size ; ++ i )
+    {
+        c.num[i]+=x.num[i]+y.num[i]+d;
+        d = c.num[i] < 7 ? 0 : c.num[i] < 14 ? 1 : 2 ;
+        c.num[i]%=10 ;
+    }
+    if (d) c.num[c.size++]=d;
+    return c;
+}
+istream& operator>> (istream &is,bigint &x)
+{
+  int n,i=0;
+  is>>n;
+  for (;n;i++)
+  {
+    x.num[i]=n%10;
+    n/=10;
+  }
+  x.size=i;
+  return is;
+}
+ostream& operator<< (ostream &os,bigint x)
+{
+        for (int i=x.size-1;i>=0;i--)
+                os<<x.num[i];
+        return os;
+}
+int main ()
+{
+    cin>>n;
+    for (int i=1;i<=n;i++)
+        cin>>a[i];
+    ans = a [ 1 ] ;
+    for (int i=2;i<=n;i++)
+        ans=cal(ans,a[i]);
+    cout<<ans;
+    return 0;
+}
 ```
 
 # Markdown
