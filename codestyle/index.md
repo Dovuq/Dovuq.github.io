@@ -187,7 +187,3 @@ This is another paragraph.
 
 1. 3
 ```
-
-# LaTeX
-
-# Dovuque
