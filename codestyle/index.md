@@ -4,7 +4,7 @@
 
 # c++
 
-例子：
+建议使用例子：
 
 ```cpp
 #include <bits/stdc++.h>
@@ -124,6 +124,61 @@ int main ()
 ```
 
 # Markdown
+
+建议使用例子：
+
+```markdown
+# H1
+
+## H2
+
+### H3
+
+**Bold**, *Italic*, and ~~Strikeout~~.
+
+This is a paragraph.
+
+This is another paragraph.
+
+> Quote.
+
+- 1
+- 2
+- 3
+
+1. 1
+2. 2
+3. 3
+
+1. 1
+1. 2
+1. 3
+```
+
+不建议使用例子：
+
+```markdown
+H1
+===
+
+H2
+---
+
+###H3
+
+__Bold__, * Italic * , and ~~Strikeout~~.
+
+This is a paragraph.
+This is another paragraph.
+
+* 1
+* 2
+* 3
+
++ 1
++ 2
++ 3
+```
 
 # LaTeX
 
