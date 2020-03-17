@@ -4,11 +4,12 @@
 
 [博客建造团队](https://www.github.com/dovuque/)
 
-[行为准则]()
+[行为准则](https://www.github.com/CODE_OF_CONDUCT.md)
+
+[关于](https://dovuque.github.io/about)
 
 |文章编号|文章名称|
 |--:|:--|
-|Top 1|[About](https://dovuque.github.io/about)|
 |1|[Different Ways to AK luogu P1001](https://dovuque.github.io/akp1001)|
 |2|[Mathematics Tools](https://dovuque.github.io/mathematics/)|
 |3|[My Code Style for OI](https://dovuque.github.io/codestyle/)|
