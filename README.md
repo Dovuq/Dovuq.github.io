@@ -4,7 +4,7 @@
 
 [博客建造团队](https://www.github.com/dovuque/)
 
-[行为准则](https://www.github.com/CODE_OF_CONDUCT.md)
+[行为准则](https://dovuque.github.io/CODE_OF_CONDUCT.md)
 
 [关于](https://dovuque.github.io/about)
 
