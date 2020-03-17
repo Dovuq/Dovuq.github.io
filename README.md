@@ -20,6 +20,6 @@
 |--:|--:|:--|:--|--:|--:|:--|
 |1|1|\[Owner\] Dovuq|![](http://latex.codecogs.com/gif.latex?\infty)|38|18|-|
 |2||xrdrsp|1|29|9|\[Warning\] 冒充 Owner|
-|3|9|Silly Computer|0|11|-9|-|
+|3|2147483647|Silly Computer|0|11|-9|-|
 
 # Sort with UserId
