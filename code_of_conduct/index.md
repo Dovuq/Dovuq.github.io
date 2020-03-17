@@ -37,14 +37,6 @@
 6. 管理员资格允许放弃，但放弃后如想重新拥有管理员资格，必须向 Owner 提出申请。
 7. 其他规则敬请期待。
 
-# 分数榜：
-
-|Rank|Name|Level|Point|PITY|Note|
-|:--|:--|:--|--:|--:|:--|
-|1|\[Owner\] Dovuq|![](http://latex.codecogs.com/gif.latex?\infty)|38|18|-|
-|2|xrdrsp|1|29|9|\[Warning\] 冒充 Owner|
-|3|Silly Computer|0|11|-9|-|
-
 # 升级分数：
 
 |Level|Point|
