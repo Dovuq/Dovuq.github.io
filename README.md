@@ -13,3 +13,9 @@
 |1|[Different Ways to AK luogu P1001](https://dovuque.github.io/akp1001)|
 |2|[Mathematics Tools](https://dovuque.github.io/mathematics/)|
 |3|[My Code Style for OI](https://dovuque.github.io/codestyle/)|
+
+|Rank|UserId|Name|Level|Point|PITY|Note|
+|--:|--:|:--|:--|--:|--:|:--|
+|1|1|\[Owner\] Dovuq|![](http://latex.codecogs.com/gif.latex?\infty)|38|18|-|
+|2||xrdrsp|1|29|9|\[Warning\] 冒充 Owner|
+|3|9|Silly Computer|0|11|-9|-|
