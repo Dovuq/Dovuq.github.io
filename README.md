@@ -28,5 +28,5 @@
 |UserId|Name|Level|Point|PITY|Note|
 |--:|:--|:--|--:|--:|:--|
 |1|\[Owner\] Dovuq|![](http://latex.codecogs.com/gif.latex?\infty)|45|25|-|
-|2041375993|xrdrsp|1|29|9|-|
+|2041375993|xrdrsp|1|34|14|-|
 |2147483647|Silly Computer|0|13|-7|-|
