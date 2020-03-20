@@ -21,7 +21,7 @@
 |Rank|UserId|Name|Level|Point|PITY|Note|
 |--:|--:|:--|:--|--:|--:|:--|
 |1|1|\[Owner\] Dovuq|![](http://latex.codecogs.com/gif.latex?\infty)|45|25|-|
-|2|2041375993|xrdrsp|1|34|14|-|
+|2|2041375993|xrdrsp|1|44|24|-|
 |3|2147483647|Silly Computer|1|20|0|-|
 
 # Sort with UserId
@@ -29,5 +29,5 @@
 |UserId|Name|Level|Point|PITY|Note|
 |--:|:--|:--|--:|--:|:--|
 |1|\[Owner\] Dovuq|![](http://latex.codecogs.com/gif.latex?\infty)|45|25|-|
-|2041375993|xrdrsp|1|34|14|-|
+|2041375993|xrdrsp|1|44|24|-|
 |2147483647|Silly Computer|1|20|0|-|
