@@ -10,7 +10,8 @@
 
 |文章编号|文章名称|
 |--:|:--|
-|4|[Macimatix Formiliez & Plot](https://www.luogu.com.cn/paste/73x0l7qh)|
+|5|[Dingtalk 刷赞器](https://www.github.com/dovuq/dingtalk)|
+|4|[数学公式和表格](https://www.luogu.com.cn/paste/73x0l7qh)|
 |3|[My Code Style for OI](https://dovuque.github.io/codestyle/)|
 |2|[Mathematics Tools](https://unthique.github.io/mathematics/)|
 |1|[Different Ways to AK luogu P1001](https://dovuque.github.io/akp1001)|
