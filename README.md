@@ -20,8 +20,8 @@
 
 |Rank|UserId|Name|Level|Point|PITY|Note|
 |--:|--:|:--|:--|--:|--:|:--|
-|2|2041375993|xrdrsp|1|59|39|-|
-|1|1|\[Owner\] Dovuq|![](http://latex.codecogs.com/gif.latex?\infty)|45|25|-|
+|1|2041375993|xrdrsp|1|59|39|-|
+|2|1|\[Owner\] Dovuq|![](http://latex.codecogs.com/gif.latex?\infty)|45|25|-|
 |3|2147483647|Silly Computer|1|20|0|-|
 
 # Sort with UserId
