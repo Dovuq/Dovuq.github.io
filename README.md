@@ -22,7 +22,7 @@
 |--:|--:|:--|:--|--:|--:|:--|
 |1|1|\[Owner\] Dovuq|![](http://latex.codecogs.com/gif.latex?\infty)|45|25|-|
 |2|2041375993|xrdrsp|1|34|14|-|
-|3|2147483647|Silly Computer|0|13|-7|-|
+|3|2147483647|Silly Computer|1|20|0|-|
 
 # Sort with UserId
 
@@ -30,4 +30,4 @@
 |--:|:--|:--|--:|--:|:--|
 |1|\[Owner\] Dovuq|![](http://latex.codecogs.com/gif.latex?\infty)|45|25|-|
 |2041375993|xrdrsp|1|34|14|-|
-|2147483647|Silly Computer|0|13|-7|-|
+|2147483647|Silly Computer|1|20|0|-|
