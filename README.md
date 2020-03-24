@@ -20,14 +20,14 @@
 
 |Rank|UserId|Name|Level|Point|PITY|Note|
 |--:|--:|:--|:--|--:|--:|:--|
-|1|2041375993|xrdrsp|2|75|55|-|
-|2|1|\[Owner\] Dovuq|![](http://latex.codecogs.com/gif.latex?\infty)|45|25|-|
+|1|2041375993|xrdrsp|2|86|66|-|
+|2|1|\[Owner\] Dovuq|![](http://latex.codecogs.com/gif.latex?\infty)|55|35|-|
 |3|2147483647|Silly Computer|1|20|0|-|
 
 # Sort with UserId
 
 |UserId|Name|Level|Point|PITY|Note|
 |--:|:--|:--|--:|--:|:--|
-|1|\[Owner\] Dovuq|![](http://latex.codecogs.com/gif.latex?\infty)|45|25|-|
-|2041375993|xrdrsp|2|75|55|-|
+|1|\[Owner\] Dovuq|![](http://latex.codecogs.com/gif.latex?\infty)|55|35|-|
+|2041375993|xrdrsp|2|86|66|-|
 |2147483647|Silly Computer|1|20|0|-|
