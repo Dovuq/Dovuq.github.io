@@ -20,7 +20,7 @@
 
 |Rank|UserId|Name|Level|Point|PITY|Note|
 |--:|--:|:--|:--|--:|--:|:--|
-|1|2041375993|xrdrsp|2|86|66|-|
+|1|2041375993|xrdrsp|2|87|67|-|
 |2|1|\[Owner\] Dovuq|![](http://latex.codecogs.com/gif.latex?\infty)|55|35|-|
 |3|2147483647|Silly Computer|1|20|0|-|
 
@@ -29,5 +29,5 @@
 |UserId|Name|Level|Point|PITY|Note|
 |--:|:--|:--|--:|--:|:--|
 |1|\[Owner\] Dovuq|![](http://latex.codecogs.com/gif.latex?\infty)|55|35|-|
-|2041375993|xrdrsp|2|86|66|-|
+|2041375993|xrdrsp|2|87|67|-|
 |2147483647|Silly Computer|1|20|0|-|
