@@ -2,7 +2,9 @@
 
 [行为准则](https://dovuque.github.io/code_of_conduct/)
 
-[关于](https://dovuque.github.io/about)
+[分数榜](https://dovuque.github.io/points/)
+
+[关于](https://dovuque.github.io/about/)
 
 |文章编号|文章名称|
 |--:|:--|
