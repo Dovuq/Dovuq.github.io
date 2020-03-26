@@ -16,9 +16,9 @@
 
 |Rank|UserId|Name|Point|PITY|Note|
 |--:|--:|:--|--:|--:|:--|
-|1|2041375993|![](http://latex.codecogs.com/gif.latex?$\color{yellow}xrdrsp$)|2|87|67|-|
-|2|1|![](http://latex.codecogs.com/gif.latex?$\color{orange}[Owner]\,Dovuq$)||63|43|-|
-|3|2147483647|![](http://latex.codecogs.com/gif.latex?$\color{orange}Silly\,Computer$)|1|20|0|-|
+|1|2041375993|![](http://latex.codecogs.com/gif.latex?\color{yellow}xrdrsp)|2|87|67|-|
+|2|1|![](http://latex.codecogs.com/gif.latex?\color{orange}[Owner]\,Dovuq)||63|43|-|
+|3|2147483647|![](http://latex.codecogs.com/gif.latex?\color{orange}Silly\,Computer)|1|20|0|-|
 
 # Sort with UserId
 
