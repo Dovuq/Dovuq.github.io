@@ -18,16 +18,16 @@
 
 # Sort with Point
 
-|Rank|UserId|Name|Level|Point|PITY|Note|
-|--:|--:|:--|:--|--:|--:|:--|
-|1|2041375993|xrdrsp|2|87|67|-|
-|2|1|\[Owner\] Dovuq|![](http://latex.codecogs.com/gif.latex?\infty)|55|35|-|
-|3|2147483647|Silly Computer|1|20|0|-|
+|Rank|UserId|Name|Point|PITY|Note|
+|--:|--:|:--|--:|--:|:--|
+|1|2041375993|![](http://latex.codecogs.com/gif.latex?$\color{yellow}xrdrsp$)|2|87|67|-|
+|2|1|![](http://latex.codecogs.com/gif.latex?$\color{orange}[Owner] Dovuq$)||63|43|-|
+|3|2147483647|![](http://latex.codecogs.com/gif.latex?$\color{orange}Silly Computer$)|1|20|0|-|
 
 # Sort with UserId
 
-|UserId|Name|Level|Point|PITY|Note|
-|--:|:--|:--|--:|--:|:--|
-|1|\[Owner\] Dovuq|![](http://latex.codecogs.com/gif.latex?\infty)|55|35|-|
-|2041375993|xrdrsp|2|87|67|-|
-|2147483647|Silly Computer|1|20|0|-|
+|UserId|Name|Point|PITY|Note|
+|--:|:--|--:|--:|:--|
+|1|![](http://latex.codecogs.com/gif.latex?$\color{orange}[Owner] Dovuq$)||63|43|-|
+|2041375993|![](http://latex.codecogs.com/gif.latex?$\color{yellow}xrdrsp$)|2|87|67|-|
+|2147483647|![](http://latex.codecogs.com/gif.latex?$\color{orange}Silly Computer$)|1|20|0|-|
