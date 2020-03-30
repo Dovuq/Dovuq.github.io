@@ -1,0 +1,47 @@
+﻿<html>
+    <head>
+        <title>register</title>
+        <script>
+            var names = [];
+            var passs = [];
+            function checkusername() {
+                var a = document.getElementById('username').value;
+                if (a == "" || a == "undefined")
+                    return true;
+                else return false;
+            }
+            function checkpassword() {
+                var a = document.getElementById('password').value;
+                if (a == "" || a == "undefined")
+                    return true;
+                else return false;
+            }
+            function checkconfirm() {
+                var a = document.getElementById('password').value;
+                var b = document.getElementById('confirm').value;
+                if (a != b)
+                    return true;
+                else return false;
+            }
+            function check() {
+                if (checkusername())
+                    alert('Username Cannot Be Empty.');
+                else if (checkpassword())
+                    alert('Password Cannot Be Empty.');
+                else if (checkconfirm())
+                    alert('Password Not Same.');
+                else {
+                    
+                    alert('Successfully Registered.');
+                }
+            }
+        </script>
+    </head>
+    <body>
+        Username:<input id="username" type="text"><br>
+        Password:<input id="password" type="text"><br>
+        Confirm Password:<input id="confirm" type="text"><br>
+        <button onclick="check()">Register</button>
+        <a href="login.html"><button>Login</button></a>
+    </body>
+</html>
