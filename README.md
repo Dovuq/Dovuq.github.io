@@ -1,5 +1,7 @@
 [博客建造团队](https://www.github.com/dovuque/)
 
+[登录（测试功能）](https://dovuque.github.io/login.html/)
+
 [行为准则](https://dovuque.github.io/code_of_conduct/)
 
 [分数榜](https://dovuque.github.io/points/)
