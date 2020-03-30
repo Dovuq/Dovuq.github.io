@@ -1,37 +1,50 @@
-﻿<html>
+<html>
     <head>
         <title>register</title>
         <script>
-            var names = [];
-            var passs = [];
-            function checkusername() {
-                var a = document.getElementById('username').value;
-                if (a == "" || a == "undefined")
-                    return true;
+            var names=[];
+            var passs=[];
+            var n=0;
+            function checkusername()
+            {
+                var a=document.getElementById('username').value;
+                if (a=="") return true;
                 else return false;
             }
-            function checkpassword() {
-                var a = document.getElementById('password').value;
-                if (a == "" || a == "undefined")
-                    return true;
+            function existusername()
+            {
+                for (i=0;i<n;i++)
+                    if (document.getElementById('username').value==names[i])
+                        return true;
+                return false;
+            }
+            function checkpassword()
+            {
+                var a=document.getElementById('password').value;
+                if (a=="") return true;
                 else return false;
             }
-            function checkconfirm() {
-                var a = document.getElementById('password').value;
-                var b = document.getElementById('confirm').value;
-                if (a != b)
-                    return true;
+            function checkconfirm()
+            {
+                var a=document.getElementById('password').value;
+                var b=document.getElementById('confirm').value;
+                if (a!=b) return true;
                 else return false;
             }
-            function check() {
+            function check()
+            {
                 if (checkusername())
                     alert('Username Cannot Be Empty.');
+                else if (existusername())
+                    alert('Username Already Exist.');
                 else if (checkpassword())
                     alert('Password Cannot Be Empty.');
                 else if (checkconfirm())
                     alert('Password Not Same.');
-                else {
-                    
+                else
+                {
+                    names[n]=document.getElementById('username').value;
+                    passs[n]=document.getElementById('password').value;
                     alert('Successfully Registered.');
                 }
             }
