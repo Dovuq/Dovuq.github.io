@@ -1,0 +1,25 @@
+# Identities available
+identities:
+  - Out
+  - Warning
+  - Default
+  - Administrator
+  - Owner
+
+# Information of users.
+# These are not allowed to change by anybody except the owner.
+# If you change any of them, you'll have a very bad effect.
+information:
+  enable: true
+  user1:
+    name: Dovuq
+    identity: Owner
+    license: [CN.330204********6016,DQ.21000********0069]
+  user2041375993:
+    name: xrdrsp
+    identity: Administrator
+    license: CN.331102********0017
+  user2147483647:
+    name: Silly Computer
+    identity: Default
+    license: DQ.21007********0161
