@@ -2,13 +2,13 @@ Version 200621
 
 [博客建造团队](https://www.github.com/dovuque/)
 
-[登录（测试功能）](https://dovuque.github.io/login.html)
+[登录（测试功能）](/login.html)
 
-[行为准则](https://dovuque.github.io/code_of_conduct/)
+[行为准则](/code_of_conduct/)
 
-[分数榜](https://dovuque.github.io/points/)
+[分数榜](/points/)
 
-[关于](https://dovuque.github.io/about/)
+[关于](/about/)
 
 |文章编号|文章名称|
 |--:|:--|
