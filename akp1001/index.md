@@ -1,6 +1,6 @@
 # Different Ways to AK [luogu P1001](https://www.luogu.com.cn/problem/P1001)
 
-[Home](https://dovuque.github.io/)
+[Home](/)
 
 # 1. C
 
@@ -111,3 +111,6 @@ main begins:
     program ends with 0;
 main ends.
 ```
+
+# 6. Stack & Fast I/O & A lot of heads
+
