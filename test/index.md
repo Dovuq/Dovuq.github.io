@@ -1,6 +1,6 @@
 # test
 
-[Home](https://dovuque.github.io/)
+[Home](/)
 
 This is a test.
 
@@ -55,4 +55,4 @@ int main ()
 |A2|B2|C2|
 |LEFT|MIDDLE|RIGHT|
 
-[Back to top](https://dovuque.github.io/test/#top)
+[Back to top](#top)
