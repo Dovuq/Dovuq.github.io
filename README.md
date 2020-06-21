@@ -10,8 +10,9 @@
 
 |文章编号|文章名称|
 |--:|:--|
+|6|[Games](/games/)|
 |5|[Dingtalk 刷赞器](https://www.github.com/dovuq/dingtalk)|
 |4|[数学公式和表格](https://dovuq.github.com/post/数学公式和表格)|
-|3|[My Code Style for OI](https://dovuque.github.io/codestyle/)|
+|3|[My Code Style for OI](/codestyle/)|
 |2|[Mathematics Tools](https://unthique.github.io/mathematics/)|
-|1|[Different Ways to AK luogu P1001](https://dovuque.github.io/akp1001)|
+|1|[Different Ways to AK luogu P1001](/akp1001/)|
