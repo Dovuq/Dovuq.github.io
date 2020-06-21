@@ -1,6 +1,6 @@
 # 行为准则
 
-[Home](https://dovuque.github.io/)
+[Home](/)
 
 # 定义：
 
