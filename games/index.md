@@ -2,15 +2,15 @@ Games **For Windows**
 
 # 扫雷
 
-[link](https://dovuq.github.io/post/games/#扫雷source)
+[link](#扫雷source)
 
 # 2048
 
-[link](https://dovuq.github.io/post/games/#2048source)
+[link](#2048source)
 
 # 跳棋
 
-[link](https://dovuq.github.io/post/games/#跳棋source)
+[link](#跳棋source)
 
 <!--more-->
 
