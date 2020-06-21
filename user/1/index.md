@@ -2,4 +2,6 @@
 
 [Home](https://dovuque.github.io/)
 
-This is only a test.
+Welcome to visit my personal homepage!
+
+[![](https://www.hit-counts.com/counter.php?t=MTQ0NzYzMQ==)](https://www.hit-counts.com/counter.php?t=MTQ0NzYzMQ==)
