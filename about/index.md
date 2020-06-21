@@ -1,6 +1,6 @@
 # About
 
-[Home](https://dovuque.github.io)
+[Home](/)
 
 # dq-dq
 
