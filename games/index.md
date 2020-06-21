@@ -1,20 +1,22 @@
-Games **For Windows**
+# Games **For Windows**
 
-# 扫雷
+[Home](/)
+
+## 扫雷
 
 [link](#扫雷source)
 
-# 2048
+## 2048
 
 [link](#2048source)
 
-# 跳棋
+## 跳棋
 
 [link](#跳棋source)
 
 <!--more-->
 
-# 扫雷source
+## 扫雷source
 
 ```cpp
 #include <bits/stdc++.h>
@@ -214,7 +216,7 @@ int main ()
 }
 ```
 
-# 2048source
+## 2048source
 
 ```cpp
 #include <bits/stdc++.h>
@@ -539,7 +541,7 @@ int main ()
 }
 ```
 
-# 跳棋source
+## 跳棋source
 
 ```cpp
 #include <bits/stdc++.h>
