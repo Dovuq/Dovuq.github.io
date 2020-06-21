@@ -1,6 +1,6 @@
 # My Code Style for OI
 
-[Home](https://dovuque.github.io)
+[Home](/)
 
 # c++
 
