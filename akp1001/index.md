@@ -112,5 +112,91 @@ main begins:
 main ends.
 ```
 
-# 6. Stack & Fast I/O & A lot of heads
+# 6. Stack & Fast I/O & A lot of #includes and #defines
 
+```cpp
+#include <algorithm>
+#include <bitset>
+#include <cctype>
+#include <cmath>
+#include <complex>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+#include <ctime>
+#include <cwchar>
+#include <cwctype>
+#include <deque>
+#include <fstream>
+#include <iomanip>
+#include <iostream>
+#include <limits>
+#include <list>
+#include <map>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <string>
+#include <vector>
+#define dq deque
+#define e 2.71828182845904523536
+#define elif else if
+#define fo(i,a,b) for (int i=a;i<b;i++)
+#define inf 2.1e9
+#define inf64 9.2e18
+#define inff 1e309
+#define ll long long
+#define lll __int128
+#define loop while (1)
+#define maxs(a,b) a=max(a,b)
+#define mins(a,b) a=min(a,b)
+#define pi acos(-1)
+#define pq priority_queue
+#define rdz srand(time(0))
+#define rd rand()
+#define templ template <class T>
+#define usg unsigned
+using namespace std;
+void read (int& x)
+{
+	int flag=1;
+	char ch=getchar();
+	x=0;
+	while (ch<'0'||ch>'9') { if (ch=='-') flag=-1; ch=getchar(); }
+	while (ch>='0'&&ch<='9') x=x*10+ch-'0',ch=getchar();
+	x*=flag;
+}
+void print (int x)
+{
+	if (x<0) putchar('-'),print(-x);
+	elif (!x) putchar('0');
+	else { if (x/10) print(x/10); putchar(x%10+'0'); }
+}
+int a;
+stack<int> sta;
+int main ()
+{
+	fo(i,1,3)
+	{
+		read(a);
+		int flag=1;
+		if (a<0) flag=-1,a=-a;
+		int j=0;
+		while(a)
+		{
+			if(a&1) sta.push((j+1)*flag);
+			j++;
+			a>>=1;
+		}
+	}
+	while(!sta.empty())
+	{
+		int j=sta.top();
+		sta.pop();
+		if (j>0) a+=1<<(j-1);
+		else a-=1<<(-j-1);
+	}
+	print(a);
+	return 0;
+}
+```
