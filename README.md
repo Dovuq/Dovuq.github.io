@@ -1,3 +1,5 @@
+Version 2
+
 [博客建造团队](https://www.github.com/dovuque/)
 
 [登录（测试功能）](https://dovuque.github.io/login.html)
