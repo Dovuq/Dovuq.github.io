@@ -66,7 +66,7 @@ num. 1,000
 n. child
 
 ## coment (comentan, comentique, comentique, comentu)
-n. & v. comment
+n. & v. comment, commit
 
 # D
 
@@ -85,8 +85,8 @@ det. 10, 10x
 ## des
 num. 10
 
-## dez
-v. die (usually Pastino)
+## dez (/, dez, dez, /)
+v. die
 
 ## dictatit
 n. dictionary
