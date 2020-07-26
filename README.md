@@ -12,6 +12,7 @@ Version 200624
 
 |文章编号|文章名称|
 |--:|:--|
+|7|[xrdrsp's blogs](/xrdrsp_blogs/)|
 |6|[Games](/games/)|
 |5|[Dingtalk 刷赞器](https://www.github.com/dovuq/dingtalk)|
 |4|[数学公式和表格](https://dovuq.github.com/post/数学公式和表格)|
