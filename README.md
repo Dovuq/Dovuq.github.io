@@ -1,4 +1,4 @@
-Version 200624
+Version 200807
 
 [博客建造团队](https://www.github.com/dovuque/)
 
@@ -12,6 +12,7 @@ Version 200624
 
 |文章编号|文章名称|
 |--:|:--|
+|8|[物理&化学表](/phy_che_plot/)|
 |7|[xrdrsp's blogs](/xrdrsp_blogs/)|
 |6|[Games](/games/)|
 |5|[Dingtalk 刷赞器](https://www.github.com/dovuq/dingtalk)|
