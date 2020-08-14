@@ -1,6 +1,4 @@
-Version 200807
-
-[博客建造团队](https://www.github.com/dovuque/)
+Version 200814
 
 [登录（测试功能）](/login.html)
 
