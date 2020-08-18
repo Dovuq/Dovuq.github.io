@@ -16,5 +16,5 @@ Version 200818
 |5|[Dingtalk 刷赞器](https://www.github.com/dovuq/dingtalk)|
 |4|[数学公式和表格](https://dovuq.github.com/post/数学公式和表格)|
 |3|[My Code Style for OI](/codestyle/)|
-||~~Mathematics Tools~~ 此文章已被删除|
+|2|[Mathematics Tools](https://blog.xrdrsp.pw/2020/03/09/Mathematics-Tools/)|
 |1|[Different Ways to AK luogu P1001](/akp1001/)|
