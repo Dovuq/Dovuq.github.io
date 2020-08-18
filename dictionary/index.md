@@ -384,3 +384,40 @@ n. word
 
 ## zodique (zodicnan, zodique, zodique, zodiqu)
 v. shout (to/at)
+
+***
+
+# About the Pronunciation
+
+Recently, some people are asking me how to read those words. In fact, letters are pronounced regally except those are special noted or foreign words. Here are the pronunciations of each letter:
+
+|Letter|Pronun.|
+|a|a:|
+|b|b|
+|ce/ci|se/si|
+|ch|tʃ|
+|c|k|
+|d|d|
+|e|e|
+|f|f|
+|g/gu|g|
+|h|No pronun.|
+|i|i|
+|j|j|
+|l|l|
+|m|m|
+|n|n|
+|o|o|
+|p|p|
+|que(at the end)|k|
+|que/qui|ke/ki|
+|q|k|
+|r|r(usually trill)|
+|sh|ʃ|
+|s|s|
+|t|t|
+|u|u|
+|v|v|
+|x|ks|
+|y|i:|
+|z|z|
