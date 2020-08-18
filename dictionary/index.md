@@ -289,8 +289,6 @@ num. 7
 v. say, talk
 
 ## sex
-n. sex
-
 num. 6
 
 ## sieque (siequan, sieque, sieque, siequ)
