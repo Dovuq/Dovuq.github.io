@@ -203,6 +203,6 @@ int main ()
 
 # 7. Shortest
 
-```pascal
-var a,b:int64;begin read(a,b);write(a+b);end.
+```ruby
+p eval gets.tr' ',?+
 ```
