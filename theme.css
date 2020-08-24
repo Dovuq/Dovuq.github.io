@@ -1,1 +1,21 @@
+/*
+ * Theme Information:
+ *
+ * Name: Untitled_1
+ * Author: Dovuq
+ * Version: 1.0
+ */
 
+body
+{
+    background-color: #ffccff;
+    color: #000000;
+}
+a
+{
+    color: #000000;
+}
+.page-header
+{
+    text-align: center;
+}
