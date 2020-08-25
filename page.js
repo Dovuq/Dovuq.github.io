@@ -1,4 +1,3 @@
-const pagenum=2;
 var page=1;
 function load ()
 {
