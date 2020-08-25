@@ -9,23 +9,23 @@
 body
 {
     background-color: #ffccff;
-    color: black;
+    color: #000000;
     text-indent: 100px;
     padding: 100px;
 }
 a
 {
-    color: black;
+    color: #000000;
 }
 h1
 {
     text-align: center;
 }
-table
-{
-    border-collapse:collapse;
-}
 table,th,td
 {
-    border: 1px solid black;
+    border: 1px solid #000000;
+}
+table
+{
+    border-collapse: collapse;
 }
