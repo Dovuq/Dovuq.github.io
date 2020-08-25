@@ -3,19 +3,29 @@
  *
  * Name: Untitled_1
  * Author: Dovuq
- * Version: 1.0
+ * Version: test_1
  */
 
 body
 {
     background-color: #ffccff;
-    color: #000000;
+    color: black;
+    text-indent: 100px;
+    padding: 100px;
 }
 a
 {
-    color: #000000;
+    color: black;
 }
 h1
 {
     text-align: center;
+}
+table
+{
+    border-collapse:collapse;
+}
+table,th,td
+{
+    border: 1px solid black;
 }
