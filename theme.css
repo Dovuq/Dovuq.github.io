@@ -35,3 +35,9 @@ a.header,p.header
     color: #3399ff;
     font-size: 20px;
 }
+p.footer
+{
+    text-align: center;
+    color: #999966;
+    font-size: 12px;
+}
