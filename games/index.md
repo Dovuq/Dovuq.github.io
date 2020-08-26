@@ -388,7 +388,7 @@ void play ()
 			case 27:
 				return;
 			default:
-				printf ("%d ",sel);
+//				printf ("%d ",sel);
 				puts ("Wrong, try again.");
 			}
 			if (dir) break;
