@@ -2,6 +2,7 @@
     <head>
         <title>Dovuq's blog</title>
         <link rel="stylesheet" type="text/css" href="/theme.css">
+        <script src="/headerfooter.js"></script>
         <script>
             function turn ()
             {
@@ -10,16 +11,22 @@
                 //alert (link);
                 window.location.href=link;
             }
+            function load ()
+            {
+                headerfooter();
+            }
+            window.onload=load();
         </script>
     </head>
     <body>
+        <header id="header"></header>
         <h1>This is Dovuq's blog.</h1>
         <p>Version 200825</p>
         <p><a href="/code_of_conduct/">行为准则</a></p>
         <p><a href="/points/">分数榜</a></p>
         <table>
             <tr>
-                <th>文章编号</th><th>文章名称<th>
+                <th>文章编号</th><th>文章名称</th>
             </tr>
             <tr>
                 <td>8</td><td><a href="/phy_che_plot/">物理&amp;化学表</a></td>
@@ -48,7 +55,8 @@
         </table>
         <p>输入用户 id，自动跳转到 TA 的个人主页</p>
         <input type="text" id="uid"/>
-        <button onclick=turn()>转到</button>
+        <button onclick="turn()">转到</button>
         <p>觉得博客可以变得更好？在<a href="https://www.github.com/dovuque/dovuque.github.io/issues">这里</a>提 issues</p>
+        <footer id="footer"></footer>
     </body>
 </html>
