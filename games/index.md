@@ -224,12 +224,15 @@ int main ()
 #include <windows.h>
 using namespace std;
 char sel;
-string a[20],p[5][5];
-int b[100][5],n,m,d[5][5];
+string a[105],p[25][25];
+int b[505][3],n,m,d[25][25];
+int size,width;
 void setup0 ()
 {
-	n=11;
-	m=10;
+	n=19;
+	m=18;
+	size=4;
+	width=6;
 	a[0]="2";
 	a[1]="4";
 	a[2]="8";
@@ -241,35 +244,54 @@ void setup0 ()
 	a[8]="512";
 	a[9]="1024";
 	a[10]="2048";
-	b[0][0]=0, b[0][1]=0, b[0][2]=1;
-	b[1][0]=1, b[1][1]=1, b[1][2]=2;
-	b[2][0]=2, b[2][1]=2, b[2][2]=3;
-	b[3][0]=3, b[3][1]=3, b[3][2]=4;
-	b[4][0]=4, b[4][1]=4, b[4][2]=5;
-	b[5][0]=5, b[5][1]=5, b[5][2]=6;
-	b[6][0]=6, b[6][1]=6, b[6][2]=7;
-	b[7][0]=7, b[7][1]=7, b[7][2]=8;
-	b[8][0]=8, b[8][1]=8, b[8][2]=9;
-	b[9][0]=9, b[9][1]=9, b[9][2]=10;
-	for (int i=0;i<4;i++)
-		for (int j=0;j<4;j++)
+	a[11]="4096";
+	a[12]="8192";
+	a[13]="16384";
+	a[14]="32768";
+	a[15]="65536";
+	a[16]="131072";
+	a[17]="262144";
+	a[18]="524288";
+	for (int i=0;i<18;i++)
+		b[i][0]=b[i][1]=i, b[i][2]=i+1;
+	for (int i=0;i<size;i++)
+		for (int j=0;j<size;j++)
 		{
 			p[i][j]=" ";
 			d[i][j]=-1;
 		}
-	int x=rand()%4,y=rand()%4;
+	int x=rand()%size,y=rand()%size;
 	p[x][y]=a[0];
 	d[x][y]=0;
 	system ("cls");
 }
 void setup1 ()
 {
-	puts ("Input setup:");
+p:	puts ("Input setup, input -1 for information:");
 	scanf ("%d",&n);
+	if (n==-1)
+	{
+		puts ("");
+		puts ("Syntax of input:");
+		puts ("n s // n: number of diff blocks, s: size of border (s*s)");
+		puts ("a[0] // the smallest number, it can be string, but not too long");
+		puts ("a[1] // etc.");
+		puts ("......");
+		puts ("a[n-1] // if you reach this, you win");
+		puts ("x y z // when a[x] reaches a[y], they merge into a[z]");
+		puts ("x y z // etc.");
+		puts ("......");
+		puts ("-1 -1 -1 // symbol of end of input");
+		puts ("");
+		goto p;
+	}
+	scanf ("%d",&size);
+	width=0;
 	for (int i=0;i<n;i++)
 	{
 		printf ("%d ",i);
 		cin>>a[i];
+		width=max(width,(int)a[i].length());
 	}
 	for (int i=0;;i++)
 	{
@@ -280,64 +302,93 @@ void setup1 ()
 			break;
 		}
 	}
-	for (int i=0;i<4;i++)
-		for (int j=0;j<4;j++)
+	for (int i=0;i<size;i++)
+		for (int j=0;j<size;j++)
 		{
 			p[i][j]=" ";
 			d[i][j]=-1;
 		}
-	int x=rand()%4,y=rand()%4;
+	int x=rand()%size,y=rand()%size;
 	p[x][y]=a[0];
 	d[x][y]=0;
 	system ("cls");
+}
+void print ()
+{
+	puts ("¡ü¡ý¡û¡ú: Move");
+	puts ("Esc: Main menu");
+	for (int k=0;k<size;k++)
+	{
+		for (int i=0;i<size;i++)
+		{
+			putchar (' ');
+			for (int j=0;j<width+2;j++)
+				putchar ('-');
+		}
+		putchar (10);
+		for (int i=0;i<size;i++)
+		{
+			putchar ('|');
+			for (int j=0;j<width+2;j++)
+				putchar (' ');
+		}
+		putchar ('|');
+		putchar (10);
+		for (int i=0;i<size;i++)
+			cout<<"| "<<setw(width)<<p[k][i]<<" ";
+		putchar ('|');
+		putchar (10);
+		for (int i=0;i<size;i++)
+		{
+			putchar ('|');
+			for (int j=0;j<width+2;j++)
+				putchar (' ');
+		}
+		putchar ('|');
+		putchar (10);
+	}
+	for (int i=0;i<size;i++)
+	{
+		putchar (' ');
+		for (int j=0;j<width+2;j++)
+			putchar ('-');
+	}
+	putchar (10);
 }
 void play ()
 {
 	while (1)
 	{
-		puts ("W. Move up");
-		puts ("A. Move left");
-		puts ("S. Move down");
-		puts ("D. Move right");
-		puts ("M. Main menu");
-		puts (" ------- ------- ------- -------");
-		puts ("|       |       |       |       |");
-		printf ("| %5s | %5s | %5s | %5s |\n",p[0][0].c_str(),p[0][1].c_str(),p[0][2].c_str(),p[0][3].c_str());
-		puts ("|       |       |       |       |");
-		puts (" -------+-------+-------+-------");
-		puts ("|       |       |       |       |");
-		printf ("| %5s | %5s | %5s | %5s |\n",p[1][0].c_str(),p[1][1].c_str(),p[1][2].c_str(),p[1][3].c_str());
-		puts ("|       |       |       |       |");
-		puts (" -------+-------+-------+-------");
-		puts ("|       |       |       |       |");
-		printf ("| %5s | %5s | %5s | %5s |\n",p[2][0].c_str(),p[2][1].c_str(),p[2][2].c_str(),p[2][3].c_str());
-		puts ("|       |       |       |       |");
-		puts (" -------+-------+-------+-------");
-		puts ("|       |       |       |       |");
-		printf ("| %5s | %5s | %5s | %5s |\n",p[3][0].c_str(),p[3][1].c_str(),p[3][2].c_str(),p[3][3].c_str());
-		puts ("|       |       |       |       |");
-		puts (" ------- ------- ------- -------");
+		print ();
 		int dir=0;
 		while (1)
 		{
 			sel=getch();
 			switch (sel)
 			{
-			case 'w':
-				dir=1;
+			case -32:
+				switch (getch())
+				{
+				case 72:
+					dir=1;
+					break;
+				case 75:
+					dir=2;
+					break;
+				case 80:
+					dir=3;
+					break;
+				case 77:
+					dir=4;
+					break;
+				default:
+					puts ("Wrong, try again.");
+				}
 				break;
-			case 'a':
-				dir=2;
-				break;
-			case 's':
-				dir=3;
-				break;
-			case 'd':
-				dir=4;
-				break;
-			case 'm':
+			case 27:
 				return;
 			default:
+				printf ("%d ",sel);
 				puts ("Wrong, try again.");
 			}
 			if (dir) break;
@@ -347,8 +398,8 @@ void play ()
 		switch (dir)
 		{
 		case 1:
-			for (int j=0;j<4;j++)
-				for (int i=0;i<4;)
+			for (int j=0;j<size;j++)
+				for (int i=0;i<size;)
 				{
 					if (i==0 || p[i][j]==" ")
 					{
@@ -383,8 +434,8 @@ void play ()
 				}
 			break;
 		case 2:
-			for (int i=0;i<4;i++)
-				for (int j=0;j<4;)
+			for (int i=0;i<size;i++)
+				for (int j=0;j<size;)
 				{
 					if (j==0 || p[i][j]==" ")
 					{
@@ -419,10 +470,10 @@ void play ()
 				}
 			break;
 		case 3:
-			for (int j=0;j<4;j++)
-				for (int i=3;i>=0;)
+			for (int j=0;j<size;j++)
+				for (int i=size-1;i>=0;)
 				{
-					if (i==3 || p[i][j]==" ")
+					if (i==size-1 || p[i][j]==" ")
 					{
 						i--;
 						continue;
@@ -455,10 +506,10 @@ void play ()
 				}
 			break;
 		case 4:
-			for (int i=0;i<4;i++)
-				for (int j=3;j>=0;)
+			for (int i=0;i<size;i++)
+				for (int j=size-1;j>=0;)
 				{
-					if (j==3 || p[i][j]==" ")
+					if (j==size-1 || p[i][j]==" ")
 					{
 						j--;
 						continue;
@@ -492,14 +543,14 @@ void play ()
 		}
 		for (int i=0;;i++)
 		{
-			int x=rand()%4,y=rand()%4;
+			int x=rand()%size,y=rand()%size;
 			if (p[x][y]==" ")
 			{
 				p[x][y]=a[0];
 				d[x][y]=0;
 				break;
 			}
-			if (i>=1000000)
+			if (i>=size*size*100)
 			{
 				puts ("You lose!");
 				return;
