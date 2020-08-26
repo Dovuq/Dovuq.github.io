@@ -13,7 +13,8 @@
             }
             function load ()
             {
-                headerfooter();
+                $("#header").load("/header.html");
+                $("#footer").load("/footer.html");
             }
             window.onload=load();
         </script>
