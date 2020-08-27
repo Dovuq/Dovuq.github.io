@@ -2,8 +2,8 @@
  * Theme Information:
  *
  * Name: Untitled_1
- * Author: Dovuq
- * Version: test_1
+ * Author: Dovuq & xrdrsp
+ * Version: 2.1
  */
 
 body
@@ -44,4 +44,9 @@ p.footer
 p.error
 {
     color: #ff0000;
+}
+pre
+{
+    background-color: #eeeeee;
+    border: 1px solid #000000;
 }
