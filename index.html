@@ -7,12 +7,10 @@
             function turn ()
             {
                 var id=document.getElementById ("uid").value;
-                var tester=new RegExp("0|[1-9][0-9]{0,9}$");
-                if (!tester.test(id))
+                if (!new RegExp("^[0-9]{1,9}$").test(id);)
                 {
                     var s=document.getElementById ("errid");
                     s.innerHTML="*输入有误。只能输入 1-9 位的整数！";
-					return;
                 }
                 var link="/user/"+id;
                 //alert (link);
@@ -31,7 +29,7 @@
     <body>
         <header id="header"></header>
         <h1>This is Dovuq's blog.</h1>
-        <p>Version 200827</p>
+        <p>Version 200826</p>
         <p><a href="/code_of_conduct/">行为准则</a></p>
         <p><a href="/points/">分数榜</a></p>
         <table>
