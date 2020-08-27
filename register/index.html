@@ -1,9 +1,8 @@
 <html>
     <head>
         <title>register</title>
+        <link rel="stylesheet" type="text/css" href="/theme.css">
         <script>
-            var names=[];
-            var passs=[];
             var n=0;
             function checkusername()
             {
@@ -13,9 +12,7 @@
             }
             function existusername()
             {
-                for (i=0;i<n;i++)
-                    if (document.getElementById('username').value==names[i])
-                        return true;
+                //check
                 return false;
             }
             function checkpassword()
@@ -43,16 +40,17 @@
                     alert('Password Not Same.');
                 else
                 {
-                    names[n]=document.getElementById('username').value;
-                    passs[n]=document.getElementById('password').value;
+                    //register
                     alert('Successfully Registered.');
+                    window.location.href="/";
                 }
             }
         </script>
     </head>
     <body>
-        Username:<input id="username" type="text"><br>
-        Password:<input id="password" type="text"><br>
+        <h1>register</h1>
+        <p>Username:<input id="username" type="text"><br></p>
+        <p>Password:<input id="password" type="text"><br></p>
         Confirm Password:<input id="confirm" type="text"><br>
         <button onclick="check()">Register</button>
         <a href="login.html"><button>Login</button></a>
