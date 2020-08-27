@@ -41,3 +41,7 @@ p.footer
     color: #999966;
     font-size: 12px;
 }
+p.error
+{
+    color: #ff0000;
+}
