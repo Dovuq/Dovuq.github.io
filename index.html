@@ -7,10 +7,10 @@
             function turn ()
             {
                 var id=document.getElementById ("uid").value;
-                if (!new RegExp("^[0-9]{1,9}$").test(id))
+                if (!new RegExp("^[0-9]{1,10}$").test(id))
                 {
                     var s=document.getElementById ("errid");
-                    s.innerHTML="*输入有误。只能输入 1-9 位的整数！";
+                    s.innerHTML="*输入有误。只能输入 1-10 位的整数！";
                     return;
                 }
                 var link="/user/"+id;
