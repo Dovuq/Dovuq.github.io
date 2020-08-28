@@ -11,7 +11,6 @@ body
     background-color: #ffffff;
     color: #000000;
     padding: 100px;
-    padding-right: 100px;
 }
 a
 {
@@ -29,7 +28,7 @@ table
 {
     border-collapse: collapse;
 }
-a.header,p.header
+p.header
 {
     text-align: center;
     color: #3399ff;
@@ -39,7 +38,7 @@ p.footer
 {
     text-align: center;
     color: #999966;
-    font-size: 12px;
+    font-size: 16px;
 }
 p.error
 {

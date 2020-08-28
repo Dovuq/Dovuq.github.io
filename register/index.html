@@ -4,22 +4,10 @@
         <link rel="stylesheet" type="text/css" href="/theme.css">
         <script>
             var n=0;
-            function checkusername()
-            {
-                var a=document.getElementById('username').value;
-                if (a=="") return true;
-                else return false;
-            }
             function existusername()
             {
                 //check
                 return false;
-            }
-            function checkpassword()
-            {
-                var a=document.getElementById('password').value;
-                if (a=="") return true;
-                else return false;
             }
             function checkconfirm()
             {
@@ -30,12 +18,8 @@
             }
             function check()
             {
-                if (checkusername())
-                    alert('Username Cannot Be Empty.');
-                else if (existusername())
+                if (existusername())
                     alert('Username Already Exist.');
-                else if (checkpassword())
-                    alert('Password Cannot Be Empty.');
                 else if (checkconfirm())
                     alert('Password Not Same.');
                 else
@@ -49,9 +33,9 @@
     </head>
     <body>
         <h1>register</h1>
-        <p>Username:<input id="username" type="text"><br></p>
-        <p>Password:<input id="password" type="text"><br></p>
-        Confirm Password:<input id="confirm" type="text"><br>
+        <p>Username:<input id="username" type="text" required></p>
+        <p>Password:<input id="password" type="password" required></p>
+        <p>Confirm Password:<input id="confirm" type="password" required></p>
         <button onclick="check()">Register</button>
         <a href="login.html"><button>Login</button></a>
     </body>

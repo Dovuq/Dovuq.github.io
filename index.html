@@ -2,7 +2,6 @@
     <head>
         <title>Dovuq's blog</title>
         <link rel="stylesheet" type="text/css" href="/theme.css">
-        <!--<script src="/jquery.min.js"></script>-->
         <script>
             function turn ()
             {
@@ -14,23 +13,14 @@
                     return;
                 }
                 var link="/user/"+id;
-                //alert (link);
                 window.location.href=link;
             }
-            /*
-            function load ()
-            {
-                $("#header").load("/header.html");
-                $("#footer").load("/footer.html");
-            }
-            window.onload=load();
-            */
         </script>
     </head>
     <body>
-        <header id="header"></header>
+        <iframe height=40px width=100% frameborder=0 scrolling=no src="/header.html"></iframe>
         <h1>This is Dovuq's blog.</h1>
-        <p>Version 16.1</p>
+        <p>Version 16.2</p>
         <p><a href="/code_of_conduct/">行为准则</a></p>
         <p><a href="/points/">分数榜</a></p>
         <table>
@@ -67,6 +57,6 @@
         <button onclick="turn()">转到</button>
         <p class="error" id="errid"></p>
         <p>觉得博客可以变得更好？在<a href="https://www.github.com/dovuque/dovuque.github.io/issues">这里</a>提 issues</p>
-        <footer id="footer"></footer>
+        <iframe height=150px width=100% frameborder=0 scrolling=no src="/footer.html"></iframe>
     </body>
 </html>
