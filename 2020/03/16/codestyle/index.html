@@ -1,0 +1,122 @@
+<html>
+    <head>
+        <title>My Code Style for OI</title>
+        <link rel="stylesheet" type="text/css" href="/theme.css">
+    </head>
+    <body>
+        <iframe height=40px width=100% frameborder=0 scrolling=no src="/header.html"></iframe>
+        <h1>My Code Style for OI</h1>
+        <p>建议使用例子：</p>
+        <pre><code>#include &lt;bits/stdc++.h&gt;
+using namespace std;
+struct bigint
+{
+    int size,num[5005];
+    bigint()
+    {
+        size=0;
+        memset (num,0,sizeof(num));
+    }
+};
+int n;
+bigint ans,a[2025];
+bigint cal (bigint x,bigint y)
+{
+    if (x.size&lt;y.size) swap(x,y);
+    bigint c;
+    c.size=x.size;
+    int d=0;
+    for (int i=0;i&lt;x.size;i++)
+    {
+        c.num[i]+=x.num[i]+y.num[i]+d;
+        d=(c.num[i]&lt;7?0:(c.num[i]&lt;14?1:2));
+        c.num[i]%=10;
+    }
+    if (d) c.num[c.size++]=d;
+    return c;
+}
+istream&amp; operator&gt;&gt; (istream &amp;is,bigint &amp;x)
+{
+    int n,i=0;
+    is&gt;&gt;n;
+    for (;n;i++)
+    {
+        x.num[i]=n%10;
+        n/=10;
+    }
+    x.size=i;
+    return is;
+}
+ostream&amp; operator&lt;&lt; (ostream &amp;os,bigint x)
+{
+    for (int i=x.size-1;i&gt;=0;i--)
+        os&lt;&lt;x.num[i];
+    return os;
+}
+int main ()
+{
+    scanf (&quot;%d&quot;,&amp;n);
+    for (int i=0;i&lt;n;i++)
+        cin&gt;&gt;a[i];
+    ans=a[0];
+    for (int i=1;i&lt;n;i++)
+        ans=cal(ans,a[i]);
+    cout&lt;&lt;ans;
+    return 0;
+}</code></pre>
+        <p>不建议使用例子：</p>
+        <pre><code># include&lt;bits/stdc++.h&gt;
+using namespace std ;
+struct bigint{
+    int size;
+    int num[5005];
+    bigint() { size=0; memset (num,0,sizeof(num)); }
+};
+int n;
+bigint ans , a[2025];
+bigint cal (bigint x , bigint y) {
+    if (x.size &lt; y.size) swap(x,y);
+    bigint c;
+    c.size =x.size;
+    int d=0;
+    for( int i = 0 ; i &lt; x . size ; ++ i )
+    {
+        c.num[i]+=x.num[i]+y.num[i]+d;
+        d = c.num[i] &lt; 7 ? 0 : c.num[i] &lt; 14 ? 1 : 2 ;
+        c.num[i]%=10 ;
+    }
+    if (d) c.num[c.size++]=d;
+    return c;
+}
+istream&amp; operator&gt;&gt; (istream &amp;is,bigint &amp;x)
+{
+  int n,i=0;
+  is&gt;&gt;n;
+  for (;n;i++)
+  {
+    x.num[i]=n%10;
+    n/=10;
+  }
+  x.size=i;
+  return is;
+}
+ostream&amp; operator&lt;&lt; (ostream &amp;os,bigint x)
+{
+        for (int i=x.size-1;i&gt;=0;i--)
+                os&lt;&lt;x.num[i];
+        return os;
+}
+int main ()
+{
+    cin&gt;&gt;n;
+    for (int i=1;i&lt;=n;i++)
+        cin&gt;&gt;a[i];
+    ans = a [ 1 ] ;
+    for (int i=2;i&lt;=n;i++)
+        ans=cal(ans,a[i]);
+    cout&lt;&lt;ans;
+    return 0;
+}</code></pre>
+        <iframe height=150px width=100% frameborder=0 scrolling=no src="/footer.html"></iframe>
+    </body>
+</html>
