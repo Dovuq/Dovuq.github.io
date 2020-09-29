@@ -1,0 +1,178 @@
+<html>
+	<head>
+		<title>Minesweeper</title>
+		<script>
+			var ans=[],n,m,bnum,c=0;
+			var dx=[-1,-1,-1,0,0,1,1,1];
+			var dy=[-1,0,1,-1,1,-1,0,1];
+			function _onload ()
+			{
+				for (var i=0;i<105;i++)
+					ans[i]=new Array();
+			}
+			function reset ()
+			{
+				var flag=0;
+				n=parseInt(document.getElementById("rownum").value);
+				m=parseInt(document.getElementById("colnum").value);
+				bnum=parseInt(document.getElementById("minnum").value);
+				if (n<3 || n>50)
+				{
+					var s=document.getElementById("rowerr");
+					s.innerHTML="*Row number should be between 3 and 50!";
+					flag=1;
+				}
+				if (m<3 || m>50)
+				{
+					var s=document.getElementById("colerr");
+					s.innerHTML="*Column number should be between 3 and 50!";
+					flag=1;
+				}
+				var minmax=parseInt(n*m*0.85);
+				if (bnum<1 || bnum>minmax)
+				{
+					var s=document.getElementById("minerr");
+					s.innerHTML="*Mine number should be between 1 and "+minmax+"!";
+					flag=1;
+				}
+                if (flag) return;
+				document.getElementById("status").style.display="none";
+				document.getElementById("playground").style.display="";
+                var s="";
+				for (var i=0;i<n;i++)
+				{
+					s+="<tr>";
+					for (var j=0;j<m;j++)
+						s+="<td width=50px height=50px id=\"item_"+i+"_"+j+"\" onclick=\"go("+i+","+j+")\" style=\"background-color: #cccccc;\">&nbsp;</td>";
+					s+="</tr>";
+                }
+				var t=document.getElementById("main");
+                t.innerHTML=s;
+                for (var i=0;i<n;i++)
+                    for (var j=0;j<m;j++)
+                        ans[i][j]=' ';
+                for (var i=0;i<bnum;i++)
+                    while (1)
+                    {
+                        var x=Math.floor(Math.random()*n);
+                        var y=Math.floor(Math.random()*m);
+                        if (ans[x][y]=='*') continue;
+                        ans[x][y]='*';
+                        for (var j=0;j<8;j++)
+                        {
+                            var xx=x+dx[j];
+                            var yy=y+dy[j];6
+                            if (xx<0||xx>=n||yy<0||yy>=m) continue;
+                            switch (ans[xx][yy])
+                            {
+                            case ' ':
+                                ans[xx][yy]='1';
+                                break;
+                            case '*':
+                                break;
+                            default:
+                                ans[xx][yy]++;
+                            }
+                        }
+                        break;
+                    }
+            }
+            function dfs (i,j)
+            {
+                //alert (i+","+j+"   ---   "+ans[i][j]);
+                var s=document.getElementById ("item_"+i+"_"+j);
+                s.style.backgroundColor="#ffffff";
+                s.innerHTML=ans[i][j];
+                for (var k=0;k<8;k++)
+                {
+                    var x=i+dx[k];
+                    var y=j+dy[k];
+                    if (x<0 || x>=n || y<0 || y>=m) continue;
+                    if (ans[x][y]==' ' && document.getElementById ("item_"+x+"_"+y).innerHTML=="&nbsp;")
+                        dfs (x,y);
+                    else
+                    {
+                        s=document.getElementById ("item_"+x+"_"+y);
+                        s.style.backgroundColor="#ffffff";
+                        s.innerHTML=ans[x][y];
+                    }
+                }
+            }
+            function go (i,j)
+            {
+                var s=document.getElementById ("item_"+i+"_"+j);
+                if (c)
+                {
+                    if (s.innerHTML=="&nbsp;")
+                        s.innerHTML="!";
+                    else if (s.innerHTML=="!")
+                        s.innerHTML="&nbsp;";
+                }
+                else
+                {
+                    if (ans[i][j]=='*')
+                    {
+                        for (var x=0;x<n;x++)
+                            for (var y=0;y<m;y++)
+                            {
+                                s=document.getElementById ("item_"+x+"_"+y);
+                                s.style.backgroundColor="#ffffff";
+                                s.innerHTML=ans[x][y];
+                            }
+                    }
+                    else if (ans[i][j]==' ')
+                        dfs(i,j);
+                    else
+                    {
+                        s.style.backgroundColor="#ffffff";
+                        s.innerHTML=ans[i][j];
+                    }
+                }
+            }
+            function change ()
+            {
+                c=1-c;
+                var s=document.getElementById ("button");
+                if (c) s.innerHTML="Marking (click to change to clicking)";
+                else s.innerHTML="Clicking (click to change to marking)";
+            }
+			window.onload=_onload();
+		</script>
+		<style>
+			body
+			{
+			    background-color: #ffffff;
+			    color: #000000;
+			    padding: 100px;
+			}
+			p.error
+			{
+				color: #ff0000;
+			}
+			table,th,td
+			{
+			    border: 1px solid #000000;
+                font-size: 24px;
+			}
+			table
+			{
+			    border-collapse: collapse;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="status">
+			Input row number:<input id="rownum"></input><br>
+			<p class="error" id="rowerr"></p>
+			Input column number:<input id="colnum"></input><br>
+			<p class="error" id="colerr"></p>
+			Input mine number:<input id="minnum"></input><br>
+			<p class="error" id="minerr"></p>
+			<button onclick="reset()">submit</button>
+		</div>
+		<div id="playground" style="display: none">
+            <table id="main"></table>
+            <button id="button" onclick="change()">Clicking (click to change to marking)</button>
+		</div>
+	</body>
+</html>
