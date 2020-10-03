@@ -18,7 +18,7 @@ void dfs (int x,int y) // 根据题目需要可以更改返回类型或增加参数等
         int xx=x+dx[k];
         int yy=y+dy[k];
         if (xx>=0 && xx<n && yy>=0 && yy<n
-            && !visit[xx][yy] /*&& 题目规定的要求*/)
+            && mp[xx][yy]=='.' && !visit[xx][yy] /*&& 题目规定的要求*/)
         {
             dfs (xx,yy);
             // 这里其实也可以进行一些操作
