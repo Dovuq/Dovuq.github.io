@@ -1,0 +1,267 @@
+<html>
+    <head>
+        <title>Untitled</title>
+        <script>
+            var ans=[],n,m,player=0,homedir=0,mirrordir=0,p=0;
+            function _onload ()
+            {
+                for (var i=0;i<55;i++)
+                    ans[i]=new Array();
+            }
+            function color ()
+            {
+                if (player) return "#0000ff";
+                else return "#ff0000";
+            }
+            function reset ()
+            {
+                var flag=0;
+                n=parseInt(document.getElementById("rownum").value);
+                m=parseInt(document.getElementById("colnum").value);
+                if (n<7 || n>50)
+                {
+                    var s=document.getElementById("rowerr");
+                    s.innerHTML="*Row number should be between 7 and 50!";
+                    flag=1;
+                }
+                if (m<7 || m>50)
+                {
+                    var s=document.getElementById("colerr");
+                    s.innerHTML="*Column number should be between 7 and 50!";
+                    flag=1;
+                }
+                if (flag) return;
+                document.getElementById("status").style.display="none";
+                document.getElementById("player").style.display="";
+                document.getElementById("playground").style.display="";
+                document.getElementById("sethome").style.display="";
+                var s="";
+                for (var i=0;i<n;i++)
+                {
+                    s+="<tr>";
+                    for (var j=0;j<m;j++)
+                        s+="<td id=\"item_"+i+"_"+j+"\" onclick=\"go("+i+","+j+")\">&nbsp;</td>";
+                    s+="</tr>";
+                }
+                var t=document.getElementById("main");
+                t.innerHTML=s;
+                document.getElementById("item_1_1").class="slash";
+            }
+            function go (x,y)
+            {
+                if (p)
+                {
+                    var s=document.getElementById("mirrorerr");
+                    if (mirrordir==0)
+                    {
+                        s.innerHTML="*Mirror direction isn't selected!";
+                        return;
+                    }
+                    s.innerHTML="";
+                    s=document.getElementById("item_"+x+"_"+y);
+                    switch (mirrordir)
+                    {
+                    case 1:
+                        s.innerHTML="<div class=\"slash2\" style=\"background-color: "+color()+"\"></div>&nbsp;";
+                        break;
+                    case 2:
+                        s.innerHTML="<div class=\"slash1\" style=\"background-color: "+color()+"\"></div>&nbsp;";
+                        break;
+                    case 3:
+                        if (x>0)
+                        {
+                            document.getElementById("item_"+(x-1)+"_"+y).style.borderBottomColor=color();
+                            document.getElementById("item_"+(x-1)+"_"+y).style.borderBottomWidth=3;
+                        }
+                        else
+                        {
+                            s.style.borderTopColor=color();
+                            s.style.borderTopWidth=3;
+                        }
+                        break;
+                    case 4:
+                        s.style.borderBottomColor=color();
+                        s.style.borderBottomWidth=3;
+                        break;
+                    case 5:
+                        if (y>0)
+                        {
+                            document.getElementById("item_"+x+"_"+(y-1)).style.borderRightColor=color();
+                            document.getElementById("item_"+x+"_"+(y-1)).style.borderRightWidth=3;
+                        }
+                        else
+                        {
+                            s.style.borderLeftColor=color();
+                            s.style.borderLeftWidth=3;
+                        }
+                        break;
+                    case 6:
+                        s.style.borderRightColor=color();
+                        s.style.borderRightWidth=3;
+                    }
+                    s=document.getElementsByName("mirrordir");
+                    for (var i=0;i<s.length;i++)
+                        s[i].checked="";
+                    mirrordir=0;
+                    if (player)
+                    {
+                        player=0;
+                        document.getElementById("player2").innerHTML="red";
+                    }
+                    else
+                    {
+                        player=1;
+                        document.getElementById("player2").innerHTML="blue";
+                    }
+                }
+                else
+                {
+                    var s=document.getElementById("homerr");
+                    if (homedir==0)
+                    {
+                        s.innerHTML="*Home direction isn't selected!";
+                        return;
+                    }
+                    s.innerHTML="";
+                    s=document.getElementById("item_"+x+"_"+y);
+                    s.innerHTML="&nbsp;.&nbsp;";
+                    if (homedir!=1)
+                    {
+                        if (x>0)
+                        {
+                            document.getElementById("item_"+(x-1)+"_"+y).style.borderBottomColor=color();
+                            document.getElementById("item_"+(x-1)+"_"+y).style.borderBottomWidth=3;
+                        }
+                        else
+                        {
+                            s.style.borderTopColor=color();
+                            s.style.borderTopWidth=3;
+                        }
+                    }
+                    if (homedir!=2)
+                    {
+                        s.style.borderBottomColor=color();
+                        s.style.borderBottomWidth=3;
+                    }
+                    if (homedir!=3)
+                    {
+                        if (y>0)
+                        {
+                            document.getElementById("item_"+x+"_"+(y-1)).style.borderRightColor=color();
+                            document.getElementById("item_"+x+"_"+(y-1)).style.borderRightWidth=3;
+                        }
+                        else
+                        {
+                            s.style.borderLeftColor=color();
+                            s.style.borderLeftWidth=3;
+                        }
+                    }
+                    if (homedir!=4)
+                    {
+                        s.style.borderRightColor=color();
+                        s.style.borderRightWidth=3;
+                    }
+                    s=document.getElementsByName("homedir");
+                    for (var i=0;i<s.length;i++)
+                        s[i].checked="";
+                    homedir=0;
+                    if (player)
+                    {
+                        player=0;
+                        document.getElementById("player2").innerHTML="red";
+                        document.getElementById("sethome").style.display="none";
+                        document.getElementById("setmirror").style.display="";
+                        p=1;
+                    }
+                    else
+                    {
+                        player=1;
+                        document.getElementById("player2").innerHTML="blue";
+                    }
+                }
+            }
+            window.onload=_onload();
+        </script>
+        <style>
+            body
+            {
+                background-color: #ffffff;
+                color: #000000;
+                padding: 100px;
+            }
+            p.error
+            {
+                color: #ff0000;
+            }
+            table,th,td
+            {
+                border: 1px solid #333333;
+            }
+            table
+            {
+                border-collapse: collapse;
+            }
+            td
+            {
+                width: 20px;
+                height: 20px;
+                padding: 0px;
+            }
+            div.slash1
+            {
+                position: absolute;
+                width: 28.28px;
+                height: 3px;
+                transform: rotate(45deg);
+                transform-origin: 0% 0%;
+            }
+            div.slash2
+            {
+                position: absolute;
+                width: 28.28px;
+                height: 3px;
+                transform: translate(0px,20px) rotate(-45deg);
+                transform-origin: 0% 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="status">
+            Input row number:<input id="rownum"></input><br>
+            <p class="error" id="rowerr"></p>
+            Input column number:<input id="colnum"></input><br>
+            <p class="error" id="colerr"></p>
+            <button onclick="reset()">submit</button>
+        </div>
+        <div id="player" style="display: none">
+            <p>Now it is <span id="player2">red</span> one's turn.</p>
+        </div>
+        <div id="playground" style="display: none">
+            <table id="main"></table>
+        </div>
+        <div id="sethome" style="display: none">
+            <p>Set home direction</p>
+            <p>
+                <input type="radio" name="homedir" onclick="homedir=1">Up
+                <input type="radio" name="homedir" onclick="homedir=2">Down
+                <input type="radio" name="homedir" onclick="homedir=3">Left
+                <input type="radio" name="homedir" onclick="homedir=4">Right
+            </p>
+            <p>Click the location after selected.</p>
+            <p class="error" id="homerr"></p>
+        </div>
+        <div id="setmirror" style="display: none">
+            <p>Set mirror direction</p>
+            <p>
+                <input type="radio" name="mirrordir" onclick="mirrordir=1">"/"
+                <input type="radio" name="mirrordir" onclick="mirrordir=2">"\"
+                <input type="radio" name="mirrordir" onclick="mirrordir=3">"-" at the top
+                <input type="radio" name="mirrordir" onclick="mirrordir=4">"-" at the bottom
+                <input type="radio" name="mirrordir" onclick="mirrordir=5">"|" on the left
+                <input type="radio" name="mirrordir" onclick="mirrordir=6">"|" on the right
+            </p>
+            <p>Click the location after selected.</p>
+            <p class="error" id="mirrorerr"></p>
+        </div>
+    </body>
+</html>
