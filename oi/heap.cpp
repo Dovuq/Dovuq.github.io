@@ -1,9 +1,4 @@
-// 堆
-inline bool cmp (int a,int b)
-{
-    // 如果 a 应该成为 b 的父节点，返回 true，否则返回 false
-    // 时间复杂度一般为 O(1)
-}
+// 堆，以最小堆为例
 struct HEAP
 {
     int val[size],n;
@@ -12,8 +7,8 @@ struct HEAP
     void add (int x)
     {
         val[++n]=x;
-        for (int m=n;m>1 && cmp(val[m],val[m/2]);m/=2)
-            swap (val[m],val[m/2]);
+        for (int m=n;m>1 && val[m]<val[m>>1];m>>=1)
+            swap (val[m],val[m>>1]);
     }
 
     // 返回树根的数据，时间复杂度 O(1)
@@ -28,12 +23,12 @@ struct HEAP
         swap (val[1],val[n]);
         n--;
         int m=1,t;
-        while (m*2<=n)
+        while ((m<<1)<=n)
         {
-            if (m*2+1<=n && cmp(val[m*2+1],val[m*2]))
-                t=m*2+1;
-            else t=m*2;
-            if (cmp(val[m],val[t])) break;
+            if ((m<<1|1)<=n && val[m<<1|1]<val[m<<1])
+                t=m<<1|1;
+            else t=m<<1;
+            if (val[m]<val[t]) break;
             swap (val[m],val[t]);
             m=t;
         }
