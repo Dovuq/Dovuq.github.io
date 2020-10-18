@@ -4,7 +4,7 @@ int head[size],next[size],to[size],edgenum;
 // 注意！如果使用了万能头文件，在 next[] 上会编译错误，原因是重复名称。next 这个名字在 STL 中已经存在，请换一个名字。
 void addedge (int u,int v/*,int w*/) // 如果是带权图就加上 w
 {
-    next[edgenum]=head[u];
+    next[++edgenum]=head[u];
     head[u]=edgenum;
     to[edgenum]=v;
     // val[edgenum]=w; // 同上
