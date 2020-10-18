@@ -17,12 +17,7 @@
                 var link="/user/"+id;
                 window.location.href=link;
             }
-            function test ()
-            {
-                Ajax('theme.css',function(str){alert(str);},function(){alert('失败了');});
-
-            }
-            function Ajax (url,fnSucc,fnFaild)
+            function getfile (url,fnSucc,fnFaild)
             {
                 var oAjax=new XMLHttpRequest();
                 jQuery.support.cors=true;
@@ -44,7 +39,7 @@
     <body>
         <iframe height=40px width=100% frameborder=0 scrolling=no src="/header.html"></iframe>
         <h1>This is Dovuq's blog.</h1>
-        <p>Version 19.3</p>
+        <p>Version 19.5</p>
         <p><a href="/code_of_conduct/">行为准则</a></p>
         <p><a href="/points/">分数榜</a></p>
         <p><a href="/oi/">OI 专版</a></p>
@@ -82,7 +77,13 @@
         <button onclick="turn()">转到</button>
         <p class="error" id="errid"></p>
         <p>觉得博客可以变得更好？在<a href="https://www.github.com/dovuque/dovuque.github.io/issues">这里</a>提 issues</p>
-        <button onclick="test()">test</button>
+        <button id="test" onclick="getfile('theme.css',
+        function (str)
+        {
+            alert (str);
+            return str;
+        },
+        alert ('File Not Found');" style="display: none">test</button>
         <iframe height=150px width=100% frameborder=0 scrolling=no src="/footer.html"></iframe>
     </body>
 </html>
