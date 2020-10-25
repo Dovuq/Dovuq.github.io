@@ -6,3 +6,5 @@ push.cpp
 push.exe
 gmon.out
 files/
+.DS_Store
+.gitignore
