@@ -1,4 +1,12 @@
 <link rel="stylesheet" type="text/css" href="/theme.css">
+<script>
+    window.onload=function ()
+    {
+        var x=new Date();
+        document.getElementById("month").innerHTML=x.getMonth()+1;
+        document.getElementById("date").innerHTML=x.getDate();
+    }
+</script>
 <p class="footer">
-    &copy; Copyright Dovuq &amp; Japs Co. Ltd. 2014-2020
+    &copy; Copyright Dovuq &amp; Japs Co. Ltd. 2014.10.31-2020.<span id="month"></span>.<span id="date"></span>
 </p>
