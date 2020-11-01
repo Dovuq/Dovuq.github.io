@@ -3,7 +3,7 @@
  *
  * Name: Untitled_1
  * Author: Dovuq & xrdrsp
- * Version: 2.1
+ * Version: 3
  */
 
 body
@@ -11,10 +11,6 @@ body
     background-color: #ffffff;
     color: #000000;
     padding: 100px;
-}
-a
-{
-    color: #000000;
 }
 h1
 {
@@ -28,19 +24,19 @@ table
 {
     border-collapse: collapse;
 }
-p.header
+.header
 {
     text-align: center;
     color: #3399ff;
     font-size: 20px;
 }
-p.footer
+.footer
 {
     text-align: center;
     color: #999966;
     font-size: 16px;
 }
-p.error
+.error
 {
     color: #ff0000;
 }

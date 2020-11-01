@@ -5,8 +5,8 @@ char mp[size][size];
 // 注意！如果使用了万能头文件，在 map[] 上会编译错误，原因是重复名称。map 这个名字在 STL 中已经存在，请换一个名字。
 
 // 地图上的 DFS，平均时间复杂度 O(kmn)，其中第 15 行与 24 行处理的总时间复杂度为 k
-const int dx={-1,0,0,1};
-const int dy={0,-1,1,0};
+const int dx[]={-1,0,0,1};
+const int dy[]={0,-1,1,0};
 // 这是每一步可以走的方向，这里是上下左右。常见的还有上下左右、左上右上左下右下八个方向。
 bool visit[size][size];
 void dfs (int x,int y) // 根据题目需要可以更改返回类型或增加参数等
@@ -17,7 +17,7 @@ void dfs (int x,int y) // 根据题目需要可以更改返回类型或增加参数等
     {
         int xx=x+dx[k];
         int yy=y+dy[k];
-        if (xx>=0 && xx<n && yy>=0 && yy<n
+        if (xx>0 && xx<=n && yy>0 && yy<=m
             && mp[xx][yy]=='.' && !visit[xx][yy] /*&& 题目规定的要求*/)
         {
             dfs (xx,yy);

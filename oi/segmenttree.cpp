@@ -1,7 +1,7 @@
 // 线段树，以求和为例
 struct TREE
 {
-    int val[size],tag[size];
+    int val[400005],tag[400005];
     void build (int i,int l,int r)
     {
         if (l>r) return;
@@ -11,16 +11,16 @@ struct TREE
             return;
         }
         int mid=(l+r)>>1;
-        build (i>>1,l,mid);
-        build (i>>1|1,mid+1,r);
-        val[i]=val[i>>1]+val[i>>1|1];
+        build (i<<1,l,mid);
+        build (i<<1|1,mid+1,r);
+        val[i]=val[i<<1]+val[i<<1|1];
     }
 
     // pushdown，时间复杂度 O(1)
     void pushdown (int i,int l,int r)
     {
-        tag[i>>1]+=tag[i];
-        tag[i>>1|1]+=tag[i];
+        tag[i<<1]+=tag[i];
+        tag[i<<1|1]+=tag[i];
         val[i]+=tag[i]*(r-l+1);
         tag[i]=0;
     }
