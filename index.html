@@ -11,7 +11,7 @@
                 if (!new RegExp("^[0-9]{1,10}$").test(id))
                 {
                     var s=document.getElementById ("errid");
-                    s.innerHTML="*输入有误。只能输入 1-10 位的整数！";
+                    s.innerHTML="*Error. You must input an integer from 1 to 9999999999!";
                     return;
                 }
                 var link="/user/"+id;
@@ -39,16 +39,16 @@
     <body>
         <iframe height=40px width=100% frameborder=0 scrolling=no src="/header.html"></iframe>
         <h1>This is Dovuq's blog.</h1>
-        <p>Version 22</p>
-        <p><a href="/code_of_conduct/">行为准则</a></p>
-        <p><a href="/points/">分数榜</a></p>
-        <p><a href="/oi/">OI 专版</a></p>
+        <p>Version 23</p>
+        <p><a href="/code_of_conduct/">Code of conduct</a></p>
+        <p><a href="/points/">Points</a></p>
+        <p><a href="/oi/">OI</a></p>
         <table>
             <tr>
-                <th>文章编号</th><th>文章名称</th>
+                <th>Article number</th><th>Article name</th>
             </tr>
             <tr>
-                <td>8</td><td><a href="/2020/08/07/phy_che_plot/">物理&amp;化学表</a></td>
+                <td>8</td><td><a href="/2020/08/07/phy_che_plot/">Table of physics &amp; chemistry</a></td>
             </tr>
             <tr>
                 <td>7</td><td><a href="/2020/03/29/xrdrsp_blogs/">xrdrsp&#39;s blogs</a></td>
@@ -57,10 +57,7 @@
                 <td>6</td><td><a href="/2020/04/14/games/">Games</a></td>
             </tr>
             <tr>
-                <td>5</td><td><a href="https://www.github.com/dovuq/dingtalk">Dingtalk 刷赞器</a></td>
-            </tr>
-            <tr>
-                <td>4</td><td><a href="/2020/03/22/mathematics/">数学公式和表格</a></td>
+                <td>4</td><td><a href="/2020/03/22/mathematics/">Mathematics formulas &amp; tables</a></td>
             </tr>
             <tr>
                 <td>3</td><td><a href="/2020/03/16/codestyle/">My Code Style for OI</a></td>
@@ -68,15 +65,12 @@
             <tr>
                 <td>2</td><td><a href="https://blog.xrdrsp.pw/2020/03/09/Mathematics-Tools/">Mathematics Tools</a></td>
             </tr>
-            <tr>
-                <td></td><td><del>Different Ways to AK luogu P1001</del> 该文章已被删除</td>
-            </tr>
         </table>
-        <p>输入用户 id，自动跳转到 TA 的个人主页</p>
+        <p>Input user id, turn to his or her personal home page automatically</p>
         <input type="text" id="uid"/>
-        <button onclick="turn()">转到</button>
+        <button onclick="turn()">Turn</button>
         <p class="error" id="errid"></p>
-        <p>觉得博客可以变得更好？在<a href="https://www.github.com/dovuque/dovuque.github.io/issues">这里</a>提 issues</p>
+        <p>Are there something can be better in the blog? <a href="https://www.github.com/dovuque/dovuque.github.io/issues">Give issues here!</a></p>
         <button id="test" onclick="getfile('theme.css',
         function (str)
         {
