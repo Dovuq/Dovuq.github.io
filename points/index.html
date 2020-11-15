@@ -2,6 +2,23 @@
     <head>
         <title>Points</title>
         <link rel="stylesheet" type="text/css" href="/theme.css">
+        <script>
+            function chg (x)
+            {
+                if (x<10) return String.fromCharCode(x+48);
+                else return String.fromCharCode(x-10+97);
+            }
+            window.onload=function ()
+            {
+                var d=Math.trunc((new Date().getTime()-1604764800000)/86400000);
+                for (var i=1;i<32768;i++)
+                {
+                    var pt=document.getElementById("pt"+i);
+                    if (!pt) continue;
+                    pt.innerHTML=parseInt(pt.innerHTML)-d;
+                }
+            }
+        </script>
     </head>
     <body>
         <iframe height=40px width=100% frameborder=0 scrolling=no src="/header.html"></iframe>
@@ -13,54 +30,28 @@
             <th>UserId</th>
             <th>Name</th>
             <th>Point</th>
-            <th>PITY</th>
-            <th>LTC</th>
             <th>Note</th>
         </tr>
         <tr>
             <td>1</td>
             <td>1</td>
-            <td><a href="/user/1" style="color: pink">[Lv7, Owner] Dovuq</a></td>
-            <td>271</td>
-            <td>251</td>
-            <td>11012020</td>
+            <td id="us1">[Owner] Dovuq</td>
+            <td id="pt1">272</td>
             <td>-</td>
         </tr>
         <tr>
             <td>2</td>
-            <td>2041375993</td>
-            <td><a href="/user/2041375993" style="color: blue">[Lv5, Admin] xrdrsp</a></td>
-            <td>173</td>
-            <td>153</td>
-            <td>10042020</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>2147483647</td>
-            <td><a style="color: red">[Lv1] Dovuq-private</a></td>
-            <td>35</td>
-            <td>15</td>
-            <td>?</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>4</td>
             <td>2</td>
-            <td><a style="color: red">[Lv1] Pörsäq</a></td>
-            <td>25</td>
-            <td>5</td>
-            <td>?</td>
+            <td id="us2">[Admin] xrdrsp</td>
+            <td id="pt2">256</td>
             <td>-</td>
         </tr>
         <tr>
-            <td></td>
+            <td>2</td>
             <td>3</td>
-            <td><a style="color: brown">[Lv1] 18446...51618</a></td>
-            <td>20</td>
+            <td id="us3">Pörsäq</td>
+            <td id="pt3">256</td>
             <td>-</td>
-            <td>-</td>
-            <td>Inactive user</td>
         </tr>
         </table>
         <h2>Sort by UserId</h2>
