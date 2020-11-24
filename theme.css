@@ -3,7 +3,7 @@
  *
  * Name: Untitled_1
  * Author: Dovuq & xrdrsp
- * Version: 3.1
+ * Version: 4
  */
 
 body
@@ -44,4 +44,8 @@ pre
 {
     background-color: #eeeeee;
     border: 1px solid #000000;
+}
+.noborder
+{
+    border: 0px;
 }

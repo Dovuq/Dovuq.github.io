@@ -9,6 +9,53 @@
             };
         </script>
         <script type="text/javascript" id="MathJax-script" async  src="https://cdn.bootcdn.net/ajax/libs/mathjax/3.0.5/es5/tex-chtml.js"></script>
+        <style>
+            .metal
+            {
+                background-color: #ffff00;
+            }
+            .nonmetal
+            {
+                background-color: #ff8888;
+            }
+            .semimetal
+            {
+                background-color: #ffaa44;
+            }
+            .las
+            {
+                background-color: #4488ff;
+            }
+            .acs
+            {
+                background-color: #00cc88;
+            }
+            .unknown
+            {
+                background-color: #cccccc;
+            }
+            .data
+            {
+                border: 0px;
+                font-size: 12px;
+                -webkit-transform-origin-x: 0;
+                -webkit-transform: scale(0.85);
+                float: left;
+            }
+            .name
+            {
+                border: 0px;
+                font-size: 16pt;
+                float: left;
+            }
+            .radio
+            {
+                border: 0px;
+                font-size: 16pt;
+                color: #ff0000;
+                float: left;
+            }
+        </style>
     </head>
     <body>
         <iframe height=40px width=100% frameborder=0 scrolling=no src="/header.html"></iframe>
@@ -217,304 +264,564 @@
                 <td>$\mathrm{J}\cdot\mathrm{s}$</td>
             </tr>
         </table>
-        <h2>化学元素表</h2>
-        <table>
+        <h2>元素周期表</h2>
+        <table class="noborder">
             <tr>
-                <th>序号</th>
-                <th>名称</th>
-                <th>符号</th>
-                <th>原子量</th>
-                <th>常见化合价</th>
-                <th>第一电离能<br>$\mathrm{kJ}/\mathrm{mol}$</th>
-                <th>电负性</th>
+                <th>周期/族</th>
+                <th>1<br>IA</th>
+                <th class="noborder"></th>
+                <th class="noborder"></th>
+                <th class="noborder"></th>
+                <th class="noborder"></th>
+                <th class="noborder"></th>
+                <th class="noborder"></th>
+                <th class="noborder"></th>
+                <th class="noborder"></th>
+                <th class="noborder"></th>
+                <th class="noborder"></th>
+                <th class="noborder"></th>
+                <th class="noborder"></th>
+                <th class="noborder"></th>
+                <th class="noborder"></th>
+                <th class="noborder"></th>
+                <th class="noborder"></th>
+                <th>18<br>0</th>
             </tr>
             <tr>
-                <td>1</td>
-                <td>氢</td>
-                <td>H</td>
-                <td>1</td>
-                <td>-1,+1</td>
-                <td>1312.0</td>
-                <td>2.20</td>
+                <th>1</th>
+                <td class="nonmetal">
+                    <table class="data">
+                        <tr><td class="data">1</td></tr>
+                        <tr><td class="data">1</td></tr>
+                    </table>
+                    <span class="name"><strong>H</strong></span>
+                </td>
+                <th>2<br>IIA</th>
+                <th class="noborder"></th>
+                <th class="noborder"></th>
+                <th class="noborder"></th>
+                <th class="noborder"></th>
+                <td class="nonmetal">
+                    <table class="data">
+                        <tr><td class="data">1</td></tr>
+                        <tr><td class="data">1</td></tr>
+                    </table>
+                    <span class="name"><strong>H</strong></span>
+                </td>
+                <th class="noborder"></th>
+                <th class="noborder"></th>
+                <th class="noborder"></th>
+                <th class="noborder"></th>
+                <th class="noborder"></th>
+                <th>13<br>IIIA</th>
+                <th>14<br>IVA</th>
+                <th>15<br>VA</th>
+                <th>16<br>VIA</th>
+                <th>17<br>VIIA</th>
+                <td class="nonmetal">
+                    <table class="data">
+                        <tr><td class="data">2</td></tr>
+                        <tr><td class="data">4</td></tr>
+                    </table>
+                    <span class="name"><strong>He</strong></span>
+                </td>
             </tr>
             <tr>
-                <td>2</td>
-                <td>氦</td>
-                <td>He</td>
-                <td>4</td>
-                <td></td>
-                <td>2372.3</td>
-                <td></td>
+                <th>2</th>
+                <td class="metal">
+                    <table class="data">
+                        <tr><td class="data">3</td></tr>
+                        <tr><td class="data">7</td></tr>
+                    </table>
+                    <span class="name"><strong>Li</strong></span>
+                </td>
+                <td class="metal">
+                    <table class="data">
+                        <tr><td class="data">4</td></tr>
+                        <tr><td class="data">9</td></tr>
+                    </table>
+                    <span class="name"><strong>Be</strong></span>
+                </td>
+                <th class="noborder"></th>
+                <th class="noborder"></th>
+                <th class="noborder"></th>
+                <th class="noborder"></th>
+                <th class="noborder"></th>
+                <th class="noborder"></th>
+                <th class="noborder"></th>
+                <th class="noborder"></th>
+                <th class="noborder"></th>
+                <th class="noborder"></th>
+                <td class="semimetal">
+                    <table class="data">
+                        <tr><td class="data">5</td></tr>
+                        <tr><td class="data">11</td></tr>
+                    </table>
+                    <span class="name"><strong>B</strong></span>
+                </td>
+                <td class="nonmetal">
+                    <table class="data">
+                        <tr><td class="data">6</td></tr>
+                        <tr><td class="data">12</td></tr>
+                    </table>
+                    <span class="name"><strong>C</strong></span>
+                </td>
+                <td class="nonmetal">
+                    <table class="data">
+                        <tr><td class="data">7</td></tr>
+                        <tr><td class="data">14</td></tr>
+                    </table>
+                    <span class="name"><strong>N</strong></span>
+                </td>
+                <td class="nonmetal">
+                    <table class="data">
+                        <tr><td class="data">8</td></tr>
+                        <tr><td class="data">16</td></tr>
+                    </table>
+                    <span class="name"><strong>O</strong></span>
+                </td>
+                <td class="nonmetal">
+                    <table class="data">
+                        <tr><td class="data">9</td></tr>
+                        <tr><td class="data">19</td></tr>
+                    </table>
+                    <span class="name"><strong>F</strong></span>
+                </td>
+                <td class="nonmetal">
+                    <table class="data">
+                        <tr><td class="data">10</td></tr>
+                        <tr><td class="data">20</td></tr>
+                    </table>
+                    <span class="name"><strong>Ne</strong></span>
+                </td>
             </tr>
             <tr>
-                <td>3</td>
-                <td>锂</td>
-                <td>Li</td>
-                <td>6</td>
-                <td>+1</td>
-                <td>502.2</td>
-                <td>0.98</td>
+                <th>3</th>
+                <td class="metal">
+                    <table class="data">
+                        <tr><td class="data">11</td></tr>
+                        <tr><td class="data">23</td></tr>
+                    </table>
+                    <span class="name"><strong>Na</strong></span>
+                </td>
+                <td class="metal">
+                    <table class="data">
+                        <tr><td class="data">12</td></tr>
+                        <tr><td class="data">24</td></tr>
+                    </table>
+                    <span class="name"><strong>Mg</strong></span>
+                </td>
+                <th>3<br>IIIB</th>
+                <th>4<br>IVB</th>
+                <th>5<br>VB</th>
+                <th>6<br>VIB</th>
+                <th>7<br>VIIB</th>
+                <th>8<br>&nbsp;</th>
+                <th>9<br>VIII</th>
+                <th>10<br>&nbsp;</th>
+                <th>11<br>IB</th>
+                <th>12<br>IIB</th>
+                <td class="metal">
+                    <table class="data">
+                        <tr><td class="data">13</td></tr>
+                        <tr><td class="data">27</td></tr>
+                    </table>
+                    <span class="name"><strong>Al</strong></span>
+                </td>
+                <td class="semimetal">
+                    <table class="data">
+                        <tr><td class="data">14</td></tr>
+                        <tr><td class="data">28</td></tr>
+                    </table>
+                    <span class="name"><strong>Si</strong></span>
+                </td>
+                <td class="nonmetal">
+                    <table class="data">
+                        <tr><td class="data">15</td></tr>
+                        <tr><td class="data">31</td></tr>
+                    </table>
+                    <span class="name"><strong>P</strong></span>
+                </td>
+                <td class="nonmetal">
+                    <table class="data">
+                        <tr><td class="data">16</td></tr>
+                        <tr><td class="data">32</td></tr>
+                    </table>
+                    <span class="name"><strong>S</strong></span>
+                </td>
+                <td class="nonmetal">
+                    <table class="data">
+                        <tr><td class="data">17</td></tr>
+                        <tr><td class="data">35.5</td></tr>
+                    </table>
+                    <span class="name"><strong>Cl</strong></span>
+                </td>
+                <td class="nonmetal">
+                    <table class="data">
+                        <tr><td class="data">18</td></tr>
+                        <tr><td class="data">40</td></tr>
+                    </table>
+                    <span class="name"><strong>Ar</strong></span>
+                </td>
             </tr>
             <tr>
-                <td>4</td>
-                <td>铍</td>
-                <td>Be</td>
-                <td>9</td>
-                <td>+2</td>
-                <td>932.0</td>
-                <td>1.57</td>
+                <th>4</th>
+                <td class="metal">
+                    <table class="data">
+                        <tr><td class="data">19</td></tr>
+                        <tr><td class="data">39</td></tr>
+                    </table>
+                    <span class="name"><strong>K</strong></span>
+                </td>
+                <td class="metal">
+                    <table class="data">
+                        <tr><td class="data">20</td></tr>
+                        <tr><td class="data">40</td></tr>
+                    </table>
+                    <span class="name"><strong>Ca</strong></span>
+                </td>
+                <td class="metal">
+                    <table class="data">
+                        <tr><td class="data">21</td></tr>
+                        <tr><td class="data">45</td></tr>
+                    </table>
+                    <span class="name"><strong>Sc</strong></span>
+                </td>
+                <td class="metal">
+                    <table class="data">
+                        <tr><td class="data">22</td></tr>
+                        <tr><td class="data">48</td></tr>
+                    </table>
+                    <span class="name"><strong>Ti</strong></span>
+                </td>
+                <td class="metal">
+                    <table class="data">
+                        <tr><td class="data">23</td></tr>
+                        <tr><td class="data">51</td></tr>
+                    </table>
+                    <span class="name"><strong>V</strong></span>
+                </td>
+                <td class="metal">
+                    <table class="data">
+                        <tr><td class="data">24</td></tr>
+                        <tr><td class="data">52</td></tr>
+                    </table>
+                    <span class="name"><strong>Cr</strong></span>
+                </td>
+                <td class="metal">
+                    <table class="data">
+                        <tr><td class="data">25</td></tr>
+                        <tr><td class="data">55</td></tr>
+                    </table>
+                    <span class="name"><strong>Mn</strong></span>
+                </td>
+                <td class="metal">
+                    <table class="data">
+                        <tr><td class="data">26</td></tr>
+                        <tr><td class="data">56</td></tr>
+                    </table>
+                    <span class="name"><strong>Fe</strong></span>
+                </td>
+                <td class="metal">
+                    <table class="data">
+                        <tr><td class="data">27</td></tr>
+                        <tr><td class="data">59</td></tr>
+                    </table>
+                    <span class="name"><strong>Co</strong></span>
+                </td>
+                <td class="metal">
+                    <table class="data">
+                        <tr><td class="data">28</td></tr>
+                        <tr><td class="data">59</td></tr>
+                    </table>
+                    <span class="name"><strong>Ni</strong></span>
+                </td>
+                <td class="metal">
+                    <table class="data">
+                        <tr><td class="data">29</td></tr>
+                        <tr><td class="data">64</td></tr>
+                    </table>
+                    <span class="name"><strong>Cu</strong></span>
+                </td>
+                <td class="metal">
+                    <table class="data">
+                        <tr><td class="data">30</td></tr>
+                        <tr><td class="data">65</td></tr>
+                    </table>
+                    <span class="name"><strong>Zn</strong></span>
+                </td>
+                <td class="metal">
+                    <table class="data">
+                        <tr><td class="data">31</td></tr>
+                        <tr><td class="data">70</td></tr>
+                    </table>
+                    <span class="name"><strong>Ga</strong></span>
+                </td>
+                <td class="semimetal">
+                    <table class="data">
+                        <tr><td class="data">32</td></tr>
+                        <tr><td class="data">73</td></tr>
+                    </table>
+                    <span class="name"><strong>Ge</strong></span>
+                </td>
+                <td class="semimetal">
+                    <table class="data">
+                        <tr><td class="data">33</td></tr>
+                        <tr><td class="data">75</td></tr>
+                    </table>
+                    <span class="name"><strong>As</strong></span>
+                </td>
+                <td class="nonmetal">
+                    <table class="data">
+                        <tr><td class="data">34</td></tr>
+                        <tr><td class="data">79</td></tr>
+                    </table>
+                    <span class="name"><strong>Se</strong></span>
+                </td>
+                <td class="nonmetal">
+                    <table class="data">
+                        <tr><td class="data">35</td></tr>
+                        <tr><td class="data">80</td></tr>
+                    </table>
+                    <span class="name"><strong>Br</strong></span>
+                </td>
+                <td class="nonmetal">
+                    <table class="data">
+                        <tr><td class="data">36</td></tr>
+                        <tr><td class="data">84</td></tr>
+                    </table>
+                    <span class="name"><strong>Kr</strong></span>
+                </td>
             </tr>
             <tr>
-                <td>5</td>
-                <td>硼</td>
-                <td>B</td>
-                <td>11</td>
-                <td>+3</td>
-                <td>800.6</td>
-                <td>2.04</td>
+                <th>5</th>
+                <td class="metal">
+                    <table class="data">
+                        <tr><td class="data">37</td></tr>
+                        <tr><td class="data">85</td></tr>
+                    </table>
+                    <span class="name"><strong>Rb</strong></span>
+                </td>
+                <td class="metal">
+                    <table class="data">
+                        <tr><td class="data">38</td></tr>
+                        <tr><td class="data">88</td></tr>
+                    </table>
+                    <span class="name"><strong>Sr</strong></span>
+                </td>
+                <td class="metal">
+                    <table class="data">
+                        <tr><td class="data">39</td></tr>
+                        <tr><td class="data">89</td></tr>
+                    </table>
+                    <span class="name"><strong>Y</strong></span>
+                </td>
+                <td class="metal">
+                    <table class="data">
+                        <tr><td class="data">40</td></tr>
+                        <tr><td class="data">91</td></tr>
+                    </table>
+                    <span class="name"><strong>Zr</strong></span>
+                </td>
+                <td class="metal">
+                    <table class="data">
+                        <tr><td class="data">41</td></tr>
+                        <tr><td class="data">93</td></tr>
+                    </table>
+                    <span class="name"><strong>Nb</strong></span>
+                </td>
+                <td class="metal">
+                    <table class="data">
+                        <tr><td class="data">42</td></tr>
+                        <tr><td class="data">96</td></tr>
+                    </table>
+                    <span class="name"><strong>Mo</strong></span>
+                </td>
+                <td class="metal">
+                    <table class="data">
+                        <tr><td class="data">43</td></tr>
+                        <tr><td class="data">98</td></tr>
+                    </table>
+                    <span class="radio"><strong>Tc</strong></span>
+                </td>
+                <td class="metal">
+                    <table class="data">
+                        <tr><td class="data">44</td></tr>
+                        <tr><td class="data">101</td></tr>
+                    </table>
+                    <span class="name"><strong>Ru</strong></span>
+                </td>
+                <td class="metal">
+                    <table class="data">
+                        <tr><td class="data">45</td></tr>
+                        <tr><td class="data">103</td></tr>
+                    </table>
+                    <span class="name"><strong>Rh</strong></span>
+                </td>
+                <td class="metal">
+                    <table class="data">
+                        <tr><td class="data">46</td></tr>
+                        <tr><td class="data">106</td></tr>
+                    </table>
+                    <span class="name"><strong>Pd</strong></span>
+                </td>
+                <td class="metal">
+                    <table class="data">
+                        <tr><td class="data">47</td></tr>
+                        <tr><td class="data">108</td></tr>
+                    </table>
+                    <span class="name"><strong>Ag</strong></span>
+                </td>
+                <td class="metal"></td>
+                <td class="metal"></td>
+                <td class="metal"></td>
+                <td class="semimetal"></td>
+                <td class="semimetal"></td>
+                <td class="nonmetal">
+                    <table class="data">
+                        <tr><td class="data">53</td></tr>
+                        <tr><td class="data">127</td></tr>
+                    </table>
+                    <span class="name"><strong>I</strong></span>
+                </td>
+                <td class="nonmetal">
+                    <table class="data">
+                        <tr><td class="data">54</td></tr>
+                        <tr><td class="data">131</td></tr>
+                    </table>
+                    <span class="name"><strong>Xe</strong></span>
+                </td>
             </tr>
             <tr>
-                <td>6</td>
-                <td>碳</td>
-                <td>C</td>
-                <td>12</td>
-                <td>-4,+2,+4</td>
-                <td>1086.5</td>
-                <td>2.55</td>
+                <th>6</th>
+                <td class="metal">
+                    <table class="data">
+                        <tr><td class="data">55</td></tr>
+                        <tr><td class="data">133</td></tr>
+                    </table>
+                    <span class="name"><strong>Cs</strong></span>
+                </td>
+                <td class="metal">
+                    <table class="data">
+                        <tr><td class="data">56</td></tr>
+                        <tr><td class="data">137</td></tr>
+                    </table>
+                    <span class="name"><strong>Ba</strong></span>
+                </td>
+                <td class="las">镧系元素</td>
+                <td class="metal"></td>
+                <td class="metal"></td>
+                <td class="metal"></td>
+                <td class="metal"></td>
+                <td class="metal"></td>
+                <td class="metal"></td>
+                <td class="metal"></td>
+                <td class="metal"></td>
+                <td class="metal"></td>
+                <td class="metal"></td>
+                <td class="metal"></td>
+                <td class="metal"></td>
+                <td class="semimetal"></td>
+                <td class="nonmetal">
+                    <table class="data">
+                        <tr><td class="data">85</td></tr>
+                        <tr><td class="data">210</td></tr>
+                    </table>
+                    <span class="radio"><strong>At</strong></span>
+                </td>
+                <td class="nonmetal">
+                    <table class="data">
+                        <tr><td class="data">86</td></tr>
+                        <tr><td class="data">222</td></tr>
+                    </table>
+                    <span class="radio"><strong>Rn</strong></span>
+                </td>
             </tr>
             <tr>
-                <td>7</td>
-                <td>氮</td>
-                <td>N</td>
-                <td>14</td>
-                <td>-3,+2,+4,+5</td>
-                <td>1402.3</td>
-                <td>3.04</td>
+                <th>7</th>
+                <td class="metal">
+                    <table class="data">
+                        <tr><td class="data">87</td></tr>
+                        <tr><td class="data">223</td></tr>
+                    </table>
+                    <span class="radio"><strong>Fr</strong></span>
+                </td>
+                <td class="metal">
+                    <table class="data">
+                        <tr><td class="data">88</td></tr>
+                        <tr><td class="data">226</td></tr>
+                    </table>
+                    <span class="radio"><strong>Ra</strong></span>
+                </td>
+                <td class="acs">锕系元素</td>
+                <td class="metal"></td>
+                <td class="metal"></td>
+                <td class="metal"></td>
+                <td class="metal"></td>
+                <td class="metal"></td>
+                <td class="metal"></td>
+                <td class="metal"></td>
+                <td class="metal"></td>
+                <td class="metal"></td>
+                <td class="metal"></td>
+                <td class="metal"></td>
+                <td class="metal"></td>
+                <td class="metal"></td>
+                <td class="nonmetal">
+                    <table class="data">
+                        <tr><td class="data">117</td></tr>
+                        <tr><td class="data">294</td></tr>
+                    </table>
+                    <span class="radio"><strong>Ts</strong></span>
+                </td>
+                <td class="nonmetal">
+                    <table class="data">
+                        <tr><td class="data">118</td></tr>
+                        <tr><td class="data">294</td></tr>
+                    </table>
+                    <span class="radio"><strong>Og</strong></span>
+                </td>
+            </tr>
+            <tr height=32px></tr>
+            <tr>
+                <td class="noborder"></td>
+                <td class="noborder"></td>
+                <td class="las">镧系元素</td>
+                <td class="las"></td>
+                <td class="las"></td>
+                <td class="las"></td>
+                <td class="las"></td>
+                <td class="las"></td>
+                <td class="las"></td>
+                <td class="las"></td>
+                <td class="las"></td>
+                <td class="las"></td>
+                <td class="las"></td>
+                <td class="las"></td>
+                <td class="las"></td>
+                <td class="las"></td>
+                <td class="las"></td>
+                <td class="las"></td>
             </tr>
             <tr>
-                <td>8</td>
-                <td>氧</td>
-                <td>O</td>
-                <td>16</td>
-                <td>-2,-1</td>
-                <td>1313.9</td>
-                <td>3.44</td>
-            </tr>
-            <tr>
-                <td>9</td>
-                <td>氟</td>
-                <td>F</td>
-                <td>19</td>
-                <td>-1</td>
-                <td>1681.0</td>
-                <td>3.98</td>
-            </tr>
-            <tr>
-                <td>10</td>
-                <td>氖</td>
-                <td>Ne</td>
-                <td>20</td>
-                <td></td>
-                <td>2080.7</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>11</td>
-                <td>钠</td>
-                <td>Na</td>
-                <td>23</td>
-                <td>+1</td>
-                <td>495.8</td>
-                <td>0.93</td>
-            </tr>
-            <tr>
-                <td>12</td>
-                <td>镁</td>
-                <td>Mg</td>
-                <td>24</td>
-                <td>+2</td>
-                <td>737.7</td>
-                <td>1.31</td>
-            </tr>
-            <tr>
-                <td>13</td>
-                <td>铝</td>
-                <td>Al</td>
-                <td>27</td>
-                <td>+3</td>
-                <td>577.5</td>
-                <td>1.61</td>
-            </tr>
-            <tr>
-                <td>14</td>
-                <td>硅</td>
-                <td>Si</td>
-                <td>28</td>
-                <td>-4,+2,+4</td>
-                <td>786.5</td>
-                <td>1.90</td>
-            </tr>
-            <tr>
-                <td>15</td>
-                <td>磷</td>
-                <td>P</td>
-                <td>31</td>
-                <td>-3,+3,+5</td>
-                <td>1011.8</td>
-                <td>2.19</td>
-            </tr>
-            <tr>
-                <td>16</td>
-                <td>硫</td>
-                <td>S</td>
-                <td>32</td>
-                <td>-2,+4,+6</td>
-                <td>999.6</td>
-                <td>2.58</td>
-            </tr>
-            <tr>
-                <td>17</td>
-                <td>氯</td>
-                <td>Cl</td>
-                <td>35.5</td>
-                <td>-1,+1,+3,+5,+7</td>
-                <td>1251.2</td>
-                <td>3.16</td>
-            </tr>
-            <tr>
-                <td>18</td>
-                <td>氩</td>
-                <td>Ar</td>
-                <td>40</td>
-                <td></td>
-                <td>1520.6</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>19</td>
-                <td>钾</td>
-                <td>K</td>
-                <td>39</td>
-                <td>+1</td>
-                <td>418.8</td>
-                <td>0.82</td>
-            </tr>
-            <tr>
-                <td>20</td>
-                <td>钙</td>
-                <td>Ca</td>
-                <td>40</td>
-                <td>+2</td>
-                <td>589.8</td>
-                <td>1.00</td>
-            </tr>
-            <tr>
-                <td>21</td>
-                <td>钪</td>
-                <td>Sc</td>
-                <td>45</td>
-                <td>+3</td>
-                <td>633.1</td>
-                <td>1.36</td>
-            </tr>
-            <tr>
-                <td>22</td>
-                <td>钛</td>
-                <td>Ti</td>
-                <td>48</td>
-                <td>+2,+3,+4</td>
-                <td>658.8</td>
-                <td>1.54</td>
-            </tr>
-            <tr>
-                <td>23</td>
-                <td>钒</td>
-                <td>V</td>
-                <td>51</td>
-                <td>+2,+3,+4,+5</td>
-                <td>650.9</td>
-                <td>1.63</td>
-            </tr>
-            <tr>
-                <td>24</td>
-                <td>铬</td>
-                <td>Cr</td>
-                <td>52</td>
-                <td>+2,+3,+6</td>
-                <td>652.9</td>
-                <td>1.66</td>
-            </tr>
-            <tr>
-                <td>25</td>
-                <td>锰</td>
-                <td>Mn</td>
-                <td>55</td>
-                <td>+4,+6,+7</td>
-                <td>717.3</td>
-                <td>1.55</td>
-            </tr>
-            <tr>
-                <td>26</td>
-                <td>铁</td>
-                <td>Fe</td>
-                <td>56</td>
-                <td>+2,+3</td>
-                <td>762.5</td>
-                <td>1.83</td>
-            </tr>
-            <tr>
-                <td>27</td>
-                <td>钴</td>
-                <td>Co</td>
-                <td>59</td>
-                <td>+2,+3</td>
-                <td>760.4</td>
-                <td>1.88</td>
-            </tr>
-            <tr>
-                <td>28</td>
-                <td>镍</td>
-                <td>Ni</td>
-                <td>59</td>
-                <td>+2,+3</td>
-                <td>737.1</td>
-                <td>1.91</td>
-            </tr>
-            <tr>
-                <td>29</td>
-                <td>铜</td>
-                <td>Cu</td>
-                <td>64</td>
-                <td>+1,+2</td>
-                <td>745.5</td>
-                <td>1.90</td>
-            </tr>
-            <tr>
-                <td>30</td>
-                <td>锌</td>
-                <td>Zn</td>
-                <td>65</td>
-                <td>+2</td>
-                <td>906.4</td>
-                <td>1.65</td>
-            </tr>
-            <tr>
-                <td>47</td>
-                <td>银</td>
-                <td>Ag</td>
-                <td>108</td>
-                <td>+1</td>
-                <td>731.0</td>
-                <td>1.93</td>
-            </tr>
-            <tr>
-                <td>53</td>
-                <td>碘</td>
-                <td>I</td>
-                <td>127</td>
-                <td>-1</td>
-                <td>1008.4</td>
-                <td>2.66</td>
+                <td class="noborder"></td>
+                <td class="noborder"></td>
+                <td class="acs">锕系元素</td>
+                <td class="acs"></td>
+                <td class="acs"></td>
+                <td class="acs"></td>
+                <td class="acs"></td>
+                <td class="acs"></td>
+                <td class="acs"></td>
+                <td class="acs"></td>
+                <td class="acs"></td>
+                <td class="acs"></td>
+                <td class="acs"></td>
+                <td class="acs"></td>
+                <td class="acs"></td>
+                <td class="acs"></td>
+                <td class="acs"></td>
+                <td class="acs"></td>
             </tr>
         </table>
         <p><a href="/plots/chem.xlsx">下一张表的下载链接。</a></p>
