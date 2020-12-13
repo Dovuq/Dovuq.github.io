@@ -1,22 +1,22 @@
-// 建边表，时间复杂度 O(m)
+// Build an edge list, time complexity O(m)
 int head[size],next[size],to[size],edgenum;
-// int val[size]; // 如果是带权图就加上这句
-// 注意！如果使用了万能头文件，在 next[] 上会编译错误，原因是重复名称。next 这个名字在 STL 中已经存在，请换一个名字。
-void addedge (int u,int v/*,int w*/) // 如果是带权图就加上 w
+// int val[size]; // Add this if it is a weighted graph
+// Attention! If you have used the head "bits/stdc++.h", you might get a compile error on "next[]" that the name is ambiguous. The name "next" already exists in STL, so please change another name.
+void addedge (int u,int v/*,int w*/) // Add "w" if it is a weighted graph
 {
     next[++edgenum]=head[u];
     head[u]=edgenum;
     to[edgenum]=v;
-    // val[edgenum]=w; // 同上
+    // val[edgenum]=w; // ditto
 }
-addedge (u,v/*,w*/); // w 同上
-addedge (v,u/*,w*/); // 如果是单向图就去掉这句
+addedge (u,v/*,w*/); // w ditto
+addedge (v,u/*,w*/); // If it is a unidirectional graph, delete this line
 
-// 遍历边表，时间复杂度 O(m/n)
-// 访问与点 u 有边连接的所有节点
+// Traversal the edge list, time complexity O(m/n)
+// Visit all notes which has an adge to u
 for (int e=head[u];e;e=next[e])
 {
     int v=to[e];
-    // int w=val[e]; // 同上
+    // int w=val[e]; // ditto
     // ...
 }

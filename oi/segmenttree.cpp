@@ -1,4 +1,4 @@
-// 线段树，以求和为例
+// Segment tree, here we take sum for example
 struct TREE
 {
     int val[400005],tag[400005];
@@ -7,7 +7,7 @@ struct TREE
         if (l>r) return;
         if (l==r)
         {
-            val[i]=a[l]; // a[l] 为该节点的值
+            val[i]=a[l]; // a[l] is the value of this node.
             return;
         }
         int mid=(l+r)>>1;
@@ -16,7 +16,7 @@ struct TREE
         val[i]=val[i<<1]+val[i<<1|1];
     }
 
-    // pushdown，时间复杂度 O(1)
+    // Push down, time complexity O(1)
     void pushdown (int i,int l,int r)
     {
         tag[i<<1]+=tag[i];
@@ -25,7 +25,7 @@ struct TREE
         tag[i]=0;
     }
 
-    // 区间查询，时间复杂度 O(logn)
+    // Interval query, time complexity O(logn)
     int query (int i,int l,int r,int x,int y)
     {
         if (l>=x && r<=y)
@@ -36,7 +36,7 @@ struct TREE
         return query(i<<1,l,mid,x,y)+query(i<<1|1,mid+1,r,x,y);
     }
 
-    // 区间修改，时间复杂度 O(logn)
+    // Interval modification, time complexity O(logn)
     void add (int i,int l,int r,int x,int y,int a)
     {
         if (l>=x && r<=y)

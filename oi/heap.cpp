@@ -1,9 +1,9 @@
-// 堆，以最小堆为例
+// Heap, here we take minimum heap for example
 struct HEAP
 {
     int val[size],n;
 
-    // 在堆中插入数据，时间复杂度 O(logn)
+    // Insert data to the heap, time complexity O(logn)
     void add (int x)
     {
         val[++n]=x;
@@ -11,13 +11,13 @@ struct HEAP
             swap (val[m],val[m>>1]);
     }
 
-    // 返回树根的数据，时间复杂度 O(1)
+    // Return the data of the root, time complexity O(1)
     int top ()
     {
         return val[1];
     }
 
-    // 删除树根的数据，时间复杂度 O(logn)
+    // Delete the root, time complexity O(logn)
     void del ()
     {
         swap (val[1],val[n]);

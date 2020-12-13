@@ -1,17 +1,17 @@
-// 这里使用了边表，不熟悉边表的出门右转“边表”
-// 时间复杂度 O(kn)，其中第 7 行与 14 行处理的总时间复杂度为 k
+// Here we use edge list. If you don't know edge list, turn to "edge list"
+// Time complexity O(kn), where the total time complexity of lines 7 and 14 is k
 bool visit[size];
-void dfs (int u) // 根据题目需要可以更改返回类型或增加参数等
+void dfs (int u) // According to the requirement of the problem, you can change the return type or add parameters
 {
     visit[u]=1;
-    // 对该节点 u 进行一些处理，具体看题目要求
+    // The node u is processed according to the requirements of the problem
     for (int e=head[u];e;e=next[e])
     {
         int v=to[e];
-        if (!visit[u] /*&& 题目规定的要求*/)
+        if (!visit[u] /*&& requirements of the problem*/)
         {
             dfs (u);
-            // 这里其实也可以进行一些操作
+            // In fact, some operations can also be carried out here
         }
     }
 }

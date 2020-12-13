@@ -1,29 +1,29 @@
-// 关于地图的操作
+// Operations on the map
 int n,m;
 char mp[size][size];
-// 地图有很多种，这里以最简单的地图——'#' 表示障碍物，'.' 表示空地——为例。
-// 注意！如果使用了万能头文件，在 map[] 上会编译错误，原因是重复名称。map 这个名字在 STL 中已经存在，请换一个名字。
+// There are many kinds of maps, here we take the simplest map, that is a '#' stands for an obstacle and a '.' stands for a piece of open space, for example
+// Attention! If you have used the head "bits/stdc++.h", you might get a compile error on "map[]" that the name is ambiguous. The name "map" already exists in STL, so please change another name.
 
-// 地图上的 DFS，平均时间复杂度 O(kmn)，其中第 15 行与 24 行处理的总时间复杂度为 k
+// DFS on the map, time complexity O(kmn) in average, where the total time complexity of lines 15 and 24 is k
 const int dx[]={-1,0,0,1};
 const int dy[]={0,-1,1,0};
-// 这是每一步可以走的方向，这里是上下左右。常见的还有上下左右、左上右上左下右下八个方向。
+// This is the possible direction of each step. Here they are up, down, left and right. In some cases there are eight directions: up, down, left, right, left up, right up, left down and right down.
 bool visit[size][size];
-void dfs (int x,int y) // 根据题目需要可以更改返回类型或增加参数等
+void dfs (int x,int y) // According to the requirement of the problem, you can change the return type or add parameters
 {
     visit[x][y]=1;
-    // 对该点 (x,y) 进行一些处理，具体看题目要求
-    for (int k=0;k<4;k++) // 4 个方向，所以是 4。如果是 8 个方向，应改成 8。
+    // The point (x,y) is processed according to the requirements of the problem
+    for (int k=0;k<4;k++) // There are 4 directions, so it is 4. If there are 8, then it should be changed to 8.
     {
         int xx=x+dx[k];
         int yy=y+dy[k];
         if (xx>0 && xx<=n && yy>0 && yy<=m
-            && mp[xx][yy]=='.' && !visit[xx][yy] /*&& 题目规定的要求*/)
+            && mp[xx][yy]=='.' && !visit[xx][yy] /*&& requirements of the problem*/)
         {
             dfs (xx,yy);
-            // 这里其实也可以进行一些操作
+            // In fact, some operations can also be carried out here
         }
     }
 }
 
-// 上面都是二维地图，三位地图可以此类推。
+// Above are two-dimensional maps, three-dimensional maps can be pushed like this.
