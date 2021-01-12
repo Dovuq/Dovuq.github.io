@@ -1,0 +1,265 @@
+<html>
+    <head>
+        <title>Untitled2</title>
+        <script>
+            var ans=[],n,m,player=0,mirrordir=0,p=0;
+            var ax,ay,bx,by,visit=[],as,bs;
+            var dx=[-1,0,0,1];
+            var dy=[0,-1,1,0];
+            function _onload ()
+            {
+                for (var i=0;i<55;i++)
+                {
+                    ans[i]=new Array();
+                    visit[i]=new Array();
+                }
+            }
+            function color ()
+            {
+                if (player) return "#8888ff";
+                else return "#ff8888";
+            }
+            function reset ()
+            {
+                var flag=0;
+                n=parseInt(document.getElementById("rownum").value);
+                m=parseInt(document.getElementById("colnum").value);
+                if (n<7 || n>50)
+                {
+                    var s=document.getElementById("rowerr");
+                    s.innerHTML="*Row number should be between 7 and 50!";
+                    flag=1;
+                }
+                if (m<7 || m>50)
+                {
+                    var s=document.getElementById("colerr");
+                    s.innerHTML="*Column number should be between 7 and 50!";
+                    flag=1;
+                }
+                if (flag) return;
+                document.getElementById("status").style.display="none";
+                document.getElementById("player").style.display="";
+                document.getElementById("playground").style.display="";
+                document.getElementById("setdir").style.display="";
+                var s="";
+                for (var i=0;i<n;i++)
+                {
+                    s+="<tr>";
+                    for (var j=0;j<m;j++)
+                        s+="<td id=\"item_"+i+"_"+j+"\" onclick=\"go("+i+","+j+")\">&nbsp;</td>";
+                    s+="</tr>";
+                }
+                var t=document.getElementById("main");
+                t.innerHTML=s;
+                document.getElementById("item_0_0").style.backgroundColor="#ff8888";
+                document.getElementById("item_"+(n-1)+"_"+(m-1)).style.backgroundColor="#8888ff";
+                ax=ay=0;
+                bx=n-1;
+                by=m-1;
+            }
+            function dfss (x,y,evt)
+            {
+                if (x<0 || x>=n || y<0 || y>=m) return 0;
+                evt;
+                visit[x][y]=1;
+                var ans=0;
+                if (x==ax && y==ay) ans|=1;
+                if (x==bx && y==by) ans|=2;
+                for (var i=0;i<4;i++)
+                {
+                    var xx=x+dx[i];
+                    var yy=y+dy[i];
+                    var flag=1;
+                    if (xx<0 || xx>=n || yy<0 || yy>=m || visit[xx][yy]) continue;
+                    switch (i)
+                    {
+                    case 1:
+                        if (document.getElementById("item_"+xx+"_"+yy).style.borderBottomWidth[0]>1) flag=0;
+                        break;
+                    case 2:
+                        if (document.getElementById("item_"+xx+"_"+yy).style.borderRightWidth[0]>1) flag=0;
+                        break;
+                    case 3:
+                        if (document.getElementById("item_"+x+"_"+y).style.borderRightWidth[0]>1) flag=0;
+                        break;
+                    case 4:
+                        if (document.getElementById("item_"+x+"_"+y).style.borderBottomWidth[0]>1) flag=0;
+                    }
+                    if (flag) ans|=dfss (xx,yy,evt);
+                }
+                return ans;
+            }
+            function dfs (x,y,evt)
+            {
+                if (x<0 || x>=n || y<0 || y>=m) return 3;
+                for (var i=0;i<55;i++)
+                    for (var j=0;j<55;j++)
+                        visit[i][j]=0;
+                return dfss (x,y,evt);
+            }
+            function go (x,y)
+            {
+                var s=document.getElementById("mirrorerr");
+                if (mirrordir==0)
+                {
+                    s.innerHTML="*Mirror direction isn't selected!";
+                    return;
+                }
+                s.innerHTML="";
+                s=document.getElementById("item_"+x+"_"+y);
+                var ra,rb;
+                switch (mirrordir)
+                {
+                case 1:
+                    if (x>0) document.getElementById("item_"+(x-1)+"_"+y).style.borderBottomWidth=3;
+                    else s.style.borderTopWidth=3;
+                    ra=dfs(x-1,y,{});
+                    rb=dfs(x,y,{});
+                    if (ra!=rb)
+                    {
+                        if (!(ra & (1<<player))) dfs(x-1,y,function(){
+                            document.getElementById("item_"+x+"_"+y).style.backgroundColor=color(player);
+                            if (player) document.getElementById("item_"+x+"_"+y).style.innerhtml=++bs;
+                            else document.getElementById("item_"+x+"_"+y).style.innerhtml=++as;
+                        });
+                        if (!(rb & (1<<player))) dfs(x,y,function(){
+                            document.getElementById("item_"+x+"_"+y).style.backgroundColor=color(player);
+                            if (player) document.getElementById("item_"+x+"_"+y).style.innerhtml=++bs;
+                            else document.getElementById("item_"+x+"_"+y).style.innerhtml=++as;
+                        });
+                    }
+                    break;
+                case 2:
+                    s.style.borderBottomWidth=3;
+                    ra=dfs(x,y,{});
+                    rb=dfs(x+1,y,{});
+                    if (ra!=rb)
+                    {
+                        if (!(ra & (1<<player))) dfs(x,y,function(){
+                            document.getElementById("item_"+x+"_"+y).style.backgroundColor=color(player);
+                            if (player) document.getElementById("item_"+x+"_"+y).style.innerhtml=++bs;
+                            else document.getElementById("item_"+x+"_"+y).style.innerhtml=++as;
+                        });
+                        if (!(rb & (1<<player))) dfs(x+1,y,function(){
+                            document.getElementById("item_"+x+"_"+y).style.backgroundColor=color(player);
+                            if (player) document.getElementById("item_"+x+"_"+y).style.innerhtml=++bs;
+                            else document.getElementById("item_"+x+"_"+y).style.innerhtml=++as;
+                        });
+                    }
+                    break;
+                case 3:
+                    if (y>0) document.getElementById("item_"+x+"_"+(y-1)).style.borderRightWidth=3;
+                    else s.style.borderLeftWidth=3;
+                    ra=dfs(x,y-1,{});
+                    rb=dfs(x,y,{});
+                    if (ra!=rb)
+                    {
+                        if (!(ra & (1<<player))) dfs(x,y-1,function(){
+                            document.getElementById("item_"+x+"_"+y).style.backgroundColor=color(player);
+                            if (player) document.getElementById("item_"+x+"_"+y).style.innerhtml=++bs;
+                            else document.getElementById("item_"+x+"_"+y).style.innerhtml=++as;
+                        });
+                        if (!(rb & (1<<player))) dfs(x,y,function(){
+                            document.getElementById("item_"+x+"_"+y).style.backgroundColor=color(player);
+                            if (player) document.getElementById("item_"+x+"_"+y).style.innerhtml=++bs;
+                            else document.getElementById("item_"+x+"_"+y).style.innerhtml=++as;
+                        });
+                    }
+                    break;
+                case 4:
+                    s.style.borderRightWidth=3;
+                    ra=dfs(x,y,{});
+                    rb=dfs(x,y+1,{});
+                    if (ra!=rb)
+                    {
+                        if (!(ra & (1<<player))) dfs(x,y,function(){
+                            document.getElementById("item_"+x+"_"+y).style.backgroundColor=color(player);
+                            if (player) document.getElementById("item_"+x+"_"+y).style.innerhtml=++bs;
+                            else document.getElementById("item_"+x+"_"+y).style.innerhtml=++as;
+                        });
+                        if (!(rb & (1<<player))) dfs(x,y+1,function(){
+                            document.getElementById("item_"+x+"_"+y).style.backgroundColor=color(player);
+                            if (player) document.getElementById("item_"+x+"_"+y).style.innerhtml=++bs;
+                            else document.getElementById("item_"+x+"_"+y).style.innerhtml=++as;
+                        });
+                    }
+                }
+                s=document.getElementsByName("mirrordir");
+                for (var i=0;i<s.length;i++)
+                    s[i].checked="";
+                mirrordir=0;
+                if (player)
+                {
+                    document.getElementById("item_"+bx+"_"+by).style.backgroundColor="#ffffff";
+                    document.getElementById("item_"+x+"_"+y).style.backgroundColor="#8888ff";
+                    bx=x;
+                    by=y;
+                    player=0;
+                    document.getElementById("player2").innerHTML="red";
+                }
+                else
+                {
+                    document.getElementById("item_"+ax+"_"+ay).style.backgroundColor="#ffffff";
+                    document.getElementById("item_"+x+"_"+y).style.backgroundColor="#ff8888";
+                    ax=x;
+                    ay=y;
+                    player=1;
+                    document.getElementById("player2").innerHTML="blue";
+                }
+            }
+            window.onload=_onload();
+        </script>
+        <style>
+            body
+            {
+                background-color: #ffffff;
+                color: #000000;
+                padding: 100px;
+            }
+            p.error
+            {
+                color: #ff0000;
+            }
+            table,th,td
+            {
+                border: 1px solid #333333;
+            }
+            table
+            {
+                border-collapse: collapse;
+            }
+            td
+            {
+                width: 20px;
+                height: 20px;
+                padding: 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="status">
+            Input row number:<input id="rownum"></input><br>
+            <p class="error" id="rowerr"></p>
+            Input column number:<input id="colnum"></input><br>
+            <p class="error" id="colerr"></p>
+            <button onclick="reset()">submit</button>
+        </div>
+        <div id="player" style="display: none">
+            <p>Now it is <span id="player2">red</span> one's turn.</p>
+        </div>
+        <div id="playground" style="display: none">
+            <table id="main"></table>
+        </div>
+        <div id="setdir" style="display: none">
+            <p>Set mirror direction</p>
+            <p>
+                <input type="radio" name="mirrordir" onclick="mirrordir=1">Up
+                <input type="radio" name="mirrordir" onclick="mirrordir=2">Down
+                <input type="radio" name="mirrordir" onclick="mirrordir=3">Left
+                <input type="radio" name="mirrordir" onclick="mirrordir=4">Right
+            </p>
+            <p>Click the location after selected.<!-- Places you are able to go is shown green.--></p>
+            <p class="error" id="mirrorerr"></p>
+        </div>
+    </body>
+</html>
