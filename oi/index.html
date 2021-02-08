@@ -1,10 +1,13 @@
 <html>
     <head>
-        <title>Dovuq's blog</title>
-        <link rel="stylesheet" type="text/css" href="/theme.css">
+        <title>OI</title>
+        <div id="header"></div>
+        <script src="/jquery.js"></script>
+        <script>
+            $("#header").load("/header.html");
+        </script>
     </head>
     <body>
-        <iframe height=40px width=100% frameborder=0 scrolling=no src="/header.html"></iframe>
         <h1>OI Board</h1>
         <p><a href="csp2020">Travel note of CSP-J/S 2020</a></p>
         <p><a href="codestyle">My Code Style for OI</a></p>
@@ -18,6 +21,9 @@
             <li><a href="segmenttree.cpp">Segment tree</a></li>
         </ol>
         <p>Welcome to point out the mistakes in the programs.</p>
-        <iframe height=150px width=100% frameborder=0 scrolling=no src="/footer.html"></iframe>
+        <div id="footer"></div>
+        <script>
+            $("#footer").load("/footer.html");
+        </script>
     </body>
 </html>

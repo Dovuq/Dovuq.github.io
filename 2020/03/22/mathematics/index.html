@@ -1,17 +1,13 @@
 <html>
     <head>
         <title>Mathematics Formulas &amp; Tables</title>
-        <link rel="stylesheet" type="text/css" href="/theme.css">
+        <div id="header"></div>
+        <script src="/jquery.js"></script>
         <script>
-            MathJax={
-                tex:{ inlineMath: [['$$','$$'],['$','$']] },
-                svg:{ fontCache: 'global' }
-            };
+            $("#header").load("/header.html");
         </script>
-        <script type="text/javascript" id="MathJax-script" async  src="https://cdn.bootcdn.net/ajax/libs/mathjax/3.0.5/es5/tex-chtml.js"></script>
     </head>
     <body>
-        <iframe height=40px width=100% frameborder=0 scrolling=no src="/header.html"></iframe>
         <h1>Mathematics Formulas &amp; Tables</h1>
         <h2>$x^2$</h2>
         <ul>
@@ -614,6 +610,9 @@
             </tr>
         </table>
         <p><a href="/plots/exsct.xlsx">Download link of the next table.</a></p>
-        <iframe height=150px width=100% frameborder=0 scrolling=no src="/footer.html"></iframe>
+        <div id="footer"></div>
+        <script>
+            $("#footer").load("/footer.html");
+        </script>
     </body>
 </html>

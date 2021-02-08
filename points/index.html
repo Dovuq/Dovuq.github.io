@@ -1,10 +1,13 @@
 <html>
     <head>
         <title>Points</title>
-        <link rel="stylesheet" type="text/css" href="/theme.css">
+        <div id="header"></div>
+        <script src="/jquery.js"></script>
+        <script>
+            $("#header").load("/header.html");
+        </script>
     </head>
     <body>
-        <iframe height=40px width=100% frameborder=0 scrolling=no src="/header.html"></iframe>
         <h1>Points</h1>
         <table>
         <tr>
@@ -18,7 +21,7 @@
             <td>1</td>
             <td>1</td>
             <td id="us1">[Owner] Dovuq</td>
-            <td id="pt1">374</td>
+            <td id="pt1">390</td>
             <td>-</td>
         </tr>
         <tr>
@@ -36,6 +39,9 @@
             <td>-</td>
         </tr>
         </table>
-        <iframe height=150px width=100% frameborder=0 scrolling=no src="/footer.html"></iframe>
+        <div id="footer"></div>
+        <script>
+            $("#footer").load("/footer.html");
+        </script>
     </body>
 </html>

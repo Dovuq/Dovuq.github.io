@@ -1,7 +1,11 @@
 <html>
     <head>
         <title>Test Your Reaction Time</title>
-        <link rel="stylesheet" type="text/css" href="/theme.css">
+        <div id="header"></div>
+        <script src="/jquery.js"></script>
+        <script>
+            $("#header").load("/header.html");
+        </script>
         <script>
             var t0=new Date().getTime(),ready=0;
             function sleep (delay)
@@ -33,10 +37,12 @@
         </script>
     </head>
     <body>
-        <iframe height=40px width=100% frameborder=0 scrolling=no src="/header.html"></iframe>
         <h1>Test Your Reaction Time</h1>
         <p>Press space when you see the background turn red. Press enter if you're ready.</p>
         <p id="ready">Ready?</p>
-        <iframe height=150px width=100% frameborder=0 scrolling=no src="/footer.html"></iframe>
+        <div id="footer"></div>
+        <script>
+            $("#footer").load("/footer.html");
+        </script>
     </body>
 </html>

@@ -1,14 +1,11 @@
 <html>
     <head>
         <title>Physics & Chemistry Tables</title>
-        <link rel="stylesheet" type="text/css" href="/theme.css">
+        <div id="header"></div>
+        <script src="/jquery.js"></script>
         <script>
-            MathJax={
-                tex:{ inlineMath: [['$$','$$'],['$','$']] },
-                svg:{ fontCache: 'global' }
-            };
+            $("#header").load("/header.html");
         </script>
-        <script type="text/javascript" id="MathJax-script" async  src="https://cdn.bootcdn.net/ajax/libs/mathjax/3.0.5/es5/tex-chtml.js"></script>
         <style>
             .metal
             {
@@ -58,7 +55,6 @@
         </style>
     </head>
     <body>
-        <iframe height=40px width=100% frameborder=0 scrolling=no src="/header.html"></iframe>
         <h1>物理&化学表</h1>
         <h2>物理量及单位表</h2>
         <table>
@@ -946,6 +942,9 @@
             </tr>
         </table>
         <p><a href="/plots/chem.xlsx">下一张表的下载链接。</a></p>
-        <iframe height=150px width=100% frameborder=0 scrolling=no src="/footer.html"></iframe>
+        <div id="footer"></div>
+        <script>
+            $("#footer").load("/footer.html");
+        </script>
     </body>
 </html>

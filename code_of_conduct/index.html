@@ -1,10 +1,13 @@
 <html>
     <head>
         <title>Code of Conduct</title>
-        <link rel="stylesheet" type="text/css" href="/theme.css">
+        <div id="header"></div>
+        <script src="/jquery.js"></script>
+        <script>
+            $("#header").load("/header.html");
+        </script>
     </head>
     <body>
-        <iframe height=40px width=100% frameborder=0 scrolling=no src="/header.html"></iframe>
         <h1>Code of Conduct</h1>
         <h2>Definitions:</h2>
         <ol>
@@ -42,6 +45,9 @@
             <li>If an administrator kicks the owner out of the team, he will never be allowed into all the owner's teams. </li>
             <li>Look forward to other rules. </li>
         </ol>
-        <iframe height=150px width=100% frameborder=0 scrolling=no src="/footer.html"></iframe>
+        <div id="footer"></div>
+        <script>
+            $("#footer").load("/footer.html");
+        </script>
     </body>
 </html>

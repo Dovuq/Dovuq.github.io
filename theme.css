@@ -3,7 +3,7 @@
  *
  * Name: Untitled_1
  * Author: Dovuq & xrdrsp
- * Version: 5
+ * Version: 6
  */
 
 body
@@ -37,4 +37,10 @@ pre
 .noborder
 {
     border: 0px;
+}
+.header
+{
+    text-align: center;
+    color: #3399ff;
+    font-size: 16px;
 }

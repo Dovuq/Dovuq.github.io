@@ -1,7 +1,11 @@
 <html>
     <head>
         <title>Frequency histogram generation</title>
-        <link rel="stylesheet" type="text/css" href="/theme.css">
+        <div id="header"></div>
+        <script src="/jquery.js"></script>
+        <script>
+            $("#header").load("/header.html");
+        </script>
         <script>
             var start,end,interval,data,err;
             var a,freq,wid,maxn,graph,s;
@@ -82,7 +86,6 @@
         </style>
     </head>
     <body>
-        <iframe height=40px width=100% frameborder=0 scrolling=no src="/header.html"></iframe>
         <h1>Frequency histogram generation</h1>
         <p>Input data below, divided by spaces, maximum 10000 numbers:</p>
         <input id="data" type="text" placeholder="Data area" style=" width: 100%"></input>
@@ -93,6 +96,9 @@
         <button onclick="generate()">submit</button>
         <p>Here comes the graph:</p>
         <div id="graph" class="graph" height=200px width=200px></div>
-        <iframe height=150px width=100% frameborder=0 scrolling=no src="/footer.html"></iframe>
+        <div id="footer"></div>
+        <script>
+            $("#footer").load("/footer.html");
+        </script>
     </body>
 </html>
