@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Time transfer</title>
+        <div id="header"></div>
+        <script src="/jquery.js"></script>
+        <script>
+            $("#header").load("/header.html");
+        </script>
+        <script>
+        </script>
+    </head>
+    <body>
+        <h1>Time transfer</h1>
+        Year: <input id="year" type="number" min=1970 max=9999 placeholder=1970><br>
+        Month: <input id="month" type="number" min=1 max=12 placeholder=1><br>
+        Date: <input id="date" type="number" min=1 max=31 placeholder=1><br>
+        Hour: <input id="hour" type="number" min=0 max=23 placeholder=0><br>
+        Minute: <input id="minute" type="number" min=0 max=59 placeholder=0><br>
+        Second: <input id="second" type="number" min=0 max=59 placeholder=0><br>
+        Zone: <select>
+            <option value="utc_12">UTC-12</option>
+            <option value="utc_11">UTC-11</option>
+            <option value="utc_10">UTC-10</option>
+            <option value="utc_95">UTC-9:30</option>
+            <option value="utc_9">UTC-9</option>
+            <option value="utc_8">UTC-8</option>
+            <option value="utc_7">UTC-7</option>
+            <option value="utc_6">UTC-6</option>
+            <option value="utc_5">UTC-5</option>
+            <option value="utc_4">UTC-4</option>
+            <option value="utc_35">UTC-3:30</option>
+            <option value="utc_3">UTC-3</option>
+            <option value="utc_25">UTC-2:30</option>
+            <option value="utc_2">UTC-2</option>
+            <option value="utc_1">UTC-1</option>
+            <option value="utc">UTC</option>
+            <option value="utc1">UTC+1</option>
+            <option value="utc2">UTC+2</option>
+            <option value="utc3">UTC+3</option>
+            <option value="utc35">UTC+3:30</option>
+            <option value="utc4">UTC+4</option>
+            <option value="utc45">UTC+4:30</option>
+            <option value="utc5">UTC+5</option>
+            <option value="utc55">UTC+5:30</option>
+            <option value="utc575">UTC+5:45</option>
+            <option value="utc6">UTC+6</option>
+            <option value="utc65">UTC+6:30</option>
+            <option value="utc7">UTC+7</option>
+            <option value="utc75">UTC+7:30</option>
+            <option value="utc8">UTC+8</option>
+            <option value="utc9">UTC+9</option>
+            <option value="utc95">UTC+9:30</option>
+            <option value="utc10">UTC+10</option>
+            <option value="utc105">UTC+10:30</option>
+            <option value="utc11">UTC+11</option>
+            <option value="utc12">UTC+12</option>
+            <option value="utc13">UTC+13</option>
+            <option value="utc14">UTC+14</option>
+        </select>
+        <button onclick="turn()">Transfer</button>
+        <div id="footer"></div>
+        <script>
+            $("#footer").load("/footer.html");
+        </script>
+    </body>
+</html>

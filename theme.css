@@ -3,7 +3,7 @@
  *
  * Name: Untitled_1
  * Author: Dovuq & xrdrsp
- * Version: 7
+ * Version: 7.1
  */
 
 body
@@ -30,7 +30,7 @@ table
 {
     color: #ff0000;
 }
-pre,code
+pre
 {
     background-color: #eeeeee;
     border: 1px solid #000000;
