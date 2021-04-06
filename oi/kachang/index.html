@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>关于卡常</title>
+        <div id="header"></div>
+        <script src="/jquery.js"></script>
+        <script>
+            $("#header").load("/header.html");
+        </script>
+    </head>
+    <body>
+        <h1>关于卡常</h1>
+        <p>1. i++ vs ++i</p>
+        <p>A. <code>for (int i=0;i&lt;1000000000;i++);</code> 3次平均用时：1.265s</p>
+        <p>B. <code>for (int i=0;i&lt;1000000000;++i);</code> 3次平均用时：1.275s</p>
+        <p>&nbsp;</p>
+        <p>2. printf vs cout vs 快速输出</p>
+        <p>A. <code>printf("%d\n",123456789);</code> 10000次总用时：4.217s</p>
+        <p>B. <code>cout&lt;&lt;123456789&lt;&lt;endl;</code> 10000次总用时：2.483s</p>
+        <p>C. <code>print(123456789);putchar(10);</code> 10000次总用时：4.147s</p>
+        <p>&nbsp;</p>
+        <p>3. register</p>
+        <p>A. 1.A 不加 register 3次平均用时：1.265s</p>
+        <p>B. 1.A 加上 register 3次平均用时：0.244s</p>
+        <p>&nbsp;</p>
+        <p>4. n*2+1 vs n&lt;&lt;1|1</p>
+        <p>A. <code>for (register int i=0;i&lt;1000000000;i++) n=n*2+1;</code> 3次平均用时：1.400s</p>
+        <p>B. <code>for (register int i=0;i&lt;1000000000;i++) n=n&lt;&lt;1|1;</code> 3次平均用时：1.395s</p>
+        <div id="footer"></div>
+        <script>
+            $("#footer").load("/footer.html");
+        </script>
+    </body>
+</html>
