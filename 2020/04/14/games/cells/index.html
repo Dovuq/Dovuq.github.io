@@ -1,0 +1,124 @@
+<html>
+    <head>
+        <title>Cells</title>
+        <script>
+            var dx=[-1,-1,-1,0,0,1,1,1];
+            var dy=[-1,0,1,-1,1,-1,0,1];
+            var t1;
+            function sleep(milliSeconds)
+            {
+                var startTime=new Date().getTime();
+                while (new Date().getTime()<startTime+milliSeconds)
+                    console.log(new Date().getTime());
+            }
+            function reset()
+            {
+                var s="";
+                for (var i=0;i<50;i++)
+                {
+                    s+="<tr>";
+                    for (var j=0;j<50;j++)
+                        s+="<td id=\"item_"+i+"_"+j+"\" onclick=\"turn("+i+","+j+")\" class=\"dead\">&nbsp;</td>";
+                    s+="</tr>";
+                }
+                var t=document.getElementById("main");
+                t.innerHTML=s;
+                t=document.getElementById("time");
+                t.innerHTML=0;
+            }
+            function turn (x,y)
+            {
+                var t=document.getElementById ("item_"+x+"_"+y);
+                if (t.className=="dead") t.className="alive";
+                else t.className="dead";
+            }
+            function go ()
+            {
+                var ans=[];
+                for (var i=0;i<50;i++)
+                {
+                    ans[i]=new Array();
+                    for (var j=0;j<50;j++)
+                    {
+                        var cnt=0;
+                        for (var k=0;k<8;k++)
+                        {
+                            var xx=i+dx[k];
+                            var yy=j+dy[k];
+                            if (xx<0||xx>=50||yy<0||yy>=50) continue;
+                            var t=document.getElementById ("item_"+xx+"_"+yy);
+                            if (t.className=="alive") cnt++;
+                        }
+                        if (cnt==3 || cnt==4) ans[i][j]=1;
+                        else ans[i][j]=0;
+                    }
+                }
+                for (var i=0;i<50;i++)
+                    for (var j=0;j<50;j++)
+                    {
+                        var t=document.getElementById ("item_"+i+"_"+j);
+                        if (ans[i][j]) t.className="alive";
+                        else t.className="dead";
+                    }
+                var t=document.getElementById("time");
+                t.innerHTML++;
+            }
+            function keep ()
+            {
+                document.getElementById ("keep").style.display="none";
+                document.getElementById ("stop").style.display="";
+                t1=window.setInterval("go()",300);
+            }
+            function stop ()
+            {
+                document.getElementById ("keep").style.display="";
+                document.getElementById ("stop").style.display="none";
+                window.clearInterval(t1);
+            }
+        </script>
+        <style>
+            body
+            {
+                background-color: #ffffff;
+                color: #000000;
+                padding: 100px;
+            }
+            table,th,td
+            {
+                border: 1px solid #000000;
+                font-size: 0px;
+            }
+            table
+            {
+                border-collapse: collapse;
+                width: 0pt;
+                height: 0pt;
+            }
+            td
+            {
+                width: 10pt;
+                height: 10pt;
+            }
+            td.dead
+            {
+                background-color: #666666;
+            }
+            td.alive
+            {
+                background-color: #ffffff;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="playground">
+            <table id="main"></table>
+            <p>
+                <button onclick="reset()">Reset</button>
+                <button onclick="go()">&gt;</button>
+                <button id="keep" onclick="keep()">&gt;&gt;&gt;</button>
+                <button id="stop" onclick="stop()" style="display: none">Stop</button>
+            </p>
+            <p>Time: <span id="time">0</span></p>
+        </div>
+    </body>
+</html>
