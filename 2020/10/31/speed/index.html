@@ -23,11 +23,31 @@
                 }
                 else document.getElementById("speed").innerHTML=(n-1)*60000/(t-t0);
             }
+            $(function()
+            {
+                if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent))
+                {
+                    document.getElementById("mobile").style.display="";
+                    mobile=1;
+                    document.body.onclick=function ()
+                    {
+                        t=new Date().getTime(),n++;
+                        if (n==0) document.getElementById("speed").innerHTML="N/A";
+                        else if (n==1)
+                        {
+                            t0=new Date().getTime();
+                            document.getElementById("speed").innerHTML="Keep on typing";
+                        }
+                        else document.getElementById("speed").innerHTML=(n-1)*60000/(t-t0);
+                    }
+                }
+            })
         </script>
     </head>
     <body>
         <h1>Speed test</h1>
         <p>Test speed. Press 1 and 2 alternately. Press 0 to clear.</p>
+        <p id="mobile" style="display: none">For mobile users, just pressing the screen is ok. To clear, refresh this page.</p>
         <p>Speed: <span id="speed">N/A</span> bpm</p>
         <div id="footer"></div>
         <script>
