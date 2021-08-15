@@ -3,7 +3,6 @@
  *
  * Name: Untitled_1
  * Author: Dovuq & xrdrsp
- * Version: 8.1
  */
 
 body
@@ -12,6 +11,7 @@ body
     color: #000000;
     padding: 100px;
     font-size: 16px;
+    text-align: left;
 }
 p
 {
