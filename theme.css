@@ -47,7 +47,7 @@ pre
 .header
 {
     text-align: center;
-    color: #3399ff;
+    color: #3399cc;
     font-size: 16px;
 }
 .footer
@@ -59,4 +59,8 @@ pre
 li
 {
     padding-top: 8px;
+}
+a:link,a:visited
+{
+    color: #3399cc;
 }
