@@ -1,5 +1,6 @@
 $RECYCLE.BIN/
 System Volume Information/
+.Trash-1000/
 key
 key.pub
 push.exe
@@ -7,3 +8,4 @@ gmon.out
 files/
 .DS_Store
 web.config
+apache2.html
