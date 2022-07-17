@@ -14,10 +14,10 @@
             function reset()
             {
                 var s="";
-                for (var i=0;i<50;i++)
+                for (var i=0;i<200;i++)
                 {
                     s+="<tr>";
-                    for (var j=0;j<50;j++)
+                    for (var j=0;j<200;j++)
                         s+="<td id=\"item_"+i+"_"+j+"\" onclick=\"turn("+i+","+j+")\" class=\"dead\">&nbsp;</td>";
                     s+="</tr>";
                 }
@@ -35,26 +35,28 @@
             function go ()
             {
                 var ans=[];
-                for (var i=0;i<50;i++)
+                for (var i=0;i<200;i++)
                 {
                     ans[i]=new Array();
-                    for (var j=0;j<50;j++)
+                    for (var j=0;j<200;j++)
                     {
                         var cnt=0;
+                        var t=document.getElementById ("item_"+i+"_"+j);
+                        if (t.className=="alive") ans[i][j]=1;
                         for (var k=0;k<8;k++)
                         {
                             var xx=i+dx[k];
                             var yy=j+dy[k];
                             if (xx<0||xx>=50||yy<0||yy>=50) continue;
-                            var t=document.getElementById ("item_"+xx+"_"+yy);
+                            t=document.getElementById ("item_"+xx+"_"+yy);
                             if (t.className=="alive") cnt++;
                         }
-                        if (cnt==3 || cnt==4) ans[i][j]=1;
-                        else ans[i][j]=0;
+                        if (cnt==3) ans[i][j]=1;
+                        else if (cnt!=2) ans[i][j]=0;
                     }
                 }
-                for (var i=0;i<50;i++)
-                    for (var j=0;j<50;j++)
+                for (var i=0;i<200;i++)
+                    for (var j=0;j<200;j++)
                     {
                         var t=document.getElementById ("item_"+i+"_"+j);
                         if (ans[i][j]) t.className="alive";
@@ -67,7 +69,7 @@
             {
                 document.getElementById ("keep").style.display="none";
                 document.getElementById ("stop").style.display="";
-                t1=window.setInterval("go()",300);
+                t1=window.setInterval("go()",100);
             }
             function stop ()
             {
