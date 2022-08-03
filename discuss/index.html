@@ -2,10 +2,25 @@
     <head>
         <title>Discussion Board</title>
         <div id="header"></div>
-        <script src="/jquery.js"></script>
         <script>
             $("#header").load("/header.html");
         </script>
+        <link rel="stylesheet" type="text/css" href="/theme.css">
+        <p class="header">
+            <a href="/" target=_parent>Home</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="/about/" target=_parent>About</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="/discuss/" target=_parent>Discuss</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="/oi/" target=_parent>OI</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="/programs/" target=_parent>Programs</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="https://www.github.com/dovuq/dovuq.github.io/issues" target=_parent>Issues</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="https://xrdrsp.github.io/" target=_parent>Link</a>
+        <p>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     </head>
     <body>
@@ -17,7 +32,7 @@
             <li>Don't comment things that have nothing to do with the blog.</li>
         </ul>
         <p>I'm sorry, that I don't know why the comments are centered. I'm now fixing it.</p>
-        <div id="valine">
+        <div id="valine" style="text-align: left">
             <div id="comment"></div>
             <script src='https://unpkg.com/valine/dist/Valine.min.js'></script>
             <script>
@@ -30,9 +45,5 @@
                 });
             </script>
         </div>
-        <div id="footer"></div>
-        <script>
-            $("#footer").load("/footer.html");
-        </script>
     </body>
 </html>
