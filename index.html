@@ -41,8 +41,8 @@
     </head>
     <body>
         <h1>Mainpage</h1>
-        <p>Version 42.1.8.2</p>
-        <p><strong>If you are new here, it is really necessary and important for you to read the <a href="about">about page!</a></strong></p>
+        <p>Version 42.1.8.3</p>
+        <!--<p><strong>If you are new here, it is really necessary and important for you to read the <a href="about">about page!</a></strong></p>-->
         <table>
             <tr>
                 <th>Article number</th><th>Article name</th>
@@ -69,21 +69,13 @@
                 <td>4</td><td><a href="/2020/03/22/mathematics/">Mathematics formulas &amp; tables</a></td>
             </tr>
             <tr>
-                <td>2</td><td><a href="https://zh.numberempire.com">Mathematics tools</a></td>
+                <td>2</td><td><a href="//numberempire.com">Mathematics tools</a></td>
             </tr>
         </table>
         <p>Input user id, turn to his or her personal home page automatically</p>
         <input type="text" id="uid"/>
         <button onclick="turn()">Turn</button>
         <p class="error" id="errid"></p>
-        <p>Are there something that can be better in the blog? <a href="https://www.github.com/dovuq/dovuq.github.io/issues">Give issues here</a> and don't forget to @Dovuq!</p>
-        <button id="test" onclick="getfile('theme.css',
-        function (str)
-        {
-            alert (str);
-            return str;
-        },
-        alert ('File Not Found'));" style="display: none">test</button>
         <div id="footer"></div>
         <script>
             $("#footer").load("/footer.html");
