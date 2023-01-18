@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Mathematics Formolas &amp; Tables</title>
+        <title>Mathematics Formulas &amp; Tables - Dovuq's website</title>
         <div id="header"></div>
         <script src="/jquery.js"></script>
         <script>
@@ -38,12 +38,18 @@
         </ol>
         <h2>Inequalities</h2>
         <ol>
-            <li>$\dfrac{a_1+a_2+...+a_n}n\geq\sqrt[n]{a_1a_2...a_n}\geq\dfrac n{\dfrac1{a_1}+\dfrac1{a_2}+...+\dfrac1{a_n}}(a_k\geq0)$</li>
-            <li>$\left||a|-|b|\right|\leq|a+b|\leq|a|+|b|$</li>
-            <li>$(a_1b_1+a_2b_2+...+a_nb_n)^2\leq(a_1^2+a_2^2+...+a_n^2)(b_1^2+b_2^2+...+b_n^2)$</li>
-            <li>$\dfrac a{a+1}\leq\ln(1+a)\leq a$</li>
-            <li>For a convex function $f(x)$, $f(\dfrac{\sum a_ix_i}{\sum a_i}) \leq \dfrac{\sum a_if(x_i)}{\sum a_i}$; if it is concave, $f(\dfrac{\sum a_ix_i}{\sum a_i}) \geq \dfrac{\sum a_if(x_i)}{\sum a_i}$</li>
-            <li>For two sorted lists $a_n$ and $b_n$, $a_1b_n+a_2b_{n-1}+...+a_nb_1\leq a_1b_{t_1}+a_2b_{t_2}+...+a_nb_{t_n}\leq a_1b_1+a_2b_2+...+a_nb_n(\{t_1,t_2,...,t_n\}=\{1,2,...,n\})$</li>
+            <li>Mean value inequality: If $a_1,a_2,...,a_n\geq0$, then $\dfrac n{\frac1{a_1}+\frac1{a_2}+...+\frac1{a_n}}\leq\sqrt[n]{a_1a_2...a_n}\leq\dfrac{a_1+a_2+...+a_n}n\leq\sqrt{\dfrac{a_1^2+a_2^2+...+a_n^2}n}$, the equal sign holds iff $a_1=a_2=...=a_n$</li>
+            <li>Power mean inequality: If $a_1,a_2,...,a_n\geq0,\alpha>\beta>0$, then $\left(\dfrac{a_1^\alpha+a_2^\alpha+...+a_n^\alpha}n\right)^{\frac1\alpha}\geq\left(\dfrac{a_1^\beta+a_2^\beta+...+a_n^\beta}n\right)^{\frac1\beta}$, the equal sign holds iff $a_1=a_2=...=a_n$</li>
+            <li>Weighted mean value inequality: If $a_1,a_2,...,a_n,\alpha_i>0,\sum_{i=1}^n\alpha_i=1$, then $a_1^{\alpha_1}a_2^{\alpha_2}...a_n^{\alpha_n}\leq a_1\alpha_1+a_2\alpha_2+...+a_n\alpha_n$</li>
+            <li>Cauchy's inequality: $(a_1b_1+a_2b_2+...+a_nb_n)^2\leq(a_1^2+a_2^2+...+a_n^2)(b_1^2+b_2^2+...+b_n^2)$, the equal sign holds iff $b_1=b_2=...=b_n=0$ or $\dfrac{a_1}{b_1}=\dfrac{a_2}{b_2}=...=\dfrac{a_n}{b_n}$</li>
+            <li>Sorting inequality: If $a_1\leq a_2\leq...\leq a_n,b_1\leq b_2\leq...\leq b_n$, then $a_1b_n+a_2b_{n-1}+...+a_nb_1\leq a_1b_{t_1}+a_2b_{t_2}+...+a_nb_{t_n}\leq a_1b_1+a_2b_2+...+a_nb_n(\{t_1,t_2,...,t_n\}=\{1,2,...,n\})$</li>
+            <li>Chebyshev's inequality: If $a_1\leq a_2\leq...\leq a_n,b_1\leq b_2\leq...\leq b_n$, then $n\sum_{i=1}^n a_kb_{n-k+1}\leq\sum_{i=1}^n a_k\sum_{i=1}^n b_k\leq n\sum_{i=1}^n a_kb_k$</li>
+            <li>Jensen's inequality: For a concave function $f(x),x\in(a,b),x_1,x_2,...,x_n\in(a,b)$, then $f(\dfrac{\sum_{i=1}^n a_ix_i}{\sum_{i=1}^n a_i}) \geq\dfrac{\sum_{i=1}^n a_if(x_i)}{\sum_{i=1}^n a_i}$</li>
+            <li>Schur's inequality: If $x,y,z\geq0$, then $x^r(x-y)(x-z)+y^r(y-z)(y-x)+z^r(z-x)(z-y)\geq0$</li>
+            <li>Hölder's inequality: If $a_1,a_2,...,a_n,b_1,b_2,...,b_n,p,q>0,\frac1p+\frac1q=1$, then $\sum_{i=1}^n a_ib_i\leq(\sum_{i=1}^n a_i^p)^{\frac1p}(\sum_{i=1}^n b_i^q)^{\frac1q}$, the equal sign holds iff $b_1=b_2=...=b_n=0$ or $\dfrac{a_1^p}{b_1^q}=\dfrac{a_2^p}{b_2^q}=...=\dfrac{a_n^p}{b_n^q}$</li>
+            <li>If $a_1,a_2,...,a_n,b_1,b_2,...,b_n,m>0$, then $\sum_{i=1}^n\dfrac{a_i^{m+1}}{b_i^m}\geq\dfrac{(\sum_{i=1}^n a_i)^{m+1}}{(\sum_{i=1}^n b_i)^m}$, the equal sign holds iff $\dfrac{a_1}{b_1}=\dfrac{a_2}{b_2}=...=\dfrac{a_n}{b_n}$</li>
+            <li>Carlson inequality: If $a_{ij},\alpha_i\geq0,\sum_{i=1}^n\alpha_i=1$, then $\prod_{j=1}^m(\sum_{i=1}^n a_{ij})^{\alpha_j}\geq\sum_{i=1}^n(\prod_{j=1}^m a_{ij}^{\alpha_j})$</li>
+            <li>Abel sum: Let $S_k=\sum_{i=1}^k a_i$, then $\sum_{i=1}^n a_kb_k=\sum_{i=1}^{n-1}S_i(b_i-b_{i+1})+S_nb_n$</li>
         </ol>
         <h2>Trigonometric functions</h2>
         <ol>
@@ -100,7 +106,7 @@
             <li>$\arcsin\cos a=\arccos\sin a\;(2k\pi\leq a\leq 2k\pi+\dfrac\pi2)$</li>
             <li>$\arctan a+\arctan b=\arctan\dfrac{a+b}{1-ab}+k\pi$</li>
         </ol>
-        <h2>Limits and calcolus</h2>
+        <h2>Limits and calculus</h2>
         <ol>
             <li>$\lim_{x\rightarrow0}\dfrac{\sin x}x=1$</li>
             <li>$\lim_{x\rightarrow\infty}(1+\dfrac1x)^x=e$</li>
