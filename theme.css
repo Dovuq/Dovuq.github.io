@@ -54,7 +54,7 @@ pre
 }
 .footer
 {
-    text-align: center;
+    /* text-align: center; */
     color: #999966;
     font-size: 16px;
 }
