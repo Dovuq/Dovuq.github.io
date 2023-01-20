@@ -46,7 +46,7 @@ pre
 {
     border: 0px;
 }
-.header
+/* .header
 {
     text-align: center;
     color: #3399cc;
@@ -54,10 +54,10 @@ pre
 }
 .footer
 {
-    /* text-align: center; */
+    text-align: center;
     color: #999966;
     font-size: 16px;
-}
+} */
 li
 {
     padding-top: 8px;
