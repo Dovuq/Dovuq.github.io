@@ -21,9 +21,17 @@ div
     // }
     // if (window.onload==null) window.onload=f();
     // else window.onload+=f();
+    function turn ()
+    {
+        var s=document.getElementById("add").value;
+        if (s[0]!='/') s='/'+s;
+        // alert (s);
+        window.location.href=s;
+    }
 </script>
 <hr>
 <p class="footer">Copyleft 2023 Dovuq, Powered by 2023 GitHub, Inc.</p>
+<p class="footer">Website navigation: turn to the page you enter: <input id="add" /><button onclick="turn()">Turn</button></p>
 <p class="footer">Are there something that can be better in the blog? Or do you have any suggestions? Please <a href="https://www.github.com/dovuq/dovuq.github.io/issues">give issues here</a> and don't forget to @Dovuq!</p>
 <p class="footer"><a href="//xrdrsp.github.io/" target=_parents>Link to xrdrsp's website</a> (It is guaranteed to be safety certified.)</p>
 <!--<p><a href="https://dovuque.github.io">\(^o^)/</a></p>-->
