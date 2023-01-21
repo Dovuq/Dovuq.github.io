@@ -1,16 +1,17 @@
 <html>
     <head>
-        <title>Mathematics Formulas &amp; Tables</title>
+        <title>Mathematics Formulas &amp; Tables - Dovuq's website</title>
         <div id="header"></div>
         <script src="/jquery.js"></script>
         <script>
             $("#header").load("/header.html");
         </script>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     </head>
     <body>
         <h1>Mathematics Formulas &amp; Tables</h1>
         <h2>$x^2$</h2>
-        <ul>
+        <ol>
             <li>$ax^2+bx+c=0(a\neq0),x=\dfrac{-b\pm\sqrt{b^2-4ac}}{2a}$</li>
             <li>$x^2+y^2=r^2(r&gt;0)$</li>
             <li>$\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1(a\geq b,c=\sqrt{a^2-b^2})$</li>
@@ -21,31 +22,37 @@
             <li>$(a+b+c)^2=a^2+b^2+c^2+2ab+2bc+2ac$</li>
             <li>$a^2+b^2\geq2ab$</li>
             <li>$\dfrac{a+b}2\geq\sqrt{ab}(a\geq0,b\geq0)$</li>
-        </ul>
+        </ol>
         <h2>$x^3$</h2>
-        <ul>
+        <ol>
             <li>$a^3+b^3+c^3-3abc=(a+b+c)(a^2+b^2+c^2-ab-bc-ac)=(a+b+c)[(a-b)^2+(b-c)^2+(c-a)^2]$</li>
             <li>$(a\pm b)^3=a^3\pm3a^2b+3ab^2\pm b^3$</li>
             <li>$a^3\pm b^3=(a\pm b)(a^2\mp ab+b^2)$</li>
-        </ul>
+        </ol>
         <h2>$x^n$</h2>
-        <ul>
+        <ol>
             <li>$a^n-b^n=(a-b)(a^{n-1}+a^{n-2}b+...+a^{n-k}b^k+...+b^{n-1})$</li>
             <li>$a^{2n+1}+b^{2n+1}=(a+b)[a^{2n}-a^{2n-1}b+...+(-1)^ka^{n-k}b^k+...+b^{2n}]$</li>
             <li>$(a+b)^n=C_n^0a^n+C_n^1a^{n-1}b+...+C_n^ka^{n-k}b^k+...+C_n^nb^n$</li>
             <li>$(a-b)^n=C_n^0a^n-C_n^1a^{n-1}b+...+(-1)^kC_n^ka^{n-k}b^k+...+(-1)^nC_n^nb^n$</li>
-        </ul>
+        </ol>
         <h2>Inequalities</h2>
-        <ul>
-            <li>$\dfrac{a_1+a_2+...+a_n}n\geq\sqrt[n]{a_1a_2...a_n}\geq\dfrac n{\dfrac1{a_1}+\dfrac1{a_2}+...+\dfrac1{a_n}}(a_k\geq0)$</li>
-            <li>$\left||a|-|b|\right|\leq|a+b|\leq|a|+|b|$</li>
-            <li>$(a_1b_1+a_2b_2+...+a_nb_n)^2\leq(a_1^2+a_2^2+...+a_n^2)(b_1^2+b_2^2+...+b_n^2)$</li>
-            <li>$\dfrac a{a+1}\leq\ln(1+a)\leq a$</li>
-            <li>For a convex function $f(x)$, $f(\dfrac{\sum a_ix_i}{\sum a_i}) \leq \dfrac{\sum a_if(x_i)}{\sum a_i}$; if it is concave, $f(\dfrac{\sum a_ix_i}{\sum a_i}) \geq \dfrac{\sum a_if(x_i)}{\sum a_i}$</li>
-            <li>For two sorted lists $a_n$ and $b_n$, $a_1b_n+a_2b_{n-1}+...+a_nb_1\leq a_1b_{t_1}+a_2b_{t_2}+...+a_nb_{t_n}\leq a_1b_1+a_2b_2+...+a_nb_n(\{t_1,t_2,...,t_n\}=\{1,2,...,n\})$</li>
-        </ul>
+        <ol>
+            <li>Mean value inequality: If $a_1,a_2,...,a_n\geq0$, then $\dfrac n{\frac1{a_1}+\frac1{a_2}+...+\frac1{a_n}}\leq\sqrt[n]{a_1a_2...a_n}\leq\dfrac{a_1+a_2+...+a_n}n\leq\sqrt{\dfrac{a_1^2+a_2^2+...+a_n^2}n}$, the equal sign holds iff $a_1=a_2=...=a_n$</li>
+            <li>Power mean inequality: If $a_1,a_2,...,a_n\geq0,\alpha>\beta>0$, then $\left(\dfrac{a_1^\alpha+a_2^\alpha+...+a_n^\alpha}n\right)^{\frac1\alpha}\geq\left(\dfrac{a_1^\beta+a_2^\beta+...+a_n^\beta}n\right)^{\frac1\beta}$, the equal sign holds iff $a_1=a_2=...=a_n$</li>
+            <li>Weighted mean value inequality: If $a_1,a_2,...,a_n,\alpha_i>0,\sum_{i=1}^n\alpha_i=1$, then $a_1^{\alpha_1}a_2^{\alpha_2}...a_n^{\alpha_n}\leq a_1\alpha_1+a_2\alpha_2+...+a_n\alpha_n$</li>
+            <li>Cauchy's inequality: $(a_1b_1+a_2b_2+...+a_nb_n)^2\leq(a_1^2+a_2^2+...+a_n^2)(b_1^2+b_2^2+...+b_n^2)$, the equal sign holds iff $b_1=b_2=...=b_n=0$ or $\dfrac{a_1}{b_1}=\dfrac{a_2}{b_2}=...=\dfrac{a_n}{b_n}$</li>
+            <li>Sorting inequality: If $a_1\leq a_2\leq...\leq a_n,b_1\leq b_2\leq...\leq b_n$, then $a_1b_n+a_2b_{n-1}+...+a_nb_1\leq a_1b_{t_1}+a_2b_{t_2}+...+a_nb_{t_n}\leq a_1b_1+a_2b_2+...+a_nb_n(\{t_1,t_2,...,t_n\}=\{1,2,...,n\})$</li>
+            <li>Chebyshev's inequality: If $a_1\leq a_2\leq...\leq a_n,b_1\leq b_2\leq...\leq b_n$, then $n\sum_{i=1}^n a_kb_{n-k+1}\leq\sum_{i=1}^n a_k\sum_{i=1}^n b_k\leq n\sum_{i=1}^n a_kb_k$</li>
+            <li>Jensen's inequality: For a concave function $f(x),x\in(a,b),x_1,x_2,...,x_n\in(a,b)$, then $f(\dfrac{\sum_{i=1}^n a_ix_i}{\sum_{i=1}^n a_i}) \geq\dfrac{\sum_{i=1}^n a_if(x_i)}{\sum_{i=1}^n a_i}$</li>
+            <li>Schur's inequality: If $x,y,z\geq0$, then $x^r(x-y)(x-z)+y^r(y-z)(y-x)+z^r(z-x)(z-y)\geq0$</li>
+            <li>Hölder's inequality: If $a_1,a_2,...,a_n,b_1,b_2,...,b_n,p,q>0,\frac1p+\frac1q=1$, then $\sum_{i=1}^n a_ib_i\leq(\sum_{i=1}^n a_i^p)^{\frac1p}(\sum_{i=1}^n b_i^q)^{\frac1q}$, the equal sign holds iff $b_1=b_2=...=b_n=0$ or $\dfrac{a_1^p}{b_1^q}=\dfrac{a_2^p}{b_2^q}=...=\dfrac{a_n^p}{b_n^q}$</li>
+            <li>If $a_1,a_2,...,a_n,b_1,b_2,...,b_n,m>0$, then $\sum_{i=1}^n\dfrac{a_i^{m+1}}{b_i^m}\geq\dfrac{(\sum_{i=1}^n a_i)^{m+1}}{(\sum_{i=1}^n b_i)^m}$, the equal sign holds iff $\dfrac{a_1}{b_1}=\dfrac{a_2}{b_2}=...=\dfrac{a_n}{b_n}$</li>
+            <li>Carlson inequality: If $a_{ij},\alpha_i\geq0,\sum_{i=1}^n\alpha_i=1$, then $\prod_{j=1}^m(\sum_{i=1}^n a_{ij})^{\alpha_j}\geq\sum_{i=1}^n(\prod_{j=1}^m a_{ij}^{\alpha_j})$</li>
+            <li>Abel sum: Let $S_k=\sum_{i=1}^k a_i$, then $\sum_{i=1}^n a_kb_k=\sum_{i=1}^{n-1}S_i(b_i-b_{i+1})+S_nb_n$</li>
+        </ol>
         <h2>Trigonometric functions</h2>
-        <ul>
+        <ol>
             <li>$\sin a\csc a=1$</li>
             <li>$\cos a\sec a=1$</li>
             <li>$\tan a\cot a=1$</li>
@@ -56,9 +63,12 @@
             <li>$\cos(a\pm b)=\cos a\cos b\mp\sin a\sin b$</li>
             <li>$\sin(a\pm b)=\sin a\cos b\pm\cos a\sin b$</li>
             <li>$\tan(a\pm b)=\dfrac{\tan a\pm\tan b}{1\mp\tan a\tan b}$</li>
-            <li>$\cos2a=\cos^2a-\sin^2a=1-2\sin^2a=2\cos^2a-1$</li>
             <li>$\sin2a=2\sin a\cos a$</li>
+            <li>$\cos2a=\cos^2a-\sin^2a=1-2\sin^2a=2\cos^2a-1$</li>
             <li>$\tan2a=\dfrac{2\tan a}{1-\tan^2a}$</li>
+            <li>$\sin\dfrac a2=\pm\sqrt{\dfrac{1-\cos a}2}$</li>
+            <li>$\cos\dfrac a2=\pm\sqrt{\dfrac{1+\cos a}2}$</li>
+            <li>$\tan\dfrac a2=\pm\sqrt{\dfrac{1-\cos a}{1+\cos a}}=\dfrac{\sin a}{1+\cos a}=\dfrac{1-\cos a}{\sin a}$</li>
             <li>$\sin a+\sin b=2\sin\dfrac{a+b}2\cos\dfrac{a-b}2$</li>
             <li>$\sin a-\sin b=2\cos\dfrac{a+b}2\sin\dfrac{a-b}2$</li>
             <li>$\cos a+\cos b=2\cos\dfrac{a+b}2\cos\dfrac{a-b}2$</li>
@@ -75,24 +85,29 @@
             <li>$\tan a=\dfrac{2\tan\dfrac a2}{1-\tan^2\dfrac a2}$</li>
             <li>$\dfrac a{\sin A}=\dfrac b{\sin B}=\dfrac c{\sin C}=2R$</li>
             <li>$c^2=a^2+b^2-2ab\cos C$</li>
-            <li>$\tan A+\tan B+\tan C=\tan A\tan B\tan C$</li>
-            <li>$\cot A\cot B+\cot A\cot C+\cot B\cot C=1$</li>
-            <li>$\tan{\dfrac A2}\tan{\dfrac B2}+\tan{\dfrac A2}\tan{\dfrac C2}+\tan{\dfrac B2}\tan{\dfrac C2}=1$</li>
-            <li>$\sin2A+\sin2B+\sin2C=4\sin A\sin B\sin C$</li>
             <li>$\sin A+\sin B+\sin C=4\cos{\dfrac A2}\cos{\dfrac B2}\cos{\dfrac C2}$</li>
+            <li>$\cos A+\cos B+\cos C=1+4\sin{\dfrac A2}\sin{\dfrac B2}\sin{\dfrac C2}$</li>
             <li>$\sin^2A+\sin^2B+\sin^2C=2+2\cos A\cos B\cos C$</li>
             <li>$\cos^2A+\cos^2B+\cos^2C=1-2\cos A\cos B\cos C$</li>
-        </ul>
+            <li>$\sin^2{\dfrac A2}+\sin^2{\dfrac B2}+\sin^2{\dfrac C2}=1-2\sin{\dfrac A2}\sin{\dfrac B2}\sin{\dfrac C2}$</li>
+            <li>$\cos^2{\dfrac A2}+\cos^2{\dfrac B2}+\cos^2{\dfrac C2}=2+2\sin{\dfrac A2}\sin{\dfrac B2}\sin{\dfrac C2}$</li>
+            <li>$\sin2A+\sin2B+\sin2C=4\sin A\sin B\sin C$</li>
+            <li>$\cos2A+\cos2B+\cos2C=-1-4\cos A\cos B\cos C$</li>
+            <li>$\tan A+\tan B+\tan C=\tan A\tan B\tan C$</li>
+            <li>$\cot A\cot B+\cot A\cot C+\cot B\cot C=1$</li>
+            <li>$\cot{\dfrac A2}+\cot{\dfrac B2}+\cot{\dfrac C2}=\cot{\dfrac A2}\cot{\dfrac B2}\cot{\dfrac C2}$</li>
+            <li>$\tan{\dfrac A2}\tan{\dfrac B2}+\tan{\dfrac A2}\tan{\dfrac C2}+\tan{\dfrac B2}\tan{\dfrac C2}=1$</li>
+        </ol>
         <h2>Inverse trigonometric functions</h2>
-        <ul>
+        <ol>
             <li>$\arcsin a+\arccos a=\dfrac\pi2$</li>
             <li>$\arctan a+\operatorname{arccot}a=\dfrac\pi2$</li>
             <li>$\cos\arcsin a=\sin\arccos a$</li>
             <li>$\arcsin\cos a=\arccos\sin a\;(2k\pi\leq a\leq 2k\pi+\dfrac\pi2)$</li>
             <li>$\arctan a+\arctan b=\arctan\dfrac{a+b}{1-ab}+k\pi$</li>
-        </ul>
+        </ol>
         <h2>Limits and calculus</h2>
-        <ul>
+        <ol>
             <li>$\lim_{x\rightarrow0}\dfrac{\sin x}x=1$</li>
             <li>$\lim_{x\rightarrow\infty}(1+\dfrac1x)^x=e$</li>
             <li>$\lim_{x\rightarrow x_0}(f(x)\pm g(x))=\lim_{x\rightarrow x_0}f(x)\pm\lim_{x\rightarrow x_0}g(x)$</li>
@@ -127,9 +142,9 @@
             <li>$\int\sin xdx=-\cos x+C$</li>
             <li>$\int\cos xdx=\sin x+C$</li>
             <li>$\int(f(x)\pm g(x))dx=\int f(x)dx\pm\int g(x)dx$</li>
-        </ul>
+        </ol>
         <h2>Summations of series</h2>
-        <ul>
+        <ol>
             <li>$\sum_{n=1}^xn=\dfrac12x(x+1)$</li>
             <li>$\sum_{n=1}^xn^2=\dfrac16x(x+1)(2x+1)$</li>
             <li>$\sum_{n=1}^xn^3=\dfrac14x^2(x+1)^2$</li>
@@ -142,7 +157,7 @@
             <li>$\sum_{n=0}^\infty\dfrac{a^n}{n!}=e^a$</li>
             <li>$\sum_{n=0}^\infty\dfrac{(-1)^na^{2n+1}}{(2n+1)!}=\sin a$</li>
             <li>$\sum_{n=0}^\infty\dfrac{(-1)^na^{2n}}{(2n)!}=\cos a$</li>
-        </ul>
+        </ol>
         <h2>Perimeters and areas of plane figures</h2>
         <table>
             <tr>
@@ -489,7 +504,7 @@
             </tr>
         </table>
         <h2>Frequently used pythagorean numbers (simplest)</h2>
-        <ul>
+        <ol>
             <li>3, 4, 5</li>
             <li>5, 12, 13</li>
             <li>7, 24, 25</li>
@@ -497,12 +512,26 @@
             <li>9, 40, 41</li>
             <li>12, 35, 37</li>
             <li>20, 21, 29</li>
-        </ul>
+        </ol>
         <h2>Frequently used triangle with 120 degrees (simplest)</h2>
-        <ul>
+        <ol>
             <li>3, 5, 7</li>
             <li>7, 8, 13</li>
-        </ul>
+            <li>5, 16, 19</li>
+            <li>8, 18, 23</li>
+        </ol>
+        <h2>Frequently used triangle with 60 degrees (simplest)</h2>
+        <ol>
+            <li>1, 1, 1</li>
+            <li>3, 7, 8</li>
+            <li>5, 7, 8</li>
+            <li>5, 19, 21</li>
+            <li>7, 13, 15</li>
+            <li>8, 13, 15</li>
+            <li>8, 23, 26</li>
+            <li>16, 19, 21</li>
+            <li>18, 23, 26</li>
+        </ol>
         <h2>$\pi$</h2>
         <p>$\pi\approx3.$</p>
         $1415926535\,8979323846\,2643383279\,5028841971\,6939937510$</p><p>
@@ -626,7 +655,7 @@
                 <td>$90$</td><td>$1$</td><td>$0$</td><td>$\infty$</td>
             </tr>
         </table>
-        <p><a href="/plots/exsct.xlsx">Download link of the next table.</a></p>
+        <p><a href="https://github.com/Dovuq/Dovuq.github.io/releases/tag/tag">Download link of the next table (exsct.xlsx).</a></p>
         <div id="footer"></div>
         <script>
             $("#footer").load("/footer.html");

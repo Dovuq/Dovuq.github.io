@@ -1,11 +1,12 @@
 <html>
     <head>
-        <title>Frequency histogram generation</title>
+        <title>Frequency Histogram Generator - Dovuq's website</title>
         <div id="header"></div>
         <script src="/jquery.js"></script>
         <script>
             $("#header").load("/header.html");
         </script>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <script>
             var start,end,interval,data,err;
             var a,freq,wid,maxn,graph,s;
@@ -29,9 +30,9 @@
                     err.innerHTML="* Interval must not be 0!";
                     flag=1;
                 }
-                else if ((end-start)/interval>100)
+                else if ((end-start)/interval>1000)
                 {
-                    err.innerHTML="* Class number must not be larger than 100!";
+                    err.innerHTML="* Class number must not be larger than 1000!";
                     flag=1;
                 }
                 else err.innerHTML="";
@@ -89,9 +90,9 @@
         <h1>Frequency histogram generation</h1>
         <p>Input data below, divided by spaces, maximum 10000 numbers:</p>
         <input id="data" type="text" placeholder="Data area" style=" width: 100%"></input>
-        <p>Start number:<input id="start" type="number"></p>
-        <p>End number:<input id="end" type="number"></p>
-        <p>Interval:<input id="interval" type="number"></p>
+        <p>Start number:<input id="start"></p>
+        <p>End number:<input id="end"></p>
+        <p>Interval:<input id="interval"></p>
         <p class="error" id="error"></p>
         <button onclick="generate()">submit</button>
         <p>Here comes the graph:</p>

@@ -1,13 +1,14 @@
 <html>
     <head>
-        <title>Test Your Reaction Time</title>
+        <title>Test Your Reaction Time - Dovuq's website</title>
         <div id="header"></div>
         <script src="/jquery.js"></script>
         <script>
             $("#header").load("/header.html");
         </script>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <script>
-            var t0=new Date().getTime(),ready=0,s=0;
+            var t0=new Date().getTime(),ready=0,s=0,mobile=0;
             function sleep (delay)
             {
                 var start=(new Date()).getTime();
@@ -24,7 +25,7 @@
                     document.getElementById("ready").innerHTML="Please wait...";
                     setTimeout(function(){
                         ready=1;
-                        document.body.style.backgroundColor="#ff0000";
+                        document.body.style.backgroundColor="#ff6666";
                         t0=new Date().getTime();
                     },Math.random()*2000+2000);
                 }
@@ -66,11 +67,71 @@
                         \">x</button></td>";
                 }
             }
+            $(function()
+            {
+                if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent))
+                {
+                    document.getElementById("mobile").style.display="";
+                    mobile=1;
+                    document.body.onclick=function ()
+                    {
+                        if (!ready)
+                        {
+                            document.body.style.backgroundColor="#ffffff";
+                            document.getElementById("ready").innerHTML="Please wait...";
+                            setTimeout(function(){
+                                ready=1;
+                                document.body.style.backgroundColor="#ff6666";
+                                t0=new Date().getTime();
+                            },Math.random()*2000+2000);
+                        }
+                        else
+                        {
+                            time=new Date().getTime()-t0;
+                            document.getElementById("ready").innerHTML="Your reaction time is "+time+" ms";
+                            ready=0;
+                            s++;
+                            var cnt=0,mo3=0,ao5=0,ao12=0,t,maxn=-1,minn=2147483647;
+                            var a3="",a5="",a12="";
+                            for (var i=s;i>0;i--)
+                            {
+                                t=document.getElementById(i);
+                                if (i==s || t.style.display!="none")
+                                {
+                                    cnt++;
+                                    if (i==s) t=time;
+                                    else t=parseInt(document.getElementById(i+"_time").innerHTML);
+                                    mo3+=t;
+                                    ao5+=t;
+                                    ao12+=t;
+                                    if (t>maxn) maxn=t;
+                                    if (t<minn) minn=t;
+                                }
+                                if (cnt==3) a3=(mo3/3).toFixed(1);
+                                if (cnt==5) a5=((ao5-maxn-minn)/3).toFixed(1);
+                                if (cnt==12) a12=((ao12-maxn-minn)/10).toFixed(1);
+                            }
+                            t=document.getElementById("score");
+                            t.innerHTML+="<tr id=\""+s+"\">\
+                                <td>"+s+"</td>\
+                                <td id=\""+s+"_time\">"+time+"</td>\
+                                <td>"+a3+"</td>\
+                                <td>"+a5+"</td>\
+                                <td>"+a12+"</td>\
+                                <td><button onclick=\"\
+                                    document.getElementById("+s+").style.display='none';\
+                                \">x</button></td>";
+                        }
+                    }
+                }
+            })
         </script>
     </head>
     <body>
         <h1>Test Your Reaction Time</h1>
+        <p><strong>Tip: It's better to view this page on computer than on the phone!</strong></p>
         <p>Press space when you see the background turn red. Press enter if you're ready.</p>
+        <p id="mobile" style="display: none">For mobile users, just pressing the screen is ok.</p>
         <p id="ready">Ready?</p>
         <p>Your score:</p>
         <table id="score">

@@ -3,19 +3,21 @@
  *
  * Name: Untitled_1
  * Author: Dovuq & xrdrsp
- * Version: 8
  */
 
 body
 {
     background-color: #ffffff;
     color: #000000;
-    padding: 100px;
-    font-size: 24px;
+    padding: 10%;
+    font-size: 110%;
+    text-align: left;
+    width: 79%;
 }
-p
+p,div
 {
     font-size: 100%;
+    text-align: left;
 }
 h1
 {
@@ -47,12 +49,24 @@ pre
 .header
 {
     text-align: center;
-    color: #3399ff;
+    color: #3399cc;
     font-size: 16px;
 }
-.footer
+/* .footer
 {
     text-align: center;
     color: #999966;
     font-size: 16px;
+} */
+li
+{
+    padding-top: 8px;
+}
+a:link,a:visited
+{
+    color: #3399cc;
+}
+sup
+{
+    font-size: 50%;
 }

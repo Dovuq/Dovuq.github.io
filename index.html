@@ -1,11 +1,12 @@
 <html>
     <head>
-        <title>Mainpage</title>
+        <title>Home - Dovuq's website</title>
         <div id="header"></div>
         <script src="/jquery.js"></script>
         <script>
             $("#header").load("/header.html");
         </script>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <script>
             function turn ()
             {
@@ -39,12 +40,17 @@
         </script>
     </head>
     <body>
-        <h1>Mainpage</h1>
-        <p>Version 40.1</p>
-        <p><strong>If you are new here, it is really necessary and important for you to read the <a href="about">about page!</a></strong></p>
+        <h1>Dovuq</h1>
+        <p>Version 42.1.11.20</p>
         <table>
             <tr>
                 <th>Article number</th><th>Article name</th>
+            </tr>
+            <tr>
+                <td>14</td><td><a href="/2022/10/03/random/">Lottary draw</a></td>
+            </tr>
+            <tr>
+                <td>13</td><td><a href="/2022/02/09/charcount/">Character count</a></td>
             </tr>
             <tr>
                 <td>12</td><td><a href="/2020/12/13/graph/">Frequency histogram generation</a></td>
@@ -65,21 +71,13 @@
                 <td>4</td><td><a href="/2020/03/22/mathematics/">Mathematics formulas &amp; tables</a></td>
             </tr>
             <tr>
-                <td>2</td><td><a href="/2020/11/15/mathtool/">Mathematics tools</a></td>
+                <td>2</td><td><a href="//numberempire.com">Mathematics tools</a></td>
             </tr>
         </table>
         <p>Input user id, turn to his or her personal home page automatically</p>
         <input type="text" id="uid"/>
         <button onclick="turn()">Turn</button>
         <p class="error" id="errid"></p>
-        <p>Are there something that can be better in the blog? <a href="https://www.github.com/dovuq/dovuq.github.io/issues">Give issues here</a> and don't forget to @Dovuq!</p>
-        <button id="test" onclick="getfile('theme.css',
-        function (str)
-        {
-            alert (str);
-            return str;
-        },
-        alert ('File Not Found'));" style="display: none">test</button>
         <div id="footer"></div>
         <script>
             $("#footer").load("/footer.html");

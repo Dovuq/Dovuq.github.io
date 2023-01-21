@@ -1,11 +1,16 @@
 <html>
     <head>
-        <title>My Code Style for OI</title>
-        <link rel="stylesheet" type="text/css" href="/theme.css">
+        <title>My Code Style for OI - Dovuq's website</title>
+        <div id="header"></div>
+        <script src="/jquery.js"></script>
+        <script>
+            $("#header").load("/header.html");
+        </script>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     </head>
     <body>
-        <iframe height=40px width=100% frameborder=0 scrolling=no src="/header.html"></iframe>
         <h1>My Code Style for OI</h1>
+        <p>Here is an example:</p>
         <pre><code>#include &lt;bits/stdc++.h&gt;
 using namespace std;
 struct bigint
@@ -63,6 +68,9 @@ int main ()
     cout&lt;&lt;ans;
     return 0;
 }</code></pre>
-        <iframe height=150px width=100% frameborder=0 scrolling=no src="/footer.html"></iframe>
+        <div id="footer"></div>
+        <script>
+            $("#footer").load("/footer.html");
+        </script>
     </body>
 </html>
