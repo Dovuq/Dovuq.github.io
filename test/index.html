@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>Test - Dovuq's website</title>
+        <div id="header"></div>
+        <script src="/jquery.js"></script>
+        <script>
+            $("#header").load("/header.html");
+        </script>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <script>
+            var mod=2041375999999993;
+            function f(x)
+            {
+                x%=mod;
+                return (((((((1120*x%mod+421)*x%mod+922)*x%mod+825)*x%mod+1007)*x%mod+412)*x%mod+105)*x%mod+118)%mod;
+            }
+            function check()
+            {
+                var pass=Get("password").value,p=0,flag=0;
+                for (var i=0;pass[i];i++)
+                {
+                    if (pass[i].charCodeAt()>256)
+                    {
+                        alert("Incorrect password!");
+                        return;
+                    }
+                    p=(p*256+pass[i].charCodeAt())%mod;
+                }
+                //console.log(p);
+                if (f(p)!=443360198438321)
+                {
+                    alert("Incorrect password!");
+                    return;
+                }
+                var t=Get("main");
+                var s=t.innerText,v="";
+                //console.log(p>>24);
+                //console.log((p>>16)&255);
+                //console.log((p>>8)&255);
+                //console.log(p&255);
+                //console.log("**********");
+                //for (var i=0;s[i];i++) console.log(s[i].charCodeAt());
+                for (var i=0;s[i];i+=4)
+                {
+                    v+=String.fromCharCode(s[i].charCodeAt()^(p>>24));
+                    if (s[i+1]) v+=String.fromCharCode(s[i+1].charCodeAt()^((p>>16)&255));
+                    if (s[i+2]) v+=String.fromCharCode(s[i+2].charCodeAt()^((p>>8)&255));
+                    if (s[i+3]) v+=String.fromCharCode(s[i+3].charCodeAt()^(p&255));
+                }
+                for (var i=0;v[i];i++) console.log(v[i].charCodeAt());
+                t.innerHTML=v;
+                t.style.display="";
+                Get("input").style.display="none";
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Test</h1>
+        <div id="input">
+            <p>You can only view this page after entering the password correctly:</p>
+            <p><input id="password" placeholder="Enter password"/><button onclick="check()">Submit</button></p>
+        </div>
+        <div id="main" style="display: none">8{%É@&shP½ É~:P7=cg</div>
+        <div id="footer"></div>
+        <script>
+            $("#footer").load("/footer.html");
+        </script>
+    </body>
+</html>
