@@ -27,19 +27,17 @@
                     }
                     p=(p*256+pass[i].charCodeAt())%mod;
                 }
-                //console.log(p);
-                if (f(p)!=443360198438321)
+                console.log(f(p));
+                if (f(p)!=185284084668387)
                 {
                     alert("Incorrect password!");
                     return;
                 }
                 var t=Get("main");
                 var s=t.innerText,v="";
-                //console.log(p>>24);
-                //console.log((p>>16)&255);
-                //console.log((p>>8)&255);
-                //console.log(p&255);
-                //console.log("**********");
+                // console.log(s);
+                // s=Base64.encode(s);
+                // console.log(s);
                 //for (var i=0;s[i];i++) console.log(s[i].charCodeAt());
                 for (var i=0;s[i];i+=4)
                 {
@@ -49,7 +47,8 @@
                     if (s[i+3]) v+=String.fromCharCode(s[i+3].charCodeAt()^(p&255));
                 }
                 //for (var i=0;v[i];i++) console.log(v[i].charCodeAt());
-                t.innerHTML=v;
+                console.log(v);
+                t.innerHTML=Base64.decode(v);
                 t.style.display="";
                 Get("input").style.display="none";
             }
@@ -61,7 +60,7 @@
             <p>You can only view this page after entering the password correctly:</p>
             <p><input id="password" placeholder="Enter password"/><button onclick="check()">Submit</button></p>
         </div>
-        <div id="main" style="display: none">8{%É@&shP½ É~:P7=cg</div>
+        <div id="main" style="display: none"></div>
         <div id="footer"></div>
         <script>
             $("#footer").load("/footer.html");
@@ -70,9 +69,8 @@
                 var opt=window.setInterval(function()
                 {
                     var id=fetchval("id");
-                    if (id=="admin") check ("xrdrspakioi");
                     window.clearInterval(opt);
-                },10);
+                },1000);
             }
         </script>
     </body>

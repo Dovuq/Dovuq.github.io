@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Markdown Palette - Dovuq's website</title>
+        <div id="header"></div>
+        <script src="/jquery.js"></script>
+        <script>
+            $("#header").load("/header.html");
+        </script>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    </head>
+    <body>
+        <h1>Markdown Palette</h1>
+        <p>Below is markdown palette powered by <a href="https://github.com/luogu-dev/markdown-palettes">Luogu's Markdown*Palettes Project</a>.</p>
+        <link rel="stylesheet" href="markdown-palettes.css">
+        <script src="markdown-palettes.js"></script>
+        <div id="editor-container" style="height: 700px;">
+        <div id="editor"></div>
+        </div>
+        <script>
+            var markdownEditor = new MarkdownPalettes("#editor");
+            markdownEditor.contenet = "**content**";
+            var code = markdownEditor.content;
+        </script>
+        <div id="footer"></div>
+        <script>
+            $("#footer").load("/footer.html");
+        </script>
+    </body>
+</html>
