@@ -119,6 +119,11 @@
                                 s.style.backgroundColor="#ffffff";
                                 s.innerHTML=ans[x][y];
                             }
+                        t1=window.setInterval(function()
+                        {
+                            alert ("You lose!");
+                            window.clearInterval(t1);
+                        },1000);
                     }
                     else if (ans[i][j]==' ')
                         dfs(i,j);
@@ -127,6 +132,19 @@
                         s.style.backgroundColor="#ffffff";
                         s.innerHTML=ans[i][j];
                     }
+                    var cnt=0;
+                    for (var x=0;x<n;x++)
+                        for (var y=0;y<n;y++)
+                        {
+                            s=document.getElementById ("item_"+x+"_"+y);
+                            if (s.style.backgroundColor=="rgb(204, 204, 204)") cnt++;
+                        }
+                    if (cnt==bnum)
+                        t1=window.setInterval(function()
+                        {
+                            alert ("You win!");
+                            window.clearInterval(t1);
+                        },1000);
                 }
             }
             function change ()
