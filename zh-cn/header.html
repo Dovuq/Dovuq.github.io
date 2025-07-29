@@ -1,0 +1,44 @@
+<link rel="stylesheet" type="text/css" href="/theme.css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<script>
+MathJax = {
+    tex:{
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+    svg:{
+            fontCache: 'global'
+        }
+    };
+</script>
+<script src="https://cdn.bootcdn.net/ajax/libs/babel-polyfill/7.8.7/polyfill.js?features=es6"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/mathjax/3.0.5/es5/tex-chtml.js" async></script>
+<script src="/base64.js"></script>
+<p class="header">
+    <a href="/zh-cn/" target=_parent>主页</a>
+    &nbsp;&nbsp;&nbsp;
+    <a href="/zh-cn/about/" target=_parent>关于</a>
+    &nbsp;&nbsp;&nbsp;
+    <a href="/zh-cn/discuss/" target=_parent>讨论版</a>
+    &nbsp;&nbsp;&nbsp;
+    <a href="/zh-cn/oi/" target=_parent>OI</a>
+    &nbsp;&nbsp;&nbsp;
+    <a href="/zh-cn/programs/" target=_parent>程序</a>
+    &nbsp;&nbsp;&nbsp;
+    <!--<a href="/zh-cn/piano/" target=_parent>钢琴表演</a>
+    &nbsp;&nbsp;&nbsp;-->
+    <a href="//www.github.com/dovuq/dovuq.github.io/issues" target=_parent>Issues</a>
+<p>
+<script>
+    function Get(x)
+    {
+        return document.getElementById(x);
+    }
+    function fetchval(name)
+    {
+        var reg=new RegExp("(^|&)"+name+"=([^&]*)(&|$)");
+        var r=window.location.search.substr(1).match(reg);
+        if (r!=null) return unescape(r[2]);
+        return null;
+    }
+</script>

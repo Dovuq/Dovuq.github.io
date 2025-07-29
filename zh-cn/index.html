@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>主页 - Dovuq 的个人网站</title>
+        <div id="header"></div>
+        <script src="/jquery.js"></script>
+        <script>
+            $("#header").load("/zh-cn/header.html");
+        </script>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <script>
+            function turn ()
+            {
+                var id=document.getElementById ("uid").value;
+                if (!new RegExp("^[0-9]{1,10}$").test(id))
+                {
+                    var s=document.getElementById ("errid");
+                    s.innerHTML="*Error. You must input an integer from 1 to 9999999999!";
+                    return;
+                }
+                var link="/zh-cn/user/"+id;
+                window.location.href=link;
+            }
+            function getfile (url,fnSucc,fnFaild)
+            {
+                var oAjax=new XMLHttpRequest();
+                jQuery.support.cors=true;
+                oAjax.open('GET',url,true);
+                oAjax.send();
+                oAjax.onreadystatechange=function()
+                {
+                    if (oAjax.readyState==4)
+                    {
+                        if(oAjax.status==200)
+                            fnSucc(oAjax.responseText);
+                        else
+                            fnFaild(oAjax.status);
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Dovuq</h1>
+        <h2>中文版正在测试中，暂不可用，敬请谅解</h2>
+        <table>
+            <tr>
+                <th>文章编号</th><th>文章名称</th>
+            </tr>
+            <tr>
+                <td>15</td><td><a href="/zh-cn/2023/08/01/markdown/">Markdown编辑器</a></td>
+            </tr>
+            <tr>
+                <td>14</td><td><a href="/zh-cn/2022/10/03/random/">抽奖器</a></td>
+            </tr>
+            <tr>
+                <td>13</td><td><a href="/zh-cn/2022/02/09/charcount/">字符统计</a></td>
+            </tr>
+            <tr>
+                <td>12</td><td><a href="/zh-cn/2020/12/13/graph/">频率分布直方图生成器</a></td>
+            </tr>
+            <tr>
+                <td>11</td><td><a href="/zh-cn/2020/11/29/reaction/">反应时间测试</a></td>
+            </tr>
+            <tr>
+                <td>10</td><td><a href="/zh-cn/2020/10/31/speed/">速度测试</a></td>
+            </tr>
+            <tr>
+                <td>8</td><td><a href="/zh-cn/2020/08/07/phy_che_plot/">物理表格</a></td>
+            </tr>
+            <tr>
+                <td>6</td><td><a href="/zh-cn/2020/04/14/games/">游戏</a></td>
+            </tr>
+            <tr>
+                <td>4</td><td><a href="/zh-cn/2020/03/22/mathematics/">数学公式和表格</a></td>
+            </tr>
+            <tr>
+                <td>2</td><td><a href="//zh.numberempire.com">数学工具</a></td>
+            </tr>
+        </table>
+        <p>输入用户编号，自动跳转到他/她的个人主页：</p>
+        <input type="text" id="uid"/>
+        <button onclick="turn()">Turn</button>
+        <p class="error" id="errid"></p>
+        <div id="footer"></div>
+        <script>
+            $("#footer").load("/zh-cn/footer.html");
+        </script>
+    </body>
+</html>
