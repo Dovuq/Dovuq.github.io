@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Speed - Dovuq's website</title>
+        <div id="header"></div>
+        <script src="/jquery.js"></script>
+        <script>
+            $("#header").load("/en/header.html");
+        </script>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <script>
+            var t0=new Date().getTime(),t=0,n=0,next=0;
+            document.onkeydown=function (evt)
+            {
+                evt=(evt)?evt:window.event;
+                var key=evt.keyCode;
+                if ((key==49 || key==97) /*&& next!=2*/) t=new Date().getTime(),n++,next=2;
+                if ((key==50 || key==98) /*&& next!=1*/) t=new Date().getTime(),n++,next=1;
+                if (key==48 || key==96) n=0,next=0;
+                if (n==0) document.getElementById("speed").innerHTML="N/A";
+                else if (n==1)
+                {
+                    t0=new Date().getTime();
+                    document.getElementById("speed").innerHTML="Keep on typing";
+                }
+                else document.getElementById("speed").innerHTML=(n-1)*60000/(t-t0);
+            }
+            $(function()
+            {
+                if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent))
+                {
+                    document.getElementById("mobile").style.display="";
+                    mobile=1;
+                    document.body.onclick=function ()
+                    {
+                        t=new Date().getTime(),n++;
+                        if (n==0) document.getElementById("speed").innerHTML="N/A";
+                        else if (n==1)
+                        {
+                            t0=new Date().getTime();
+                            document.getElementById("speed").innerHTML="Keep on typing";
+                        }
+                        else document.getElementById("speed").innerHTML=(n-1)*60000/(t-t0);
+                    }
+                }
+            })
+        </script>
+    </head>
+    <body>
+        <h1>Speed test</h1>
+        <p>Test speed. Press 1 and 2 alternately. Press 0 to clear.</p>
+        <p id="mobile" style="display: none">For mobile users, just pressing the screen is ok. To clear, refresh this page.</p>
+        <p>Speed: <span id="speed">N/A</span> bpm</p>
+        <div id="footer"></div>
+        <script>
+            $("#footer").load("/en/footer.html");
+        </script>
+    </body>
+</html>

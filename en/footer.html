@@ -1,0 +1,60 @@
+<style>
+.footer
+{
+    /* text-align: center; */
+    color: #999966;
+    font-size: 16px;
+}
+div
+{
+    /* text-align: center; */
+}
+</style>
+<script>
+    // function f()
+    // {
+    //     var x=new Date();
+    //     document.getElementById("month").innerHTML=x.getMonth()+1;
+    //     document.getElementById("date").innerHTML=x.getDate();
+    //     document.getElementById("year").innerHTML=x.getYear()+1900;
+    //     document.getElementById("year2").innerHTML=x.getYear()+1900;
+    // }
+    // if (window.onload==null) window.onload=f();
+    // else window.onload+=f();
+    function footer_turn ()
+    {
+        var s=document.getElementById("add").value;
+        if (s[0]!='/') s='/'+s;
+        s='/en'+s;
+        // alert (s);
+        window.location.href=s;
+    }
+    function chlang (lang)
+    {
+        var s=window.location.href;
+        s=s.replace('/en/','/'+lang+'/');
+        window.location.href=s;
+    }
+</script>
+<hr>
+<p class="footer">Language:
+    <strong>English</strong>
+    &nbsp;&nbsp;&nbsp;
+    <a onclick=chlang('zh-cn') target=_parents>中文（简体）</a>
+</p>
+<p class="footer">Copyleft 2025 Dovuq, Powered by 2025 <a href="https://pages.github.com/" target="_parents">GitHub Pages</a>.</p>
+<p class="footer">Website navigation: turn to the page you enter: <input id="add" /><button onclick="footer_turn()">Turn</button></p>
+<p class="footer">Are there something that can be better in the blog? Or do you have any suggestions? Please <a href="https://www.github.com/dovuq/dovuq.github.io/issues">give issues here</a> and don't forget to @Dovuq!</p>
+<p class="footer">Special thanks to third-party: <a href="//xrdrsp.github.io/" target=_parents>xrdrsp</a></p>
+<p class="footer">It is guaranteed that all links in the website are safety certified.</p>
+<!--<p><a href="https://dovuque.github.io">\(^o^)/</a></p>-->
+<p class="footer">Current time: <iframe src="https://free.timeanddate.com/clock/i7y35ii0/fs16/fc996/tct/pct/ahl/avb/tt0/tw1/tm3/td2/th1/ta1/tb2" frameborder="0" height="16" allowtransparency="true"></iframe>
+</p>
+<!--<div id="counter">
+    <a target="_blank" href="https://24counter.com/cc_stats/1612773049">
+        <img alt="blog counter" border="0" height="1" src="https://24counter.com/online/ccc.php?id=1612773049">
+    </a>
+    <a target="_blank" href="https://24counter.com/conline/1612773049">
+        <img alt="blog counter" border="0" src="https://24counter.com/online/fcc.php?id=1612773049">
+    </a>
+</div>-->

@@ -1,0 +1,60 @@
+<style>
+.footer
+{
+    /* text-align: center; */
+    color: #999966;
+    font-size: 16px;
+}
+div
+{
+    /* text-align: center; */
+}
+</style>
+<script>
+    // function f()
+    // {
+    //     var x=new Date();
+    //     document.getElementById("month").innerHTML=x.getMonth()+1;
+    //     document.getElementById("date").innerHTML=x.getDate();
+    //     document.getElementById("year").innerHTML=x.getYear()+1900;
+    //     document.getElementById("year2").innerHTML=x.getYear()+1900;
+    // }
+    // if (window.onload==null) window.onload=f();
+    // else window.onload+=f();
+    function footer_turn ()
+    {
+        var s=document.getElementById("add").value;
+        if (s[0]!='/') s='/'+s;
+        s='/zh-cn'+s;
+        // alert (s);
+        window.location.href=s;
+    }
+    function chlang (lang)
+    {
+        var s=window.location.href;
+        s=s.replace('/zh-cn/','/'+lang+'/');
+        window.location.href=s;
+    }
+</script>
+<hr>
+<p class="footer">语言：
+    <a onclick=chlang('en')>English</a>
+    &nbsp;&nbsp;&nbsp;
+    <strong>中文（简体）</strong>
+</p>
+<p class="footer">版权属左 2025 Dovuq，由 2025 <a href="https://pages.github.com/" target="_parents">GitHub Pages</a> 提供支持。</p>
+<p class="footer">网页导航：跳转至您输入的页面：<input id="add" /><button onclick="footer_turn()">跳转</button></p>
+<p class="footer">网页中还有什么可以改进的地方吗？或者您有什么建议？请<a href="https://www.github.com/dovuq/dovuq.github.io/issues">在此处提交问题</a>，别忘了 @Dovuq！</p>
+<p class="footer">特别感谢：<a href="//xrdrsp.github.io/" target=_parents>xrdrsp</a></p>
+<p class="footer">保证网站中的所有链接都是安全的，可以放心点击。</p>
+<!--<p><a href="https://dovuque.github.io">\(^o^)/</a></p>-->
+<p class="footer">当前时间：<iframe src="https://free.timeanddate.com/clock/i7y35ii0/fs16/fc996/tct/pct/ahl/avb/tt0/tw1/tm3/td2/th1/ta1/tb2" frameborder="0" height="16" allowtransparency="true"></iframe>
+</p>
+<!--<div id="counter">
+    <a target="_blank" href="https://24counter.com/cc_stats/1612773049">
+        <img alt="blog counter" border="0" height="1" src="https://24counter.com/online/ccc.php?id=1612773049">
+    </a>
+    <a target="_blank" href="https://24counter.com/conline/1612773049">
+        <img alt="blog counter" border="0" src="https://24counter.com/online/fcc.php?id=1612773049">
+    </a>
+</div>-->

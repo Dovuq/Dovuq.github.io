@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>关于卡常 - Dovuq's website</title>
+        <div id="header"></div>
+        <script src="/jquery.js"></script>
+        <script>
+            $("#header").load("/en/header.html");
+        </script>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    </head>
+    <body>
+        <h1>关于卡常</h1>
+        <p>1. i++ vs ++i</p>
+        <p>A. <code>for (register int i=0;i&lt;1000000000;i++);</code> 3次平均用时：0.330s</p>
+        <p>B. <code>for (register int i=0;i&lt;1000000000;++i);</code> 3次平均用时：0.331s</p>
+        <p>&nbsp;</p>
+        <p>2. printf vs cout vs 快速输出</p>
+        <p>A. <code>for (register int i=0;i&lt;1000000;i++) printf("%d\n",123456789);</code> 3次平均用时：3.533s</p>
+        <p>B. <code>for (register int i=0;i&lt;1000000;i++) cout&lt;&lt;123456789&lt;&lt;endl;</code> 3次平均用时：7.802s</p>
+        <p>C. <code>for (register int i=0;i&lt;1000000;i++) print(123456789),putchar(10);</code> 3次平均用时：0.423s</p>
+        <p>&nbsp;</p>
+        <p>3. register</p>
+        <p>A. 1.A 不加 register 3次平均用时：2.507s</p>
+        <p>B. 1.A 加上 register 3次平均用时：0.330s</p>
+        <p>&nbsp;</p>
+        <p>4. n*32+6 vs n&lt;&lt;5|6</p>
+        <p>A. <code>for (register int i=0;i&lt;1000000000;i++) n=n*32+6;</code> 3次平均用时：2.363s</p>
+        <p>B. <code>for (register int i=0;i&lt;1000000000;i++) n=n&lt;&lt;5|6;</code> 3次平均用时：2.342s</p>
+        <div id="footer"></div>
+        <script>
+            $("#footer").load("/en/footer.html");
+        </script>
+    </body>
+</html>

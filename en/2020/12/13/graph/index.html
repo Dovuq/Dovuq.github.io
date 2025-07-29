@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <title>Frequency Histogram Generator - Dovuq's website</title>
+        <div id="header"></div>
+        <script src="/jquery.js"></script>
+        <script>
+            $("#header").load("/en/header.html");
+        </script>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <script>
+            var start,end,interval,data,err;
+            var a,freq,wid,maxn,graph,s;
+            function generate ()
+            {
+                var flag=0;
+                start=parseFloat(document.getElementById("start").value);
+                end=parseFloat(document.getElementById("end").value);
+                interval=parseFloat(document.getElementById("interval").value);
+                data=document.getElementById("data").value.split(" ");
+                for (var i=0;i<data.length;i++)
+                    data[i]=parseFloat(data[i]);
+                err=document.getElementById("error");
+                if (start>=end)
+                {
+                    err.innerHTML="* Start number must be smaller than end number!";
+                    flag=1;
+                }
+                else if (interval==0)
+                {
+                    err.innerHTML="* Interval must not be 0!";
+                    flag=1;
+                }
+                else if ((end-start)/interval>1000)
+                {
+                    err.innerHTML="* Class number must not be larger than 1000!";
+                    flag=1;
+                }
+                else err.innerHTML="";
+                if (flag) return;
+                a=new Array(105);
+                freq=new Array(105);
+                for (var i=start,j=0;i<end+interval-1e-6;i+=interval,j++)
+                    a[j]=i;
+                wid=500/j;
+                maxn=0;
+                //alert (a);
+                for (var i=0;i<j;i++)
+                    for (var k=0;k<data.length;k++)
+                        if (data[k]>=a[i] && data[k]<a[i+1])
+                        {
+                            if (freq[i]==undefined) freq[i]=1;
+                            else freq[i]++;
+                            //alert ("data="+data[k]+", freq="+freq[i]);
+                            if (freq[i]>maxn)
+                                maxn=freq[i];
+                        }
+                graph=document.getElementById("graph");
+                s="";
+                for (var i=0;i<j;i++)
+                {
+                    if (freq[i])
+                        s+='<div id='+i+' style="\
+                        position: absolute;\
+                        border: 1px solid black;\
+                        height: '+500*freq[i]/maxn+'px;\
+                        width: '+wid+'px;\
+                        top: '+(500-500*freq[i]/maxn)+'px;\
+                        left: '+i*wid+'px;\
+                        margin-right: 0px;\
+                        background-color: #cccccc;\
+                        ">&nbsp;</div>';
+                    else s+='<span style="\
+                        display:-moz-inline-box;\
+                        display:inline-block;\
+                        width:150px"></span>';
+                }
+                graph.innerHTML=s;
+            }
+        </script>
+        <style>
+            div.graph
+            {
+                height: 500px;
+                width: 500px;
+                position: relative;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Frequency histogram generation</h1>
+        <p>Input data below, divided by spaces, maximum 10000 numbers:</p>
+        <input id="data" type="text" placeholder="Data area" style=" width: 100%"></input>
+        <p>Start number:<input id="start"></p>
+        <p>End number:<input id="end"></p>
+        <p>Interval:<input id="interval"></p>
+        <p class="error" id="error"></p>
+        <button onclick="generate()">submit</button>
+        <p>Here comes the graph:</p>
+        <div id="graph" class="graph" height=200px width=200px></div>
+        <div id="footer"></div>
+        <script>
+            $("#footer").load("/en/footer.html");
+        </script>
+    </body>
+</html>

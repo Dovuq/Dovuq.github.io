@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>Home - Dovuq's website</title>
+        <div id="header"></div>
+        <script src="/jquery.js"></script>
+        <script>
+            $("#header").load("/en/header.html");
+        </script>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <script>
+            function turn ()
+            {
+                var id=document.getElementById ("uid").value;
+                if (!new RegExp("^[0-9]{1,10}$").test(id))
+                {
+                    var s=document.getElementById ("errid");
+                    s.innerHTML="*Error. You must input an integer from 1 to 9999999999!";
+                    return;
+                }
+                var link="/en/user/"+id;
+                window.location.href=link;
+            }
+            function getfile (url,fnSucc,fnFaild)
+            {
+                var oAjax=new XMLHttpRequest();
+                jQuery.support.cors=true;
+                oAjax.open('GET',url,true);
+                oAjax.send();
+                oAjax.onreadystatechange=function()
+                {
+                    if (oAjax.readyState==4)
+                    {
+                        if(oAjax.status==200)
+                            fnSucc(oAjax.responseText);
+                        else
+                            fnFaild(oAjax.status);
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Dovuq</h1>
+        <p>Version (Beta)</p>
+        <table>
+            <tr>
+                <th>Article number</th><th>Article name</th>
+            </tr>
+            <tr>
+                <td>15</td><td><a href="/en/2023/08/01/markdown/">Markdown Palette</a></td>
+            </tr>
+            <tr>
+                <td>14</td><td><a href="/en/2022/10/03/random/">Lottary draw</a></td>
+            </tr>
+            <tr>
+                <td>13</td><td><a href="/en/2022/02/09/charcount/">Character count</a></td>
+            </tr>
+            <tr>
+                <td>12</td><td><a href="/en/2020/12/13/graph/">Frequency histogram generation</a></td>
+            </tr>
+            <tr>
+                <td>11</td><td><a href="/en/2020/11/29/reaction/">Test your reaction time</a></td>
+            </tr>
+            <tr>
+                <td>10</td><td><a href="/en/2020/10/31/speed/">Speed test</a></td>
+            </tr>
+            <tr>
+                <td>8</td><td><a href="/en/2020/08/07/phy_che_plot/">Table of physics</a></td>
+            </tr>
+            <tr>
+                <td>6</td><td><a href="/en/2020/04/14/games/">Games</a></td>
+            </tr>
+            <tr>
+                <td>4</td><td><a href="/en/2020/03/22/mathematics/">Mathematics formulas &amp; tables</a></td>
+            </tr>
+            <tr>
+                <td>2</td><td><a href="//numberempire.com">Mathematics tools</a></td>
+            </tr>
+        </table>
+        <p>Input user id, turn to his or her personal home page automatically</p>
+        <input type="text" id="uid"/>
+        <button onclick="turn()">Turn</button>
+        <p class="error" id="errid"></p>
+        <div id="footer"></div>
+        <script>
+            $("#footer").load("/en/footer.html");
+        </script>
+    </body>
+</html>
