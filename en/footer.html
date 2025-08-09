@@ -11,16 +11,16 @@ div
 }
 </style>
 <script>
-    // function f()
-    // {
-    //     var x=new Date();
-    //     document.getElementById("month").innerHTML=x.getMonth()+1;
-    //     document.getElementById("date").innerHTML=x.getDate();
-    //     document.getElementById("year").innerHTML=x.getYear()+1900;
-    //     document.getElementById("year2").innerHTML=x.getYear()+1900;
-    // }
-    // if (window.onload==null) window.onload=f();
-    // else window.onload+=f();
+    function f()
+    {
+        var x=new Date();
+        // document.getElementById("month").innerHTML=x.getMonth()+1;
+        // document.getElementById("date").innerHTML=x.getDate();
+        document.getElementById("year").innerHTML=x.getYear()+1900;
+        document.getElementById("year2").innerHTML=x.getYear()+1900;
+    }
+    if (window.onload==null) window.onload=f();
+    else window.onload+=f();
     function footer_turn ()
     {
         var s=document.getElementById("add").value;
@@ -42,7 +42,7 @@ div
     &nbsp;&nbsp;&nbsp;
     <a onclick=chlang('zh-cn') target=_parents>中文（简体）</a>
 </p>
-<p class="footer">Copyleft 2025 Dovuq, Powered by 2025 <a href="https://pages.github.com/" target="_parents">GitHub Pages</a>.</p>
+<p class="footer">Copyleft <span id="year"></span> Dovuq, Powered by <span id="year2"></span> <a href="https://pages.github.com/" target="_parents">GitHub Pages</a>.</p>
 <p class="footer">Website navigation: turn to the page you enter: <input id="add" /><button onclick="footer_turn()">Turn</button></p>
 <p class="footer">Are there something that can be better in the blog? Or do you have any suggestions? Please <a href="https://www.github.com/dovuq/dovuq.github.io/issues">give issues here</a> and don't forget to @Dovuq!</p>
 <p class="footer">Special thanks to third-party: <a href="//xrdrsp.github.io/" target=_parents>xrdrsp</a></p>
