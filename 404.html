@@ -1,11 +1,20 @@
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<script>
-    function getl()
-    {
-        var u=window.location.href.split('/');
-        var lang=u[3];
-        window.location.href="/"+lang+"/404.html";
-    }
-    if (window.onload==null) window.onload=getl();
-    else window.onload+=getl();
-</script>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <script src="/jquery.js"></script>
+        <script>
+            const lgs=['en','zh-cn'];
+            window.onload=function ()
+            {
+                var u=window.location.href.split('/');
+                var lang=u[3];
+                if (!lgs.includes(lang)) lang=lgs[0];
+                $("#main").load("/"+lang+"/404.html");
+            }
+        </script>
+    </head>
+    <body>
+        <div id="main"></div>
+    </body>
+</html>
