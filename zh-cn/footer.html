@@ -11,6 +11,7 @@ div
 }
 </style>
 <script>
+    const langs=["en","zh-cn"];
     function f()
     {
         var x=new Date();
@@ -31,9 +32,15 @@ div
     }
     function chlang (lang)
     {
-        var s=window.location.href;
-        s=s.replace('/zh-cn/','/'+lang+'/');
-        window.location.href=s;
+        var s=window.location.href.split('/');
+        console.log(s);
+        if (langs.includes(s[3])) s[3]=lang;
+        else s.splice(3,0,lang);
+        //console.log(s);
+        var t=s[0];
+        for (var i=1;i<s.length;i++) t+='/'+s[i];
+        //console.log(t);
+        window.location.href=t;
     }
 </script>
 <hr>
