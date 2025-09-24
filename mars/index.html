@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script>
+            // Mars Time Namespace
+            function fetchval(name)
+            {
+                var reg=new RegExp("(^|&)"+name+"=([^&]*)(&|$)");
+                var r=window.location.search.substr(1).match(reg);
+                if (r!=null) return unescape(r[2]);
+                return null;
+            }
+            const Mars = (() => {
+                class Time {
+                    constructor() {
+                        this.zone = 7;
+                        this.year = 191;
+                        this.month = 20;
+                        this.sol = 26;
+                        this.hour = 7 + this.zone;
+                        this.minute = 6;
+                        this.second = 0;
+                    }
+
+                    print() {
+                        let week;
+                        switch (this.sol % 7) {
+                            case 1: week = "Sol"; break;
+                            case 2: week = "Lun"; break;
+                            case 3: week = "Mar"; break;
+                            case 4: week = "Mer"; break;
+                            case 5: week = "Jov"; break;
+                            case 6: week = "Ven"; break;
+                            case 0: week = "Sat"; break;
+                        }
+                        document.getElementById("ans").innerText=
+                            `${this.year.toString().padStart(4, '0')}/` +
+                            `${this.month.toString().padStart(2, '0')}/` +
+                            `${this.sol.toString().padStart(2, '0')} ${week} ` +
+                            `${this.hour.toString().padStart(2, '0')}:` +
+                            `${this.minute.toString().padStart(2, '0')}:` +
+                            `${this.second.toFixed(0).padStart(2, '0')} MST`;
+                        if (this.zone) document.getElementById("ans").innerText+=`${this.zone >= 0 ? "+" : ""}${this.zone}`;
+                    }
+                }
+
+                const Solnum = [0, 28, 28, 28, 28, 28, 27, 28, 28, 28, 28, 28, 27, 28, 28, 28, 28, 28, 27, 28, 28, 28, 28, 28, 27];
+                const yearlength = 59301863.05212;
+                const sollength = 88775.24409;
+                const secondlength = 1.02749125104;
+                const zero = new Time();
+
+                function isleap(year) {
+                    if (year & 1) return true;
+                    if ((year % 10 === 0 && year % 100 !== 0) || (year % 1000 === 0 && year % 3000 !== 0))
+                        return true;
+                    return false;
+                }
+
+                function solnum(year, month) {
+                    return Solnum[month] + (month === 24 ? (isleap(year) ? 1 : 0) : 0);
+                }
+
+                function nextsol(t) {
+                    t.sol++;
+                    if (t.sol > solnum(t.year, t.month)) {
+                        t.month++;
+                        t.sol = 1;
+                        if (t.month > 24) {
+                            t.year++;
+                            t.month = 1;
+                        }
+                    }
+                    return t;
+                }
+
+                function prevsol(t) {
+                    t.sol--;
+                    if (t.sol < 1) {
+                        t.month--;
+                        if (t.month < 1) {
+                            t.year--;
+                            t.month = 24;
+                        }
+                        t.sol = solnum(t.year, t.month);
+                    }
+                    return t;
+                }
+
+                function nextyear(t) {
+                    t.year++;
+                    if (isleap(t.year - 1))
+                        t = prevsol(t);
+                    return t;
+                }
+
+                function nextsecond(t) {
+                    t.second++;
+                    while (t.second > 59) {
+                        t.minute++;
+                        t.second -= 60;
+                    }
+                    while (t.minute > 59) {
+                        t.hour++;
+                        t.minute -= 60;
+                    }
+                    while (t.hour > 23) {
+                        t = nextsol(t);
+                        t.hour -= 24;
+                    }
+                    return t;
+                }
+
+                return { Time, zero, yearlength, sollength, secondlength, nextyear, nextsol, nextsecond, prevsol };
+            })();
+
+            // 主程序
+            window.onload=function main() {
+            
+                let b = 0;
+                let ans = Mars.zero;
+
+                ans.zone = parseInt(fetchval("zone"));
+                if (!Number.isInteger(ans.zone)) ans.zone=0;
+                ans.hour = 7 + ans.zone;
+                while (ans.hour<0)
+                {
+                    ans.hour+=24;
+                    ans=Mars.prevsol(ans);
+                }
+                while (ans.hour>23)
+                {
+                    ans.hour-=24;
+                    ans=Mars.nextsol(ans);
+                }
+                a = Math.floor(Date.now() / 1000);
+
+                while (b + Mars.yearlength <= a) {
+                    b += Mars.yearlength;
+                    ans = Mars.nextyear(ans);
+                }
+                while (b + Mars.sollength <= a) {
+                    b += Mars.sollength;
+                    ans = Mars.nextsol(ans);
+                }
+                while (b + Mars.secondlength - 0.5 <= a) {
+                    b += Mars.secondlength;
+                    ans = Mars.nextsecond(ans);
+                }
+
+                ans.print();
+                setInterval(function(){
+                    ans=Mars.nextsecond(ans);
+                    ans.print();
+                },Mars.secondlength*1000);
+            };
+
+        </script>
+        <style>
+            body
+            {
+                color: #999966;
+                font-size: 16px;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="ans"></div>
+    </body>
+</html>
