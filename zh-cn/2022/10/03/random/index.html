@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>抽奖器 - Dovuq 的个人网站</title>
+        <div id="header"></div>
+        <script src="/jquery.js"></script>
+        <script>
+            $("#header").load("/zh-cn/header.html");
+        </script>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <script>
+            var ep=1;
+            function p()
+            {
+                var t=document.getElementById("ep");
+                if (t.style.display=="none")
+                    t.style.display="";
+                else t.style.display="none";
+                ep=!ep;
+            }
+            function gen()
+            {
+                var t=document.getElementById("data").value,cnt=0,cnt2=0,i;
+                var names=new Array(1005),poss=new Array(1005),sum=0;
+                names[0]=poss[0]="";
+                for (i=0;t[i];i++)
+                {
+                    if ((t[i]=='\n' || t[i]=='\r') && (i<1 || t[i-1]!='\n' && t[i-1]!='\r'))
+                        names[++cnt]="";
+                    else names[cnt]+=t[i];
+                }
+                if (t[i-1]!='\n' && t[i-1]!='\r') cnt++;
+                //alert(names);
+                document.getElementById("err").innerHTML="";
+                if (ep) document.getElementById("result").innerHTML=names[Math.floor(Math.random()*cnt)];
+                else
+                {
+                    var s=document.getElementById("poss").value;
+                    for (i=0;s[i];i++)
+                    {
+                        if ((s[i]=='\n' || s[i]=='\r') && (i<1 || s[i-1]!='\n' && s[i-1]!='\r'))
+                            poss[++cnt2]="";
+                        else poss[cnt2]+=s[i];
+                    }
+                    if (s[i-1]!='\n' && s[i-1]!='\r') cnt2++;
+                    if (cnt!=cnt2)
+                    {
+                        document.getElementById("result").innerHTML="";
+                        document.getElementById("err").innerHTML="* 名字的个数和概率的个数不相等！";
+                        return 0;
+                    }
+                    for (i=0;i<cnt;i++)
+                    {
+                        poss[i]=parseFloat(poss[i]);
+                        sum+=poss[i];
+                    }
+                    poss[0]/=sum;
+                    for (i=1;i<cnt;i++) poss[i]=poss[i-1]+poss[i]/sum;
+                    var j=Math.random();
+                    for (i=0;i<cnt;i++)
+                        if (j<poss[i])
+                        {
+                            document.getElementById("result").innerHTML=names[i];
+                            return 0;
+                        }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>抽奖器</h1>
+        <p>名单（一行一个名字，最多 1000 个）：</p>
+        <textarea id="data" type="text" placeholder="名单" style="width: 100%; height: 200px"></textarea>
+        <p>
+            <input type="checkbox" onclick="p()" checked/>
+            每个名字概率相等
+        </p>
+        <div id="ep" style="display: none">
+            <p>每个人抽到的概率（一行一个）：</p>
+            <p>（输入的概率总和可以不是 1。例如，如果你输入 $3$, $4$, $5$，则三个人抽到的概率分别为 $\dfrac3{12}$, $\dfrac4{12}$, $\dfrac5{12}$。）</p>
+            <textarea id="poss" type="text" placeholder="Probability" style="width: 100%; height: 200px"></textarea>
+        </div>
+        <button onclick="gen()">生成</button>
+        <p>结果：<span id="result"></span><span id="err" class="error"></span></p>
+        <div id="footer"></div>
+        <script>
+            $("#footer").load("/zh-cn/footer.html");
+        </script>
+    </body>
+</html>
